@@ -68,7 +68,7 @@ export function ROICalculator() {
           onClick={clearToMinimum}
           className="text-xs font-medium text-[--text-muted] hover:text-[--text-secondary] underline underline-offset-2 transition-colors shrink-0"
         >
-          Clear to minimum
+          Reset all
         </button>
       </div>
 
