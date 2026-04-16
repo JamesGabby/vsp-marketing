@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
+/* ─── Semantic color tokens ────────────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light mode */
+  --background: #fafbfc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --volt: #0f8a6b;
+  --volt-hover: #0a7058;
+  --volt-glow: rgba(15, 138, 107, 0.08);
+  --volt-foreground: #ffffff;
+  --text-primary: #0b1225;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --grid-line: rgba(0, 0, 0, 0.04);
+
+  /* shadcn compat */
+  --foreground: #0b1225;
+  --card: #ffffff;
+  --card-foreground: #0b1225;
+  --primary: #0f8a6b;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --input: #e2e8f0;
+  --ring: #0f8a6b;
+  --radius: 0.75rem;
 }
+
+.dark {
+  /* Dark mode */
+  --background: #0b1225;
+  --surface: #111b36;
+  --border: #1a2544;
+  --volt: #2dd4a8;
+  --volt-hover: #22b890;
+  --volt-glow: rgba(45, 212, 168, 0.15);
+  --volt-foreground: #0b1225;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --grid-line: rgba(255, 255, 255, 0.03);
+
+  /* shadcn compat */
+  --foreground: #f8fafc;
+  --card: #111b36;
+  --card-foreground: #f8fafc;
+  --primary: #2dd4a8;
+  --primary-foreground: #0b1225;
+  --secondary: #1a2544;
+  --secondary-foreground: #f8fafc;
+  --muted: #1a2544;
+  --muted-foreground: #94a3b8;
+  --accent: #1a2544;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --input: #1a2544;
+  --ring: #2dd4a8;
+}
+
+/* ─── Tailwind v4 theme mappings ────────────────────────────────────── */
 
 @theme inline {
+  /* Brand tokens → Tailwind utilities */
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-volt: var(--volt);
+  --color-volt-hover: var(--volt-hover);
+
+  /* shadcn tokens → Tailwind utilities */
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+
+  /* Border radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base styles ────────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Hero background ────────────────────────────────────────────────── */
+
+.hero-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% 0%, var(--volt-glow) 0%, transparent 65%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 100% 100%, 64px 64px, 64px 64px;
+}
+
+/* ─── Focus visible ring ─────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--volt);
+  outline-offset: 2px;
 }
