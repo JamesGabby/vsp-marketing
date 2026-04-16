@@ -2,12 +2,13 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Inbox, UserSearch, Bell } from "lucide-react"
+import { Inbox, UserSearch, Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import { ROICalculator } from "@/components/tools/roi-calculator/ROICalculator"
 
-const tools = [
+const comingSoonTools = [
   {
     icon: UserSearch,
     title: "ICP Builder",
@@ -19,12 +20,6 @@ const tools = [
     title: "Deliverability Audit",
     description:
       "Check your domain reputation, SPF/DKIM/DMARC configuration, and inbox placement score before your next campaign.",
-  },
-  {
-    icon: Calculator,
-    title: "ROI Calculator",
-    description:
-      "Model the expected pipeline and revenue impact of an outbound program based on your ACV, close rates, and target market size.",
   },
 ]
 
@@ -45,33 +40,42 @@ export default function ToolsPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-12"
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
             Tools for{" "}
             <span className="text-[--volt]">Growth Teams</span>
           </h1>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
-            Free resources and calculators to help you plan, measure, and optimize
-            your outbound engine. Coming soon.
+            Free resources to help you plan, measure, and optimise your outbound engine.
           </p>
         </motion.div>
 
-        {/* Tool cards */}
+        {/* ROI Calculator — featured */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12"
+        >
+          <ROICalculator />
+        </motion.div>
+
+        {/* Coming soon tools */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16"
         >
-          {tools.map((tool, i) => {
+          {comingSoonTools.map((tool, i) => {
             const Icon = tool.icon
             return (
               <motion.div
                 key={tool.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
+                transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
                 className="rounded-2xl border border-[--border] bg-[--surface] p-6 opacity-60 pointer-events-none select-none shadow-sm dark:shadow-none"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -95,7 +99,7 @@ export default function ToolsPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
           className="max-w-md mx-auto text-center"
         >
           <div className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--surface] border border-[--border] mx-auto">
@@ -112,10 +116,7 @@ export default function ToolsPage() {
               You&apos;re on the list — we&apos;ll be in touch.
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-2"
-            >
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
               <Input
                 type="email"
                 placeholder="you@company.com"

@@ -134,3 +134,52 @@ body {
   outline: 2px solid var(--volt);
   outline-offset: 2px;
 }
+
+/* ─── Range input (ROI Calculator) ──────────────────────────────────── */
+
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--volt);
+  cursor: pointer;
+  transition: transform 0.1s;
+  box-shadow: 0 0 0 3px var(--volt-glow);
+}
+
+input[type="range"].slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--volt);
+  border: none;
+  cursor: pointer;
+}
+
+/* ─── Hide number input spinners ─────────────────────────────────────── */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
