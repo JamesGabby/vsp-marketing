@@ -70,9 +70,10 @@ export function calculate(s: CalcState): CalcResults {
   const revenueMonths = Math.max(1, 12 - s.salesCycle)
   const annualRevenue = revenuePerMonth * revenueMonths
 
+  const annualCost = totalMonthlyCost * 12 + s.setupFee
   const annualROI =
-    totalMonthlyCost > 0
-      ? ((annualRevenue - totalMonthlyCost * 12) / (totalMonthlyCost * 12)) * 100
+    annualCost > 0
+      ? ((annualRevenue - annualCost) / annualCost) * 100
       : null
 
   const totalContractValue = s.dealValue * s.contractLength

@@ -91,6 +91,14 @@ export function ROICalculator() {
               onChange={set("adToolSpend")}
               prefix="£"
             />
+            <SliderInput
+              label="One-time setup / onboarding fee"
+              value={state.setupFee}
+              min={0} max={25000} step={250}
+              onChange={set("setupFee")}
+              prefix="£"
+              hint="Upfront cost — excluded from monthly ROI, included in year-1 annual ROI."
+            />
 
             {/* Headcount — plain number input */}
             <div className="flex items-center justify-between gap-3">
@@ -232,15 +240,15 @@ export function ROICalculator() {
 
         {/* ── Right: Results (desktop sticky) ────────────────── */}
         <div className="hidden lg:block">
-          <div className="sticky top-20">
-            <ResultsDashboard results={results} />
+          <div className="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl">
+            <ResultsDashboard results={results} setupFee={state.setupFee} />
           </div>
         </div>
       </div>
 
       {/* Mobile results — below inputs */}
       <div className="lg:hidden mt-6">
-        <ResultsDashboard results={results} />
+        <ResultsDashboard results={results} setupFee={state.setupFee} />
       </div>
 
       {/* CTA */}

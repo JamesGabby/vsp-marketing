@@ -5,9 +5,10 @@ import { fmtGBP, fmtPct, fmtNum, type CalcResults } from "./calculations"
 
 interface ResultsDashboardProps {
   results: CalcResults
+  setupFee: number
 }
 
-export function ResultsDashboard({ results }: ResultsDashboardProps) {
+export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
   const {
     totalMonthlyCost,
     meetingsPerMonth,
@@ -90,7 +91,7 @@ export function ResultsDashboard({ results }: ResultsDashboardProps) {
         <StatCard
           label="Annual ROI"
           value={annualROI !== null ? fmtPct(annualROI, true) : "—"}
-          sub="12-month projection"
+          sub={setupFee > 0 ? "incl. setup fee" : "12-month projection"}
         />
         <StatCard
           label="Total Monthly Cost"

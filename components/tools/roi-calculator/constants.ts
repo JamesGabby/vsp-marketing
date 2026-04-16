@@ -2,6 +2,7 @@ export interface CalcState {
   // Section 1 — Investment
   agencyRetainer: number
   adToolSpend: number
+  setupFee: number
   salesHeadcount: number
   costPerRep: number
   perMeetingFee: number
@@ -23,6 +24,7 @@ export type PresetKey = "conservative" | "moderate" | "aggressive"
 export const DEFAULTS: CalcState = {
   agencyRetainer: 3000,
   adToolSpend: 500,
+  setupFee: 0,
   salesHeadcount: 1,
   costPerRep: 4500,
   perMeetingFee: 0,
@@ -41,6 +43,7 @@ export const PRESETS: Record<PresetKey, CalcState> = {
   conservative: {
     agencyRetainer: 1500,
     adToolSpend: 200,
+    setupFee: 0,
     salesHeadcount: 0,
     costPerRep: 3500,
     perMeetingFee: 0,
@@ -58,6 +61,7 @@ export const PRESETS: Record<PresetKey, CalcState> = {
   aggressive: {
     agencyRetainer: 8000,
     adToolSpend: 2000,
+    setupFee: 0,
     salesHeadcount: 3,
     costPerRep: 5500,
     perMeetingFee: 0,
@@ -76,6 +80,7 @@ export const PRESETS: Record<PresetKey, CalcState> = {
 export const MINIMUMS: CalcState = {
   agencyRetainer: 0,
   adToolSpend: 0,
+  setupFee: 0,
   salesHeadcount: 0,
   costPerRep: 0,
   perMeetingFee: 0,
