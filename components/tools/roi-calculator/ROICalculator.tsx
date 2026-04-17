@@ -45,10 +45,10 @@ export function ROICalculator() {
   }
 
   return (
-    <section className="rounded-3xl border border-[--border] bg-[--surface]/50 p-6 sm:p-8">
+    <section className="rounded-3xl border-2 border-[--border] bg-[--surface]/50 p-6 sm:p-8">
       {/* Section header */}
       <div className="flex items-start gap-4 mb-6">
-        <div className="h-10 w-10 shrink-0 rounded-xl border border-[--volt]/25 bg-[--volt-glow] flex items-center justify-center">
+        <div className="h-10 w-10 shrink-0 rounded-xl border-2 border-[--volt]/25 bg-[--volt-glow] flex items-center justify-center">
           <Calculator className="h-5 w-5 text-[--volt]" />
         </div>
         <div>
@@ -142,7 +142,7 @@ export function ROICalculator() {
             />
 
             {/* Total cost summary */}
-            <div className="rounded-lg border border-[--border] bg-[--background] px-4 py-2.5 flex flex-col gap-1.5">
+            <div className="rounded-lg border-2 border-[--border] bg-[--background] px-4 py-2.5 flex flex-col gap-1.5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-wider text-[--text-muted]">
                   Total Monthly Outbound Cost
@@ -252,7 +252,7 @@ export function ROICalculator() {
       </div>
 
       {/* CTA */}
-      <div className="mt-8 rounded-2xl border border-[--volt]/20 bg-[--volt-glow] px-6 py-7 text-center">
+      <div className="mt-8 rounded-2xl border-2 border-[--volt]/20 bg-[--volt-glow] px-6 py-7 text-center">
         <h3 className="text-lg font-bold text-[--text-primary] mb-2">
           Want these numbers for real?
         </h3>

@@ -28,7 +28,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
   const roiNegative = monthlyROI !== null && monthlyROI < 0
 
   return (
-    <div className="rounded-2xl border border-[--border] bg-[--surface] p-5 flex flex-col gap-6">
+    <div className="rounded-2xl border-2 border-[--border] bg-[--surface] p-5 flex flex-col gap-6">
       {/* Header */}
       <div>
         <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">

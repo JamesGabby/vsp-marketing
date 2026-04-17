@@ -6,7 +6,7 @@ interface StatCardProps {
 
 export function StatCard({ label, value, sub }: StatCardProps) {
   return (
-    <div className="rounded-xl border border-[--border] bg-[--background] p-3.5">
+    <div className="rounded-xl border-2 border-[--border] bg-[--background] p-3.5">
       <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted] mb-1">
         {label}
       </p>

@@ -13,7 +13,7 @@ const steps = [
     number: "02",
     title: "Infrastructure Setup",
     description:
-      "Domains, mailboxes, warmup, tech stack configured for maximum deliverability. We don't send a single email until the foundation is solid.",
+      "Dedicated domains, mailboxes, warmup, tech stack configured for maximum deliverability. We don't send a single email until the foundation is solid.",
   },
   {
     number: "03",
@@ -79,7 +79,7 @@ export function ProcessTimeline() {
 
                 {/* Step number bubble */}
                 <div className="relative z-10 mb-4 lg:mb-6 self-start lg:self-center pl-6 lg:pl-0">
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[--background] border border-[--border] lg:mx-auto">
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border] lg:mx-auto">
                     <span
                       className="text-lg font-bold text-[--volt]"
                       style={{ fontFamily: "var(--font-mono)" }}

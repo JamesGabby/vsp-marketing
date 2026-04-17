@@ -56,21 +56,21 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="h-9 w-9 flex items-center justify-center rounded-lg border border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
+                className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
               >
                 <Globe className="h-4 w-4" />
               </a>
               <a
                 href="#"
                 aria-label="Twitter / X"
-                className="h-9 w-9 flex items-center justify-center rounded-lg border border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
+                className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
               <a
                 href="mailto:hello@voltscale.com"
                 aria-label="Email"
-                className="h-9 w-9 flex items-center justify-center rounded-lg border border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
+                className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
               >
                 <Mail className="h-4 w-4" />
               </a>

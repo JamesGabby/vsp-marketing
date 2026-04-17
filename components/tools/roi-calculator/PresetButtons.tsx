@@ -27,7 +27,7 @@ export function PresetButtons({ active, onSelect }: PresetButtonsProps) {
             type="button"
             onClick={() => onSelect(key)}
             className={cn(
-              "rounded-lg border px-4 py-2 text-sm font-medium transition-colors",
+              "rounded-lg border-2px-4 py-2 text-sm font-medium transition-colors",
               active === key
                 ? "border-[--volt] bg-[--volt-glow] text-[--volt]"
                 : "border-[--border] text-[--text-secondary] hover:border-[--volt] hover:text-[--volt] hover:bg-[--volt-glow]"

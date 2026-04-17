@@ -97,9 +97,9 @@ export function ServicesGrid() {
               <motion.div
                 key={service.title}
                 variants={cardVariants}
-                className="group rounded-2xl border border-[--border] bg-[--surface] p-6 hover:border-[--volt]/40 hover:bg-[--volt-glow] transition-all duration-300 shadow-sm dark:shadow-none"
+                className="group rounded-2xl border-2 border-[--border] bg-[--surface] p-6 hover:border-[--volt]/40 hover:bg-[--volt-glow] transition-all duration-300 shadow-sm dark:shadow-none"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border border-[--border] group-hover:border-[--volt]/40 transition-colors">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border] group-hover:border-[--volt]/40 transition-colors">
                   <Icon className="h-5 w-5 text-[--volt]" />
                 </div>
                 <h3 className="text-base font-bold text-[--text-primary] mb-2 tracking-tight">

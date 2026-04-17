@@ -15,7 +15,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--border] bg-[--surface] px-4 py-1.5 text-xs font-medium text-[--text-secondary]"
+            className="mb-6 inline-flex items-center gap-1.5 rounded-full border-2 border-[--border] bg-[--surface] pl-2.5 pr-4 py-1.5 text-xs font-medium leading-none text-[--text-secondary]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
             B2B Outbound Agency

@@ -76,10 +76,10 @@ export default function ToolsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
-                className="rounded-2xl border border-[--border] bg-[--surface] p-6 opacity-60 pointer-events-none select-none shadow-sm dark:shadow-none"
+                className="rounded-2xl border-2 border-[--border] bg-[--surface] p-6 opacity-60 pointer-events-none select-none shadow-sm dark:shadow-none"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border border-[--border]">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border]">
                     <Icon className="h-5 w-5 text-[--text-muted]" />
                   </div>
                   <Badge variant="muted">Coming Soon</Badge>
@@ -102,7 +102,7 @@ export default function ToolsPage() {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="max-w-md mx-auto text-center"
         >
-          <div className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--surface] border border-[--border] mx-auto">
+          <div className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--surface] border-2 border-[--border] mx-auto">
             <Bell className="h-5 w-5 text-[--volt]" />
           </div>
           <h2 className="text-xl font-bold text-[--text-primary] mb-2 mt-3">
@@ -112,7 +112,7 @@ export default function ToolsPage() {
             Drop your email and we&apos;ll let you know the moment they&apos;re live.
           </p>
           {submitted ? (
-            <div className="rounded-lg border border-[--volt]/40 bg-[--volt-glow] px-5 py-4 text-sm font-medium text-[--volt]">
+            <div className="rounded-lg border-2 border-[--volt]/40 bg-[--volt-glow] px-5 py-4 text-sm font-medium text-[--volt]">
               You&apos;re on the list — we&apos;ll be in touch.
             </div>
           ) : (

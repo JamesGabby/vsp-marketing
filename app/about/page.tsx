@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Zap, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -41,8 +42,8 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-20"
         >
-          <div className="mb-6 inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-[--surface] border border-[--border]">
-            <Zap className="h-7 w-7 text-[--volt]" fill="currentColor" />
+          <div className="mb-6 inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-[--surface] border-2 border-[--border]">
+            <Image src="/vs.png" alt="VoltScale Partners" height={56} width={56} priority />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-6">
             About <span className="text-[--volt]">VoltScale Partners</span>
@@ -78,7 +79,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="rounded-2xl border border-[--border] bg-[--surface] p-6 shadow-sm dark:shadow-none"
+                className="rounded-2xl border-2 border-[--border] bg-[--surface] p-6 shadow-sm dark:shadow-none"
               >
                 <div className="mb-2 h-1 w-8 rounded-full bg-[--volt]" />
                 <h3 className="text-base font-bold text-[--text-primary] mb-2 tracking-tight">
@@ -87,47 +88,6 @@ export default function AboutPage() {
                 <p className="text-sm text-[--text-secondary] leading-relaxed">
                   {v.description}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Team */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-20"
-        >
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[--text-primary] mb-8 text-center">
-            The Team
-          </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamPlaceholders.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="flex flex-col items-center text-center gap-3"
-              >
-                {/* Avatar placeholder */}
-                <div className="h-20 w-20 rounded-2xl bg-[--surface] border border-[--border] flex items-center justify-center">
-                  <span
-                    className="text-lg font-bold text-[--volt]"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    {member.initials}
-                  </span>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[--text-primary]">
-                    {member.name}
-                  </p>
-                  <p className="text-xs text-[--text-muted]">{member.role}</p>
-                </div>
               </motion.div>
             ))}
           </div>

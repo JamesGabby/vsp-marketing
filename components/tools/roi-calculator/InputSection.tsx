@@ -15,7 +15,7 @@ export function InputSection({ title, defaultOpen = true, children }: InputSecti
   const [open, setOpen] = useState(defaultOpen)
 
   return (
-    <div className="rounded-2xl border border-[--border] bg-[--surface] overflow-hidden">
+    <div className="rounded-2xl border-2 border-[--border] bg-[--surface] overflow-hidden">
       <button
         type="button"
         onClick={() => setOpen(!open)}
