@@ -1,0 +1,369 @@
+export type ContentBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "list"; items: string[] }
+
+export type BlogPost = {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  readTime: string
+  publishedAt: string
+  author: string
+  content: ContentBlock[]
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "why-cold-email-fails",
+    title: "Why Most Cold Email Campaigns Fail (And How to Fix Them)",
+    excerpt:
+      "The problem isn't cold email itself — it's how it's being executed. Here's the framework that separates campaigns that book meetings from ones that land in spam.",
+    category: "Cold Email",
+    readTime: "6 min read",
+    publishedAt: "2026-03-18",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "Cold email has a reputation problem. Talk to most sales leaders and they'll tell you their team 'tried it' and it didn't work. But when you dig into what they actually did, the pattern is always the same: generic templates, no personalization, wrong targeting, or broken deliverability. The channel isn't broken — the execution is.",
+      },
+      {
+        type: "heading",
+        text: "The Real Reasons Cold Email Fails",
+      },
+      {
+        type: "paragraph",
+        text: "In our analysis of hundreds of outbound campaigns, failures almost always come down to one of five root causes: a misidentified ICP, generic messaging that sounds like everyone else, deliverability issues sending emails to spam, unverified lists with bounce rates over 5%, or giving up too early before the system matures.",
+      },
+      {
+        type: "heading",
+        text: "Start With the ICP — Not the Template",
+      },
+      {
+        type: "paragraph",
+        text: "The single biggest predictor of cold email success isn't your subject line — it's how precisely you've defined who you're targeting. 'Series B SaaS companies that recently hired a VP of Sales and run Salesforce' will dramatically outperform 'software companies with 50–200 employees.' Specificity is what makes your message relevant, and relevance is what drives replies.",
+      },
+      {
+        type: "heading",
+        text: "Deliverability Is the Foundation",
+      },
+      {
+        type: "paragraph",
+        text: "You can write the best cold email in the world and it won't matter if it lands in spam. Proper infrastructure — dedicated sending domains, SPF/DKIM/DMARC configuration, gradual warmup, and inbox rotation — is non-negotiable. Most campaigns that 'don't work' have never actually been seen by a human. Fix the foundation before you touch copy.",
+      },
+      {
+        type: "heading",
+        text: "Make It Sound Human",
+      },
+      {
+        type: "paragraph",
+        text: "The easiest way to get deleted is to make it obvious your email was sent to 10,000 people. Reference something specific about the prospect's company — a recent funding round, a job posting that signals a problem you solve, a LinkedIn post they wrote. One genuine line of personalization changes the entire tone from 'blast' to 'targeted.'",
+      },
+      {
+        type: "heading",
+        text: "The Follow-Up Is Where Deals Live",
+      },
+      {
+        type: "paragraph",
+        text: "Most positive replies don't come from the first email — they come from follow-ups 2 through 5. Persistence with value beats persistence with pressure. Each follow-up should add something new: a different angle, a relevant case study, or a direct question. Don't just bump your previous message.",
+      },
+      {
+        type: "paragraph",
+        text: "Cold email works when it's done with precision. The campaigns that fail treat it like a numbers game. The ones that succeed treat it like a conversation starter with a well-researched prospect.",
+      },
+    ],
+  },
+  {
+    slug: "icp-research-framework",
+    title: "The ICP Research Framework That Books 50+ Meetings a Month",
+    excerpt:
+      "Most ICPs are built on assumptions. Here's how to build one on evidence — using firmographic, technographic, and behavioral signals that actually predict conversion.",
+    category: "Strategy",
+    readTime: "7 min read",
+    publishedAt: "2026-03-04",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "An Ideal Customer Profile is the single most important asset in outbound sales. Get it right and every downstream activity — targeting, copywriting, sequencing — becomes dramatically easier. Get it wrong and you're burning budget on prospects who were never going to buy.",
+      },
+      {
+        type: "heading",
+        text: "The Problem With Most ICPs",
+      },
+      {
+        type: "paragraph",
+        text: "Most ICPs are built in a meeting room by people who haven't talked to a customer in six months. They describe who the company would like to sell to, not who actually buys. The result is a profile full of obvious criteria — 'mid-market SaaS, 100–500 employees' — that describes thousands of companies with wildly different conversion rates.",
+      },
+      {
+        type: "heading",
+        text: "Layer 1: Firmographic Signals",
+      },
+      {
+        type: "paragraph",
+        text: "Start with the basics — company size, industry, geography, revenue. But don't stop there. Look at growth stage, funding history, and headcount trajectory. A company that raised a Series B six months ago and is growing headcount 40% year-over-year is a fundamentally different prospect than one that's been flat for two years, even if they're the same size.",
+      },
+      {
+        type: "heading",
+        text: "Layer 2: Technographic Signals",
+      },
+      {
+        type: "paragraph",
+        text: "What tools a company uses tells you how they operate and what problems they likely have. If you sell a Salesforce integration, companies that have recently adopted Salesforce are a priority. If you sell a hiring tool, companies posting a surge of job listings on LinkedIn are in an active growth phase. Tools like BuiltWith, Clearbit, and Bombora surface this data at scale.",
+      },
+      {
+        type: "heading",
+        text: "Layer 3: Behavioral Signals",
+      },
+      {
+        type: "list",
+        items: [
+          "Recent LinkedIn content about a problem your product solves",
+          "Job postings that indicate a gap you fill (e.g., hiring their first SDR team)",
+          "Conference attendance or speaking engagements in your space",
+          "News coverage of challenges relevant to your solution",
+          "Competitive tool adoption — switching from a competitor to you",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Validate With Your Best Customers",
+      },
+      {
+        type: "paragraph",
+        text: "Look at your 10 best-fit customers — the ones that closed fastest, had the highest ACV, and churned least. What do they have in common beyond the obvious? What were they experiencing right before they bought? Who internally championed the deal? The answers will reveal patterns your ICP framework is probably missing.",
+      },
+      {
+        type: "paragraph",
+        text: "A great ICP isn't a one-time exercise. It should evolve as you close more deals and gather more data. Treat it as a living document and revisit it every quarter.",
+      },
+    ],
+  },
+  {
+    slug: "deliverability-guide-2026",
+    title: "Cold Email Deliverability: The Complete 2026 Guide",
+    excerpt:
+      "Inbox placement is the single most underrated lever in outbound. This guide covers everything — domain setup, warmup, sending limits, and how to monitor your reputation.",
+    category: "Deliverability",
+    readTime: "9 min read",
+    publishedAt: "2026-02-19",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "You can have the best copy in the world and a hyper-targeted list, but if your emails are landing in spam, none of it matters. Deliverability is the unsexy foundation that everything else sits on — and it's where most campaigns quietly die before anyone notices.",
+      },
+      {
+        type: "heading",
+        text: "Never Send From Your Primary Domain",
+      },
+      {
+        type: "paragraph",
+        text: "Your primary domain is a business asset. If it gets flagged for spam, your entire company's email — including customer comms, transactional emails, and internal communication — suffers. Always use dedicated sending domains for outbound. Register variations like your-company.io or yourbrand.co and configure them separately.",
+      },
+      {
+        type: "heading",
+        text: "The Essential DNS Configuration",
+      },
+      {
+        type: "list",
+        items: [
+          "SPF: Lists which servers are authorised to send email from your domain",
+          "DKIM: Adds a cryptographic signature to verify the email wasn't tampered with",
+          "DMARC: Tells recipient servers what to do if SPF or DKIM fails",
+          "MX Records: Required even on sending-only domains to handle bounces properly",
+          "Custom tracking domain: Removes shared tracking domains that damage reputation",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Domain Warmup: The Right Way",
+      },
+      {
+        type: "paragraph",
+        text: "A new domain has zero sending history and zero trust. Start with 5–10 emails per day per mailbox in week one, increasing by 10–20% each week. Use a warmup tool like Lemlist, Instantly, or Mailreach to automate inbox-to-inbox warmup activity. Run warmup for at least 3–4 weeks before sending any real campaigns.",
+      },
+      {
+        type: "heading",
+        text: "Sending Limits That Don't Kill Your Reputation",
+      },
+      {
+        type: "paragraph",
+        text: "Even a well-warmed domain has limits. Industry best practice is a maximum of 30–50 cold emails per mailbox per day. If you need more volume, add more mailboxes — not more emails per mailbox. Spread sends across multiple hours to mimic human behaviour, and avoid sending on weekends.",
+      },
+      {
+        type: "heading",
+        text: "List Hygiene Is Non-Negotiable",
+      },
+      {
+        type: "paragraph",
+        text: "Bounce rates above 3–5% signal to email providers that you're sending to bad data. Verify every list before sending using tools like NeverBounce, ZeroBounce, or Hunter's email verifier. Remove hard bounces immediately, and suppress unsubscribes and complaint addresses from all future sends.",
+      },
+      {
+        type: "heading",
+        text: "Monitoring Your Reputation",
+      },
+      {
+        type: "paragraph",
+        text: "Set up Google Postmaster Tools and monitor your domain reputation weekly. Check your IP against major blacklists using MXToolbox. Use a seed-list tool to track where your emails are landing — inbox, promotions, or spam — across major email clients. If inbox rates drop below 80%, pause and investigate before continuing to send.",
+      },
+      {
+        type: "paragraph",
+        text: "Deliverability isn't a one-time setup. It's ongoing maintenance. Treat it like infrastructure, not an afterthought, and it becomes a competitive advantage.",
+      },
+    ],
+  },
+  {
+    slug: "linkedin-outbound-beyond-connection-requests",
+    title: "LinkedIn Outbound: Why Connection Requests Are Just the Beginning",
+    excerpt:
+      "LinkedIn is far more powerful than most people use it. Here's how to layer voice notes, engagement, content signals, and InMail into a channel that books real meetings.",
+    category: "LinkedIn",
+    readTime: "5 min read",
+    publishedAt: "2026-02-05",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "Most people's LinkedIn outbound strategy is: send a connection request, wait for acceptance, send a pitch. It's the digital equivalent of walking up to someone at a networking event and immediately asking for their business card. No context, no warmth, no reason to say yes.",
+      },
+      {
+        type: "heading",
+        text: "LinkedIn's Unique Advantage",
+      },
+      {
+        type: "paragraph",
+        text: "LinkedIn gives you something cold email can't: social proof and ambient presence. When a prospect sees your content, your mutual connections, and your endorsements before they ever receive a message from you, the message lands in an entirely different context. Warm beats cold every time.",
+      },
+      {
+        type: "heading",
+        text: "The Pre-Connection Sequence",
+      },
+      {
+        type: "paragraph",
+        text: "Before sending a connection request, spend a week engaging with your target's content. Like their posts, leave a thoughtful comment, share something they'd find relevant. By the time your connection request arrives, they've seen your name two or three times. Acceptance rates go from 20% to 60%+.",
+      },
+      {
+        type: "heading",
+        text: "Voice Notes Change Everything",
+      },
+      {
+        type: "paragraph",
+        text: "LinkedIn's voice note feature is massively underused. A 30-second voice note after a connection is accepted has dramatically higher open and response rates than a text message. It's human, it's personal, and it stands out in an inbox full of copy-pasted pitches. Keep it conversational — no scripts.",
+      },
+      {
+        type: "heading",
+        text: "Content Signals as Trigger Events",
+      },
+      {
+        type: "paragraph",
+        text: "When a prospect posts about a challenge your product solves, that's a trigger event. When they announce a promotion, a new hire, or a company milestone — those are trigger events. Reaching out in direct response to something they shared is as close to warm outreach as cold outbound gets. Your message becomes 'I saw what you posted and it reminded me of…' instead of 'I hope this finds you well.'",
+      },
+      {
+        type: "heading",
+        text: "Layering LinkedIn Into a Multi-Channel Sequence",
+      },
+      {
+        type: "list",
+        items: [
+          "Day 1: Engage with prospect's recent content (like/comment)",
+          "Day 3: Send personalised connection request referencing shared interest",
+          "Day 5: Voice note after connection is accepted — brief intro, no pitch",
+          "Day 8: First LinkedIn message — one question, no attachments",
+          "Day 10: First cold email referencing the LinkedIn connection",
+          "Day 14: Follow-up email with a relevant insight or case study",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "LinkedIn and email reinforce each other. The prospect sees you in two places, hears a human voice, and receives a message that references real context. That's the difference between being ignored and getting a reply.",
+      },
+    ],
+  },
+  {
+    slug: "multi-channel-outbound-orchestration",
+    title: "Multi-Channel Outbound: How to Orchestrate Email, LinkedIn, and Calling",
+    excerpt:
+      "Single-channel outbound is a race to the bottom. Here's how the best teams layer channels into a coherent sequence where every touchpoint builds on the last.",
+    category: "Strategy",
+    readTime: "8 min read",
+    publishedAt: "2026-01-22",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "The era of cold email as a standalone outbound channel is over. Inbox noise is at an all-time high, LinkedIn connection acceptance rates have dropped, and cold calls are answered less than ever. But here's the thing: none of those channels are dead. What's dead is using any single one in isolation.",
+      },
+      {
+        type: "heading",
+        text: "Why Multi-Channel Wins",
+      },
+      {
+        type: "paragraph",
+        text: "Research consistently shows that prospects need between 7 and 12 meaningful touchpoints before they engage with an unknown vendor. A single-channel sequence maxes out at 5–6 touchpoints before it becomes harassment. Multi-channel lets you reach the same number of touchpoints across different contexts, different days, and different moods — without wearing out any single channel.",
+      },
+      {
+        type: "heading",
+        text: "The Channel Stack",
+      },
+      {
+        type: "list",
+        items: [
+          "Email: High volume, asynchronous, easy to personalise at scale",
+          "LinkedIn: Social proof, warm context, voice note capability",
+          "Cold calling: Synchronous, immediate qualification, human connection",
+          "Direct mail: Extremely high open rates, stands out in a digital world",
+          "Video prospecting: Personal, memorable, difficult to ignore",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Sequencing Principle: Each Touch Builds on the Last",
+      },
+      {
+        type: "paragraph",
+        text: "The mistake most teams make is treating each channel as independent. Instead, each touchpoint should reference or build on the previous one. 'I mentioned in my LinkedIn message last week…' or 'I sent you an email on Tuesday about this — calling to make sure it didn't get buried.' This creates continuity and makes you sound organised, not scattered.",
+      },
+      {
+        type: "heading",
+        text: "Timing and Spacing",
+      },
+      {
+        type: "paragraph",
+        text: "Aggressive spacing — multiple touches in a single week — works in short, high-urgency campaigns. But for most enterprise or mid-market sequences, spacing touches 2–4 days apart over 3–4 weeks gives prospects enough time to see your messages without feeling bombarded. Map your sequence against your average sales cycle — the tighter the cycle, the tighter the sequence.",
+      },
+      {
+        type: "heading",
+        text: "What to Measure",
+      },
+      {
+        type: "paragraph",
+        text: "Track reply rates and meeting rates by channel, by sequence step, and by segment. If email step 3 has a 0.5% reply rate but LinkedIn step 2 has a 12% reply rate, reorder the sequence. Multi-channel only works if you're constantly optimising based on what's actually performing — not what you assumed would work when you built the sequence.",
+      },
+      {
+        type: "paragraph",
+        text: "The teams that win at outbound in 2026 aren't the ones with the best cold email. They're the ones that show up in the right place, at the right time, with the right message — across every channel a prospect uses.",
+      },
+    ],
+  },
+]
+
+export function getAllPosts(): BlogPost[] {
+  return [...blogPosts].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  )
+}
+
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug)
+}
+
+export function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })
+}
