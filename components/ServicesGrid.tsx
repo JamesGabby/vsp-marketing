@@ -73,6 +73,9 @@ export function ServicesGrid() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+            What We Do
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
             Outbound,{" "}
             <span className="text-[--volt]">Engineered.</span>
@@ -99,7 +102,7 @@ export function ServicesGrid() {
                 variants={cardVariants}
                 className="group rounded-2xl border-2 border-[--border] bg-[--surface] p-6 hover:border-[--volt]/40 hover:bg-[--volt-glow] transition-all duration-300 shadow-sm dark:shadow-none"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border] group-hover:border-[--volt]/40 transition-colors">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--volt-glow] border border-[--volt]/20 group-hover:bg-[--volt]/15 group-hover:border-[--volt]/40 transition-colors">
                   <Icon className="h-5 w-5 text-[--volt]" />
                 </div>
                 <h3 className="text-base font-bold text-[--text-primary] mb-2 tracking-tight">

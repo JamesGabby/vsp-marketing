@@ -42,8 +42,13 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-20"
         >
-          <div className="mb-6 inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-[--surface] border-2 border-[--border]">
-            <Image src="/vs.png" alt="VoltScale Partners" height={56} width={56} priority />
+          <div className="flex flex-col items-center gap-4 mb-6">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+              Our Story
+            </div>
+            <div className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-[--volt-glow] border border-[--volt]/20">
+              <Image src="/vs.png" alt="VoltScale Partners" height={56} width={56} priority />
+            </div>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-6">
             About <span className="text-[--volt]">VoltScale Partners</span>
@@ -68,9 +73,14 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[--text-primary] mb-8 text-center">
-            How We Think
-          </h2>
+          <div className="text-center mb-8">
+            <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+              Our Values
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[--text-primary]">
+              How We Think
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v, i) => (
               <motion.div
@@ -79,9 +89,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="rounded-2xl border-2 border-[--border] bg-[--surface] p-6 shadow-sm dark:shadow-none"
+                className="rounded-2xl border-2 border-[--border] bg-[--surface] p-6 shadow-sm dark:shadow-none hover:border-[--volt]/40 hover:bg-[--volt-glow] transition-all duration-300"
               >
-                <div className="mb-2 h-1 w-8 rounded-full bg-[--volt]" />
+                <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-lg bg-[--volt] text-[--volt-foreground] text-sm font-bold" style={{ fontFamily: "var(--font-mono)" }}>
+                  0{i + 1}
+                </div>
                 <h3 className="text-base font-bold text-[--text-primary] mb-2 tracking-tight">
                   {v.title}
                 </h3>

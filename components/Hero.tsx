@@ -15,7 +15,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-1.5 rounded-full border-2 border-[--border] bg-[--surface] pl-2.5 pr-4 py-1.5 text-xs font-medium leading-none text-[--text-secondary]"
+            className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
             B2B Outbound Agency
@@ -49,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Button asChild size="lg">
               <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
@@ -63,6 +63,21 @@ export function Hero() {
                 <ChevronDown className="h-4 w-4" />
               </a>
             </Button>
+          </motion.div>
+
+          {/* Trust strip */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
+          >
+            {["No long-term contracts", "Results in 30 days", "Cancel any time"].map((item) => (
+              <span key={item} className="flex items-center gap-1.5">
+                <span className="h-1 w-1 rounded-full bg-[--volt]" />
+                {item}
+              </span>
+            ))}
           </motion.div>
         </div>
       </div>

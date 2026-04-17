@@ -11,14 +11,16 @@ const metrics = [
 
 export function MetricsBar() {
   return (
-    <section className="border-y border-[--border] bg-[--surface]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+    <section className="relative border-y border-[--border] bg-[--surface] overflow-hidden">
+      {/* Volt gradient accent */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[--volt-glow] to-transparent pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 divide-x-0 lg:divide-x divide-[--border]"
         >
           {metrics.map((metric, i) => (
             <motion.div
@@ -27,7 +29,7 @@ export function MetricsBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex flex-col items-center text-center gap-1"
+              className="flex flex-col items-center text-center gap-1.5 px-6 py-2"
             >
               <span
                 className="text-3xl sm:text-4xl font-bold text-[--volt]"

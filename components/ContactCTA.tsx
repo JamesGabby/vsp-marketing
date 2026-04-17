@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 export function ContactCTA() {
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[--surface]">
+    <section id="contact" className="relative py-24 lg:py-32 bg-[--surface] overflow-hidden volt-section">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top CTA block */}
         <motion.div
@@ -19,6 +19,9 @@ export function ContactCTA() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+            Get Started
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
             Ready to Build{" "}
             <span className="text-[--volt]">Predictable Pipeline?</span>
@@ -50,7 +53,7 @@ export function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="max-w-xl mx-auto flex flex-col gap-4"
+          className="max-w-xl mx-auto flex flex-col gap-4 rounded-2xl border-2 border-[--border] bg-[--background] p-6 sm:p-8 shadow-sm dark:shadow-none"
           onSubmit={(e) => e.preventDefault()}
           aria-label="Contact form"
         >

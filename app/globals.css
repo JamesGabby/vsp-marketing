@@ -122,10 +122,16 @@ body {
 .hero-bg {
   background-color: var(--background);
   background-image:
-    radial-gradient(ellipse 90% 55% at 50% 0%, var(--volt-glow) 0%, transparent 65%),
+    radial-gradient(ellipse 100% 65% at 50% 0%, var(--volt-glow) 0%, transparent 70%),
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 100% 100%, 64px 64px, 64px 64px;
+}
+
+/* ─── Section volt accent background ────────────────────────────────── */
+
+.volt-section {
+  background-image: radial-gradient(ellipse 80% 50% at 50% 0%, var(--volt-glow) 0%, transparent 65%);
 }
 
 /* ─── Focus visible ring ─────────────────────────────────────────────── */

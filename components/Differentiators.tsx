@@ -42,6 +42,9 @@ export function Differentiators() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+              Why VoltScale
+            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
               Not Your Typical{" "}
               <span className="text-[--volt]">Lead Gen Shop</span>
@@ -50,10 +53,10 @@ export function Differentiators() {
               Most agencies measure success by activity. We measure it by revenue
               impact — and we're built top to bottom to deliver that.
             </p>
-            {/* Visual accent — horizontal rule with volt dot */}
+            {/* Visual accent */}
             <div className="flex items-center gap-3">
-              <div className="h-px flex-1 bg-[--border]" />
-              <div className="h-2 w-2 rounded-full bg-[--volt]" />
+              <div className="h-px w-12 bg-[--volt]" />
+              <div className="h-1.5 w-1.5 rounded-full bg-[--volt]" />
               <div className="h-px flex-1 bg-[--border]" />
             </div>
           </motion.div>
@@ -77,7 +80,7 @@ export function Differentiators() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="rounded-xl border-2 border-[--border] bg-[--surface] p-5 shadow-sm dark:shadow-none hover:border-[--volt]/40 hover:bg-[--volt-glow] transition-all duration-300"
                 >
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[--background] border-2 border-[--border]">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[--volt-glow] border border-[--volt]/20">
                     <Icon className="h-4 w-4 text-[--volt]" />
                   </div>
                   <h3 className="text-sm font-bold text-[--text-primary] mb-1.5 tracking-tight">

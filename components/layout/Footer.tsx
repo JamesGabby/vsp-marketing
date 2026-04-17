@@ -12,7 +12,9 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[--border] bg-[--surface]">
+    <footer className="relative border-t border-[--border] bg-[--surface]">
+      {/* Volt gradient accent at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[--volt]/50 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}

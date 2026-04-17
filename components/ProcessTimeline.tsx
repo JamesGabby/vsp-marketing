@@ -47,6 +47,9 @@ export function ProcessTimeline() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+            How It Works
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
             Our <span className="text-[--volt]">Process</span>
           </h2>
@@ -60,7 +63,7 @@ export function ProcessTimeline() {
         <div className="relative">
           {/* Connector line — hidden on mobile */}
           <div
-            className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-[--border]"
+            className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[--volt]/40 to-transparent"
             aria-hidden="true"
           />
 
@@ -75,13 +78,13 @@ export function ProcessTimeline() {
                 className="relative flex flex-col"
               >
                 {/* Mobile: left-border accent */}
-                <div className="lg:hidden absolute left-0 top-0 bottom-0 w-px bg-[--border]" />
+                <div className="lg:hidden absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[--volt]/60 to-[--volt]/10" />
 
                 {/* Step number bubble */}
                 <div className="relative z-10 mb-4 lg:mb-6 self-start lg:self-center pl-6 lg:pl-0">
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border] lg:mx-auto">
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[--volt] lg:mx-auto shadow-sm">
                     <span
-                      className="text-lg font-bold text-[--volt]"
+                      className="text-lg font-bold text-[--volt-foreground]"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {step.number}
