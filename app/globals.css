@@ -101,6 +101,14 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
+
+  /* Animations */
+  --animate-float: vspfloat 2.5s ease-in-out infinite;
+
+  @keyframes vspfloat {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-7px); }
+  }
 }
 
 /* ─── Base styles ────────────────────────────────────────────────────── */

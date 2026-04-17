@@ -113,12 +113,14 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <Button asChild size="lg">
-            <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
-              Work With Us
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
+            <Button asChild size="lg">
+              <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
+                Work With Us
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </div>
