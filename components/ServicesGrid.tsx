@@ -27,7 +27,7 @@ const services = [
     icon: PenLine,
     title: "Copywriting That Converts",
     description:
-      "Our emails sound like a human wrote them because a human did. Personalized using real research, leading with pain points, not product pitches.",
+      "We built our own personalisation engine in-house using Python and Claude AI. It researches each prospect the way a good SDR would — their site, LinkedIn, recent announcements — then drafts a line that reads like a human wrote it. Because we control the whole pipeline, we tune the research logic to your ICP, your offer, and your tone. Every lead comes with a reason-to-reach-out that's actually specific to that person — not a mail-merged \"I saw you work at {{company}}\".",
   },
   {
     icon: ShieldCheck,
