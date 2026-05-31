@@ -5,33 +5,33 @@ import { motion } from "framer-motion"
 const steps = [
   {
     number: "01",
-    title: "Discovery & ICP Workshop",
+    title: "ICP Definition & Engine Training",
     description:
-      "Deep-dive into your business, customers, and competitive landscape. We leave with a crystal-clear picture of who we're targeting and why they'll care.",
+      "We work closely with you to define your ideal customer profile down to firmographic, technographic, and behavioral signals. We then train the qualification engine specifically on your ICP and offer.",
   },
   {
     number: "02",
-    title: "Infrastructure Setup",
+    title: "Lead List Building & Verification",
     description:
-      "Dedicated domains, mailboxes, warmup, tech stack configured for maximum deliverability. We don't send a single email until the foundation is solid.",
+      "We scrape leads matching your ICP across multiple data sources, cross-reference them, and double-verify every email address before anything enters the engine. Clean data is non-negotiable.",
   },
   {
     number: "03",
-    title: "Campaign Build",
+    title: "AI Qualification & Deep Research",
     description:
-      "Copywriting, sequencing, audience segmentation, channel strategy. Every message is crafted with the target persona in mind — not a template.",
+      "Our AI agent researches each prospect across multiple sources, detects buying signals relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
   },
   {
     number: "04",
-    title: "Launch & Iterate",
+    title: "Infrastructure Setup & Outreach",
     description:
-      "Go live, monitor performance, A/B test relentlessly, optimize weekly. Outbound is a living system, not a set-and-forget campaign.",
+      "Dedicated sending domains, expert DNS config, inbox warm-up, and daily health monitoring — so emails always land in the primary inbox. We then run personalised, research-based outreach to every qualified prospect.",
   },
   {
     number: "05",
-    title: "Scale & Expand",
+    title: "Inbox Management & Handoffs",
     description:
-      "Double down on what works, expand into new segments and channels. When something converts, we build on it systematically.",
+      "We handle all replies and back-and-forth with interested leads, book them directly onto your calendar, and provide full context on each prospect. You just show up and close.",
   },
 ]
 

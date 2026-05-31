@@ -19,9 +19,9 @@ const services = [
   },
   {
     icon: Network,
-    title: "Multi-Channel Orchestration",
+    title: "Cold Email — Our Core Speciality",
     description:
-      "Cold email alone doesn't cut it. We layer email, LinkedIn (connections, voice notes, engagement), cold calling, and direct mail — sequenced so every touch reinforces the last.",
+      "Cold email is the channel we've engineered from the ground up. Our AI qualification and personalisation engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out — not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
   },
   {
     icon: PenLine,

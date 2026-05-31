@@ -39,9 +39,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            VoltScale Partners is a B2B outbound agency that books qualified meetings
-            with your ideal customers — through precision targeting, human-sounding
-            outreach, and multi-channel orchestration.
+            VoltScale Partners uses an AI-powered qualification and personalisation engine to book meetings with highly qualified leads — through deep ICP research, buying signal detection, and human-sounding cold email outreach built for your exact market.
           </motion.p>
 
           {/* CTAs */}
@@ -74,7 +72,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
           >
-            {["No long-term contracts", "Results in 30 days", "Cancel any time"].map((item) => (
+            {["No long-term contracts", "Pay per qualified meeting held", "15 meetings in 90 days — guaranteed"].map((item) => (
               <span key={item} className="flex items-center gap-1.5">
                 <span className="h-1 w-1 rounded-full bg-[--volt]" />
                 {item}

@@ -55,9 +55,12 @@ export function ContactCTA() {
             Ready to Build{" "}
             <span className="text-[--volt]">Predictable Pipeline?</span>
           </h2>
-          <p className="text-lg text-[--text-secondary] leading-relaxed mb-8">
+          <p className="text-lg text-[--text-secondary] leading-relaxed mb-6">
             Stop guessing where your next customer will come from. Let&apos;s build
             an outbound engine that fills your calendar with qualified conversations.
+          </p>
+          <p className="text-sm text-[--text-secondary] leading-relaxed mb-8">
+            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> a small monthly fee to cover tech and tooling, then you only pay per qualified meeting that takes place. No hefty retainers.
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
             <Button asChild size="lg">
@@ -67,6 +70,9 @@ export function ContactCTA() {
               </Link>
             </Button>
           </div>
+          <p className="mt-4 text-sm text-[--text-muted]">
+            We guarantee 15 qualified meetings within 90 days — or we keep working for free until we hit it.
+          </p>
         </motion.div>
 
         {/* Divider */}

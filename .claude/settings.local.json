@@ -13,7 +13,8 @@
       "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/apple-touch-icon.png\" /c/Users/gabbs/nextjs/vsp/app/)",
       "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon.ico\" /c/Users/gabbs/nextjs/vsp/app/)",
       "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon-16x16.png\" /c/Users/gabbs/nextjs/vsp/app/)",
-      "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon-32x32.png\" /c/Users/gabbs/nextjs/vsp/app/)"
+      "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon-32x32.png\" /c/Users/gabbs/nextjs/vsp/app/)",
+      "Bash(xargs grep *)"
     ]
   }
 }

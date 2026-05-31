@@ -7,7 +7,7 @@ import { Zap, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const teamPlaceholders = [
-  { initials: "JS", name: "Jamie Sullivan", role: "Founder & Head of Strategy" },
+  { initials: "JG", name: "James Gabbitus", role: "Founder & Head of Strategy" },
   { initials: "MR", name: "Morgan Reid", role: "Head of Outbound Operations" },
   { initials: "CC", name: "Casey Chen", role: "Lead Copywriter" },
   { initials: "DP", name: "Drew Parker", role: "Data & Enrichment Lead" },
@@ -54,14 +54,13 @@ export default function AboutPage() {
             About <span className="text-[--volt]">VoltScale Partners</span>
           </h1>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            VoltScale was built on a simple premise: most B2B companies have a great
-            product and a weak pipeline. Not because outbound doesn't work — but because
-            it&apos;s being done wrong.
+            I&apos;m James Gabbitus — founder of VoltScale Partners. I built this after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. I decided to build something better.
+          </p>
+          <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
+            With a technical background (MSc Computing), I spent months coding, testing, debugging, and iterating to build our AI-powered qualification and personalisation engine from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and writes research-based outreach that sounds like a human wrote it — because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
-            We exist to close that gap. We&apos;re a team of outbound specialists, data
-            nerds, and copywriters who care more about your revenue than your activity reports.
-            We don&apos;t measure success in emails sent — we measure it in meetings that close.
+            We don&apos;t measure success in emails sent. We measure it in qualified meetings held — and deals closed.
           </p>
         </motion.div>
 
