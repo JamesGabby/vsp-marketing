@@ -175,7 +175,9 @@ export default function CaseStudiesPage() {
 
                     <div className="mt-auto pt-4">
                       <Link
-                        href="/contact"
+                        href="https://calendly.com/voltscalepartners/15mins"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-[--volt] hover:gap-2.5 transition-all"
                       >
                         Get similar results <ArrowRight className="h-3.5 w-3.5" />
