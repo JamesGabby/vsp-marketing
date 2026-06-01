@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <Hero />
       <MetricsBar />
-      {/* <VSLVideo /> */}
+      <VSLVideo />
       <ServicesGrid />
       <ProcessTimeline />
       <Differentiators />
