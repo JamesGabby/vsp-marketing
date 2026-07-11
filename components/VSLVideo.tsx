@@ -33,8 +33,8 @@ export function VSLVideo() {
           style={{ aspectRatio: "16 / 9" }}
         >
           <iframe
-            src="https://www.youtube.com/embed/anXOYHPu4Qc"
-            title="How We Fill Your Pipeline — VoltScale Partners"
+            src="https://youtu.be/9BKsPKEt6kw"
+            title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             className="absolute inset-0 h-full w-full"
