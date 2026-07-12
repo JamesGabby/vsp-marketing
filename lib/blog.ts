@@ -16,10 +16,92 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "inside-the-signal-engine",
+    title: "Inside the Signal Engine: How Every Prospect Gets Researched, Qualified, and Personalised Before We Ever Reach Out",
+    excerpt:
+      "Our personalisation engine has evolved. The Signal Engine researches every prospect across multiple data sources, verifies they genuinely fit your ICP, checks for buying signals, and produces research-based messaging for each one. No templates, no spray-and-pray.",
+    category: "Technology",
+    readTime: "7 min read",
+    publishedAt: "2026-07-08",
+    author: "VoltScale Team",
+    content: [
+      {
+        type: "paragraph",
+        text: "Earlier this year we wrote about why we stopped using Clay and built our own AI personalisation engine. That system solved one problem: turning real research into personalisation lines that actually sound like a human did their homework. But it left another problem untouched. It personalised every prospect on the list, whether or not that prospect deserved to be on the list in the first place. The Signal Engine is what it grew into: a single system that qualifies and personalises in one pass, so that every prospect we contact has been researched, verified, and greenlit before a single email goes out.",
+      },
+      {
+        type: "heading",
+        text: "The Problem With Personalising Everyone",
+      },
+      {
+        type: "paragraph",
+        text: "A beautifully personalised email to the wrong prospect is still a wasted send. Worse, it's a wasted send that looks like effort. Most outbound teams treat qualification and personalisation as separate stages, often handled by separate tools, and the result is a leaky funnel: the list gets built against loose criteria, then the personalisation layer dutifully writes a clever line for every row, including the companies that were never going to buy. The research needed to personalise a prospect well is the same research that tells you whether they're worth contacting at all. It made no sense to keep those jobs apart.",
+      },
+      {
+        type: "heading",
+        text: "How the Signal Engine Works",
+      },
+      {
+        type: "paragraph",
+        text: "The workflow is deliberately simple from the outside. We feed the engine a prospect list and train it on the client's ICP: who they sell to, what problem they solve, what a genuinely good-fit account looks like, and just as importantly, what a bad one looks like. From there, the engine takes over. It researches each prospect across multiple data sources, verifies they actually fit the ICP, looks for active buying signals, and produces research-based personalised messaging for every prospect that makes the cut.",
+      },
+      {
+        type: "heading",
+        text: "Step 1: Verify the ICP Fit",
+      },
+      {
+        type: "paragraph",
+        text: "Every list has noise in it. Companies that matched a filter but not the intent behind it. Job titles that sound right but sit in the wrong part of the org. The Signal Engine's first job is to catch these. Because it's trained on the specific ICP rather than a set of firmographic filters, it can reason about fit the way a good SDR would: not 'does this company have 50 to 200 employees' but 'is this actually the kind of business, at the kind of stage, with the kind of problem our client solves?' Prospects that fail this check don't get messaging. They get removed.",
+      },
+      {
+        type: "heading",
+        text: "Step 2: Look for Buying Signals",
+      },
+      {
+        type: "paragraph",
+        text: "Fitting the ICP means a prospect could buy. Buying signals suggest they might buy now. The engine looks for the signals that matter for the specific offer, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "Hiring activity that indicates a gap the offer fills, like a first SDR hire or a surge of sales roles",
+          "Recent funding, acquisitions, or leadership changes that typically precede new investment in growth",
+          "Tech stack changes and tool adoption relevant to the client's product",
+          "Public content: posts, interviews, or announcements that reveal a live priority or pain point",
+          "Company milestones such as new markets, new products, or rapid headcount growth",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Only prospects showing genuine fit and credible signals get greenlit. This is the opposite of spray-and-pray: the engine's job is as much about deciding who not to contact as it is about preparing the outreach for those who make it through.",
+      },
+      {
+        type: "heading",
+        text: "Step 3: Produce Research-Based Messaging",
+      },
+      {
+        type: "paragraph",
+        text: "For every greenlit prospect, the engine turns its research into personalised messaging that's specific to that person, that company, and the client's offer. To be precise about what that means: the engine doesn't send emails, and it doesn't write them end to end. It produces the research-backed personalised messaging for each prospect and adds it to the prospect list as a dedicated column, ready to be used in campaigns. That distinction matters. The messaging is grounded in what the research actually found, and a human retains full control over the final email that lands in someone's inbox.",
+      },
+      {
+        type: "heading",
+        text: "Why This Beats the Two-Tool Approach",
+      },
+      {
+        type: "paragraph",
+        text: "When qualification and personalisation share the same research, three things happen. First, the messaging gets sharper, because it can reference the same signal that justified the outreach in the first place. Second, list quality compounds, because every campaign starts from a set of prospects that have each been individually verified rather than bulk-filtered. Third, reply rates reflect both improvements at once: the right people, contacted for a reason they can recognise, with a message that demonstrates someone actually looked.",
+      },
+      {
+        type: "paragraph",
+        text: "The Signal Engine is the natural conclusion of the argument we made when we moved off Clay: enrichment gives you data, but outbound that converts requires judgement. Now that judgement is applied twice, once to decide whether a prospect should be contacted at all, and once to decide what would actually make them reply.",
+      },
+    ],
+  },
+  {
     slug: "why-we-built-our-own-ai-personalisation-engine",
     title: "Why We Stopped Using Clay and Built Our Own AI Personalisation Engine",
     excerpt:
-      "Clay, Apollo, and every other enrichment tool share the same fundamental flaw: they give you fields, not insight. Here's why we built our own personalisation engine from scratch — and what it actually produces.",
+      "Clay, Apollo, and every other enrichment tool share the same fundamental flaw: they give you fields, not insight. Here's why we built our own personalisation engine from scratch, and what it actually produces.",
     category: "Technology",
     readTime: "7 min read",
     publishedAt: "2026-04-14",
@@ -27,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Personalisation is the most cited fix for declining cold email response rates — and the most misunderstood. Every tool in the outbound stack now has an 'AI personalisation' feature. Most of them are doing something far simpler than they'd like you to think. And after running hundreds of campaigns and watching those features produce lines like 'I noticed VoltScale helps B2B companies scale their outbound — impressive stuff,' we decided to stop patching the problem and solve it.",
+        text: "Personalisation is the most cited fix for declining cold email response rates, and the most misunderstood. Every tool in the outbound stack now has an 'AI personalisation' feature. Most of them are doing something far simpler than they'd like you to think. And after running hundreds of campaigns and watching those features produce lines like 'I noticed VoltScale helps B2B companies scale their outbound. Impressive stuff,' we decided to stop patching the problem and solve it.",
       },
       {
         type: "heading",
@@ -35,11 +117,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Clay is genuinely impressive infrastructure. The waterfall enrichment, the breadth of data sources, the ability to build complex enrichment workflows — it's well-engineered. Apollo, Instantly's AI variables, Lemlist's liquid personalisation — they all offer something similar: the ability to pull structured data fields about a prospect and slot them into a template. Company name. Job title. Recent funding. LinkedIn headline. Number of employees.",
+        text: "Clay is genuinely impressive infrastructure. The waterfall enrichment, the breadth of data sources, the ability to build complex enrichment workflows. It's well-engineered. Apollo, Instantly's AI variables, and Lemlist's liquid personalisation all offer something similar: the ability to pull structured data fields about a prospect and slot them into a template. Company name. Job title. Recent funding. LinkedIn headline. Number of employees.",
       },
       {
         type: "paragraph",
-        text: "The problem is that personalisation-as-variable-substitution is still, at its core, a mail merge. The field changes. The logic doesn't. You're still working from a fixed template — you've just swapped out {{first_name}} for {{recent_funding_round}}. And prospects can tell. The resulting line reads like a system trying to seem human, not a human being.",
+        text: "The problem is that personalisation-as-variable-substitution is still, at its core, a mail merge. The field changes. The logic doesn't. You're still working from a fixed template; you've just swapped out {{first_name}} for {{recent_funding_round}}. And prospects can tell. The resulting line reads like a system trying to seem human, not a human being.",
       },
       {
         type: "heading",
@@ -49,11 +131,11 @@ export const blogPosts: BlogPost[] = [
         type: "list",
         items: [
           "Template-bound: the research is only as creative as the person who built the Clay table. If you didn't think to pull a specific signal, it won't appear.",
-          "Surface-level research: these tools pull structured data — fields from a database. They don't read a company's about page and extract what actually makes them a fit for your offer.",
+          "Surface-level research: these tools pull structured data: fields from a database. They don't read a company's about page and extract what actually makes them a fit for your offer.",
           "ICP-agnostic: the same enrichment logic gets applied to every prospect regardless of your specific offer or the angle that actually converts for your audience.",
           "Tone-blind: the output sounds the same whether you're selling to a no-nonsense CFO at a logistics company or a growth-focused CMO at a VC-backed SaaS startup.",
-          "Credit costs at scale: Clay's credit model works well for small lists. At high volume, the cost of multi-source enrichment compounds fast — especially when you're hitting five or six waterfalls per row.",
-          "You can't audit the reasoning: when the line is bad, you don't know why. There's no way to inspect or improve the underlying logic, because there isn't any — it's just field substitution.",
+          "Credit costs at scale: Clay's credit model works well for small lists. At high volume, the cost of multi-source enrichment compounds fast, especially when you're hitting five or six waterfalls per row.",
+          "You can't audit the reasoning: when the line is bad, you don't know why. There's no way to inspect or improve the underlying logic, because there isn't any. It's just field substitution.",
         ],
       },
       {
@@ -62,11 +144,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The breaking point came when we were reviewing a batch of 'personalised' lines generated by an AI enrichment step in Clay for a client in the logistics space. The lines were technically correct — they referenced real facts about each company. But none of them contained the kind of insight a good SDR would actually use to open a conversation. They were accurate and forgettable. We needed something that could reason about why a specific company, at this specific moment, should care about this specific offer.",
+        text: "The breaking point came when we were reviewing a batch of 'personalised' lines generated by an AI enrichment step in Clay for a client in the logistics space. The lines were technically correct: they referenced real facts about each company. But none of them contained the kind of insight a good SDR would actually use to open a conversation. They were accurate and forgettable. We needed something that could reason about why a specific company, at this specific moment, should care about this specific offer.",
       },
       {
         type: "paragraph",
-        text: "Off-the-shelf tools aren't built to do that. They're built to enrich at scale — which is valuable, but it's a different job. If you want genuine research-backed personalisation, you need a system that can actually think.",
+        text: "Off-the-shelf tools aren't built to do that. They're built to enrich at scale, which is valuable, but it's a different job. If you want genuine research-backed personalisation, you need a system that can actually think.",
       },
       {
         type: "heading",
@@ -74,11 +156,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "We built our own personalisation engine in-house using Python and Anthropic's Claude. The architecture is straightforward: for each prospect, the system pulls context from their website, LinkedIn profile, recent press and announcements, and any other signals that are relevant to the specific offer we're promoting. It then passes that context to Claude alongside a brief on the client's ICP, their offer, and their tone of voice. Claude drafts a personalisation line the way a good SDR would — one that reads like it was written by someone who actually did their homework.",
+        text: "We built our own personalisation engine in-house using Python and Anthropic's Claude. The architecture is straightforward: for each prospect, the system pulls context from their website, LinkedIn profile, recent press and announcements, and any other signals that are relevant to the specific offer we're promoting. It then passes that context to Claude alongside a brief on the client's ICP, their offer, and their tone of voice. Claude drafts a personalisation line the way a good SDR would: one that reads like it was written by someone who actually did their homework.",
       },
       {
         type: "paragraph",
-        text: "Because we own the full pipeline, we can tune every part of it. If a client sells to PE-backed portfolio companies, the research logic prioritises acquisition history and portfolio signals. If they sell to heads of engineering at hypergrowth startups, we weight recent hiring data and technical blog posts. The ICP shapes the research, and the research shapes the line — not the other way around.",
+        text: "Because we own the full pipeline, we can tune every part of it. If a client sells to PE-backed portfolio companies, the research logic prioritises acquisition history and portfolio signals. If they sell to heads of engineering at hypergrowth startups, we weight recent hiring data and technical blog posts. The ICP shapes the research, and the research shapes the line, not the other way around.",
       },
       {
         type: "heading",
@@ -86,11 +168,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The simplest way to explain the difference is this: a Clay-enriched personalisation line tells the prospect you know their job title. Our system produces a line that tells them you understand their situation. 'I saw you recently promoted your head of demand gen to VP — typically a sign the team is gearing up to scale pipeline aggressively' is a fundamentally different conversation opener than 'I see you're the CMO at Acme Corp.'",
+        text: "The simplest way to explain the difference is this: a Clay-enriched personalisation line tells the prospect you know their job title. Our system produces a line that tells them you understand their situation. 'I saw you recently promoted your head of demand gen to VP, typically a sign the team is gearing up to scale pipeline aggressively' is a fundamentally different conversation opener than 'I see you're the CMO at Acme Corp.'",
       },
       {
         type: "paragraph",
-        text: "Every row in the lead list we hand to a client has a reason-to-reach-out that's actually specific to that person. Not a mail-merged 'I saw you work at {{company}}.' Not a funding round mentioned in passing. A line that demonstrates genuine understanding of their context — and creates a natural bridge to why this conversation is relevant right now.",
+        text: "Every row in the lead list we hand to a client has a reason-to-reach-out that's actually specific to that person. Not a mail-merged 'I saw you work at {{company}}.' Not a funding round mentioned in passing. A line that demonstrates genuine understanding of their context, one that creates a natural bridge to why this conversation is relevant right now.",
       },
       {
         type: "heading",
@@ -98,11 +180,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "To be clear: we still use structured enrichment tools where they make sense. Data sourcing, verification, firmographic and technographic signals — these are solved problems and there are good tools for them. What we rejected was the idea that enrichment and personalisation are the same job. They're not. Enrichment gives you data. Personalisation requires judgement — about what matters, what to lead with, and why a specific person should care.",
+        text: "To be clear: we still use structured enrichment tools where they make sense. Data sourcing, verification, firmographic and technographic signals: these are solved problems and there are good tools for them. What we rejected was the idea that enrichment and personalisation are the same job. They're not. Enrichment gives you data. Personalisation requires judgement about what matters, what to lead with, and why a specific person should care.",
       },
       {
         type: "paragraph",
-        text: "Building our own engine was the only way to deliver that consistently at scale. The result is a system that produces lead lists where the personalisation actually personalises — and outbound campaigns where the reply rate reflects that.",
+        text: "Building our own engine was the only way to deliver that consistently at scale. The result is a system that produces lead lists where the personalisation actually personalises, and outbound campaigns where the reply rate reflects that.",
       },
     ],
   },
@@ -110,7 +192,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-cold-email-fails",
     title: "Why Most Cold Email Campaigns Fail (And How to Fix Them)",
     excerpt:
-      "The problem isn't cold email itself — it's how it's being executed. Here's the framework that separates campaigns that book meetings from ones that land in spam.",
+      "The problem isn't cold email itself. It's how it's being executed. Here's the framework that separates campaigns that book meetings from ones that land in spam.",
     category: "Cold Email",
     readTime: "6 min read",
     publishedAt: "2026-03-18",
@@ -118,7 +200,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Cold email has a reputation problem. Talk to most sales leaders and they'll tell you their team 'tried it' and it didn't work. But when you dig into what they actually did, the pattern is always the same: generic templates, no personalization, wrong targeting, or broken deliverability. The channel isn't broken — the execution is.",
+        text: "Cold email has a reputation problem. Talk to most sales leaders and they'll tell you their team 'tried it' and it didn't work. But when you dig into what they actually did, the pattern is always the same: generic templates, no personalization, wrong targeting, or broken deliverability. The channel isn't broken; the execution is.",
       },
       {
         type: "heading",
@@ -130,11 +212,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "Start With the ICP — Not the Template",
+        text: "Start With the ICP, Not the Template",
       },
       {
         type: "paragraph",
-        text: "The single biggest predictor of cold email success isn't your subject line — it's how precisely you've defined who you're targeting. 'Series B SaaS companies that recently hired a VP of Sales and run Salesforce' will dramatically outperform 'software companies with 50–200 employees.' Specificity is what makes your message relevant, and relevance is what drives replies.",
+        text: "The single biggest predictor of cold email success isn't your subject line; it's how precisely you've defined who you're targeting. 'Series B SaaS companies that recently hired a VP of Sales and run Salesforce' will dramatically outperform 'software companies with 50–200 employees.' Specificity is what makes your message relevant, and relevance is what drives replies.",
       },
       {
         type: "heading",
@@ -142,7 +224,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "You can write the best cold email in the world and it won't matter if it lands in spam. Proper infrastructure — dedicated sending domains, SPF/DKIM/DMARC configuration, gradual warmup, and inbox rotation — is non-negotiable. Most campaigns that 'don't work' have never actually been seen by a human. Fix the foundation before you touch copy.",
+        text: "You can write the best cold email in the world and it won't matter if it lands in spam. Proper infrastructure (dedicated sending domains, SPF/DKIM/DMARC configuration, gradual warmup, and inbox rotation) is non-negotiable. Most campaigns that 'don't work' have never actually been seen by a human. Fix the foundation before you touch copy.",
       },
       {
         type: "heading",
@@ -150,7 +232,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The easiest way to get deleted is to make it obvious your email was sent to 10,000 people. Reference something specific about the prospect's company — a recent funding round, a job posting that signals a problem you solve, a LinkedIn post they wrote. One genuine line of personalization changes the entire tone from 'blast' to 'targeted.'",
+        text: "The easiest way to get deleted is to make it obvious your email was sent to 10,000 people. Reference something specific about the prospect's company: a recent funding round, a job posting that signals a problem you solve, a LinkedIn post they wrote. One genuine line of personalization changes the entire tone from 'blast' to 'targeted.'",
       },
       {
         type: "heading",
@@ -158,7 +240,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Most positive replies don't come from the first email — they come from follow-ups 2 through 5. Persistence with value beats persistence with pressure. Each follow-up should add something new: a different angle, a relevant case study, or a direct question. Don't just bump your previous message.",
+        text: "Most positive replies don't come from the first email; they come from follow-ups 2 through 5. Persistence with value beats persistence with pressure. Each follow-up should add something new: a different angle, a relevant case study, or a direct question. Don't just bump your previous message.",
       },
       {
         type: "paragraph",
@@ -170,7 +252,7 @@ export const blogPosts: BlogPost[] = [
     slug: "icp-research-framework",
     title: "The ICP Research Framework That Books 50+ Meetings a Month",
     excerpt:
-      "Most ICPs are built on assumptions. Here's how to build one on evidence — using firmographic, technographic, and behavioral signals that actually predict conversion.",
+      "Most ICPs are built on assumptions. Here's how to build one on evidence, using firmographic, technographic, and behavioral signals that actually predict conversion.",
     category: "Strategy",
     readTime: "7 min read",
     publishedAt: "2026-03-04",
@@ -178,7 +260,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "An Ideal Customer Profile is the single most important asset in outbound sales. Get it right and every downstream activity — targeting, copywriting, sequencing — becomes dramatically easier. Get it wrong and you're burning budget on prospects who were never going to buy.",
+        text: "An Ideal Customer Profile is the single most important asset in outbound sales. Get it right and every downstream activity (targeting, copywriting, sequencing) becomes dramatically easier. Get it wrong and you're burning budget on prospects who were never going to buy.",
       },
       {
         type: "heading",
@@ -186,7 +268,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Most ICPs are built in a meeting room by people who haven't talked to a customer in six months. They describe who the company would like to sell to, not who actually buys. The result is a profile full of obvious criteria — 'mid-market SaaS, 100–500 employees' — that describes thousands of companies with wildly different conversion rates.",
+        text: "Most ICPs are built in a meeting room by people who haven't talked to a customer in six months. They describe who the company would like to sell to, not who actually buys. The result is a profile full of obvious criteria, like 'mid-market SaaS, 100–500 employees', that describes thousands of companies with wildly different conversion rates.",
       },
       {
         type: "heading",
@@ -194,7 +276,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Start with the basics — company size, industry, geography, revenue. But don't stop there. Look at growth stage, funding history, and headcount trajectory. A company that raised a Series B six months ago and is growing headcount 40% year-over-year is a fundamentally different prospect than one that's been flat for two years, even if they're the same size.",
+        text: "Start with the basics: company size, industry, geography, revenue. But don't stop there. Look at growth stage, funding history, and headcount trajectory. A company that raised a Series B six months ago and is growing headcount 40% year-over-year is a fundamentally different prospect than one that's been flat for two years, even if they're the same size.",
       },
       {
         type: "heading",
@@ -215,7 +297,7 @@ export const blogPosts: BlogPost[] = [
           "Job postings that indicate a gap you fill (e.g., hiring their first SDR team)",
           "Conference attendance or speaking engagements in your space",
           "News coverage of challenges relevant to your solution",
-          "Competitive tool adoption — switching from a competitor to you",
+          "Competitive tool adoption: switching from a competitor to you",
         ],
       },
       {
@@ -224,7 +306,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Look at your 10 best-fit customers — the ones that closed fastest, had the highest ACV, and churned least. What do they have in common beyond the obvious? What were they experiencing right before they bought? Who internally championed the deal? The answers will reveal patterns your ICP framework is probably missing.",
+        text: "Look at your 10 best-fit customers: the ones that closed fastest, had the highest ACV, and churned least. What do they have in common beyond the obvious? What were they experiencing right before they bought? Who internally championed the deal? The answers will reveal patterns your ICP framework is probably missing.",
       },
       {
         type: "paragraph",
@@ -236,7 +318,7 @@ export const blogPosts: BlogPost[] = [
     slug: "deliverability-guide-2026",
     title: "Cold Email Deliverability: The Complete 2026 Guide",
     excerpt:
-      "Inbox placement is the single most underrated lever in outbound. This guide covers everything — domain setup, warmup, sending limits, and how to monitor your reputation.",
+      "Inbox placement is the single most underrated lever in outbound. This guide covers everything: domain setup, warmup, sending limits, and how to monitor your reputation.",
     category: "Deliverability",
     readTime: "9 min read",
     publishedAt: "2026-02-19",
@@ -244,7 +326,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "You can have the best copy in the world and a hyper-targeted list, but if your emails are landing in spam, none of it matters. Deliverability is the unsexy foundation that everything else sits on — and it's where most campaigns quietly die before anyone notices.",
+        text: "You can have the best copy in the world and a hyper-targeted list, but if your emails are landing in spam, none of it matters. Deliverability is the unsexy foundation that everything else sits on, and it's where most campaigns quietly die before anyone notices.",
       },
       {
         type: "heading",
@@ -252,7 +334,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Your primary domain is a business asset. If it gets flagged for spam, your entire company's email — including customer comms, transactional emails, and internal communication — suffers. Always use dedicated sending domains for outbound. Register variations like your-company.io or yourbrand.co and configure them separately.",
+        text: "Your primary domain is a business asset. If it gets flagged for spam, your entire company's email (including customer comms, transactional emails, and internal communication) suffers. Always use dedicated sending domains for outbound. Register variations like your-company.io or yourbrand.co and configure them separately.",
       },
       {
         type: "heading",
@@ -282,7 +364,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Even a well-warmed domain has limits. Industry best practice is a maximum of 30–50 cold emails per mailbox per day. If you need more volume, add more mailboxes — not more emails per mailbox. Spread sends across multiple hours to mimic human behaviour, and avoid sending on weekends.",
+        text: "Even a well-warmed domain has limits. Industry best practice is a maximum of 30–50 cold emails per mailbox per day. If you need more volume, add more mailboxes, not more emails per mailbox. Spread sends across multiple hours to mimic human behaviour, and avoid sending on weekends.",
       },
       {
         type: "heading",
@@ -298,7 +380,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Set up Google Postmaster Tools and monitor your domain reputation weekly. Check your IP against major blacklists using MXToolbox. Use a seed-list tool to track where your emails are landing — inbox, promotions, or spam — across major email clients. If inbox rates drop below 80%, pause and investigate before continuing to send.",
+        text: "Set up Google Postmaster Tools and monitor your domain reputation weekly. Check your IP against major blacklists using MXToolbox. Use a seed-list tool to track where your emails are landing (inbox, promotions, or spam) across major email clients. If inbox rates drop below 80%, pause and investigate before continuing to send.",
       },
       {
         type: "paragraph",
@@ -342,7 +424,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "LinkedIn's voice note feature is massively underused. A 30-second voice note after a connection is accepted has dramatically higher open and response rates than a text message. It's human, it's personal, and it stands out in an inbox full of copy-pasted pitches. Keep it conversational — no scripts.",
+        text: "LinkedIn's voice note feature is massively underused. A 30-second voice note after a connection is accepted has dramatically higher open and response rates than a text message. It's human, it's personal, and it stands out in an inbox full of copy-pasted pitches. Keep it conversational: no scripts.",
       },
       {
         type: "heading",
@@ -350,7 +432,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "When a prospect posts about a challenge your product solves, that's a trigger event. When they announce a promotion, a new hire, or a company milestone — those are trigger events. Reaching out in direct response to something they shared is as close to warm outreach as cold outbound gets. Your message becomes 'I saw what you posted and it reminded me of…' instead of 'I hope this finds you well.'",
+        text: "When a prospect posts about a challenge your product solves, that's a trigger event. When they announce a promotion, a new hire, or a company milestone, those are trigger events too. Reaching out in direct response to something they shared is as close to warm outreach as cold outbound gets. Your message becomes 'I saw what you posted and it reminded me of…' instead of 'I hope this finds you well.'",
       },
       {
         type: "heading",
@@ -361,8 +443,8 @@ export const blogPosts: BlogPost[] = [
         items: [
           "Day 1: Engage with prospect's recent content (like/comment)",
           "Day 3: Send personalised connection request referencing shared interest",
-          "Day 5: Voice note after connection is accepted — brief intro, no pitch",
-          "Day 8: First LinkedIn message — one question, no attachments",
+          "Day 5: Voice note after connection is accepted: brief intro, no pitch",
+          "Day 8: First LinkedIn message: one question, no attachments",
           "Day 10: First cold email referencing the LinkedIn connection",
           "Day 14: Follow-up email with a relevant insight or case study",
         ],
@@ -393,7 +475,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Research consistently shows that prospects need between 7 and 12 meaningful touchpoints before they engage with an unknown vendor. A single-channel sequence maxes out at 5–6 touchpoints before it becomes harassment. Multi-channel lets you reach the same number of touchpoints across different contexts, different days, and different moods — without wearing out any single channel.",
+        text: "Research consistently shows that prospects need between 7 and 12 meaningful touchpoints before they engage with an unknown vendor. A single-channel sequence maxes out at 5–6 touchpoints before it becomes harassment. Multi-channel lets you reach the same number of touchpoints across different contexts, different days, and different moods, without wearing out any single channel.",
       },
       {
         type: "heading",
@@ -415,7 +497,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The mistake most teams make is treating each channel as independent. Instead, each touchpoint should reference or build on the previous one. 'I mentioned in my LinkedIn message last week…' or 'I sent you an email on Tuesday about this — calling to make sure it didn't get buried.' This creates continuity and makes you sound organised, not scattered.",
+        text: "The mistake most teams make is treating each channel as independent. Instead, each touchpoint should reference or build on the previous one. 'I mentioned in my LinkedIn message last week…' or 'I sent you an email on Tuesday about this, so I'm calling to make sure it didn't get buried.' This creates continuity and makes you sound organised, not scattered.",
       },
       {
         type: "heading",
@@ -423,7 +505,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Aggressive spacing — multiple touches in a single week — works in short, high-urgency campaigns. But for most enterprise or mid-market sequences, spacing touches 2–4 days apart over 3–4 weeks gives prospects enough time to see your messages without feeling bombarded. Map your sequence against your average sales cycle — the tighter the cycle, the tighter the sequence.",
+        text: "Aggressive spacing, with multiple touches in a single week, works in short, high-urgency campaigns. But for most enterprise or mid-market sequences, spacing touches 2–4 days apart over 3–4 weeks gives prospects enough time to see your messages without feeling bombarded. Map your sequence against your average sales cycle: the tighter the cycle, the tighter the sequence.",
       },
       {
         type: "heading",
@@ -431,11 +513,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Track reply rates and meeting rates by channel, by sequence step, and by segment. If email step 3 has a 0.5% reply rate but LinkedIn step 2 has a 12% reply rate, reorder the sequence. Multi-channel only works if you're constantly optimising based on what's actually performing — not what you assumed would work when you built the sequence.",
+        text: "Track reply rates and meeting rates by channel, by sequence step, and by segment. If email step 3 has a 0.5% reply rate but LinkedIn step 2 has a 12% reply rate, reorder the sequence. Multi-channel only works if you're constantly optimising based on what's actually performing, not what you assumed would work when you built the sequence.",
       },
       {
         type: "paragraph",
-        text: "The teams that win at outbound in 2026 aren't the ones with the best cold email. They're the ones that show up in the right place, at the right time, with the right message — across every channel a prospect uses.",
+        text: "The teams that win at outbound in 2026 aren't the ones with the best cold email. They're the ones that show up in the right place, at the right time, with the right message, across every channel a prospect uses.",
       },
     ],
   },
