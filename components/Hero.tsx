@@ -39,7 +39,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            VoltScale Partners uses an AI-powered qualification and personalisation engine to book meetings with highly qualified leads — through deep ICP research, buying signal detection, and human-sounding cold email outreach built for your exact market.
+            Every prospect we contact has already been through our Signal Engine: researched across multiple data sources, verified against your ICP, and showing real buying signals. Outreach built from that research books the meetings. No templates, no spray-and-pray.
           </motion.p>
 
           {/* CTAs */}
@@ -65,17 +65,44 @@ export function Hero() {
             </Button>
           </motion.div>
 
+          {/* Signal Engine link */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-10 text-sm"
+          >
+            <Link
+              href="/blog/inside-the-signal-engine"
+              className="inline-flex items-center gap-1.5 text-[--volt] hover:underline underline-offset-4 font-medium"
+            >
+              Read how the Signal Engine works
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </motion.p>
+
           {/* Trust strip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
+            className="flex flex-wrap items-start justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
           >
-            {["No long-term contracts", "Pay per qualified meeting held", "15 meetings in 90 days — guaranteed"].map((item) => (
-              <span key={item} className="flex items-center gap-1.5">
-                <span className="h-1 w-1 rounded-full bg-[--volt]" />
-                {item}
+            {[
+              { label: "No long-term contracts", sub: "(monthly rolling)" },
+              { label: "Pay per qualified meeting held" },
+              { label: "30-day satisfaction guarantee" },
+            ].map((item) => (
+              <span key={item.label} className="flex flex-col">
+                <span className="flex items-center gap-1.5">
+                  <span className="h-1 w-1 rounded-full bg-[--volt]" />
+                  {item.label}
+                </span>
+                {item.sub && (
+                  <span className="pl-2.5 text-[11px] text-[--text-muted]/80">
+                    {item.sub}
+                  </span>
+                )}
               </span>
             ))}
           </motion.div>

@@ -19,15 +19,15 @@ const services = [
   },
   {
     icon: Network,
-    title: "Cold Email — Our Core Speciality",
+    title: "Cold Email: Our Core Speciality",
     description:
-      "Cold email is the channel we've engineered from the ground up. Our AI qualification and personalisation engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out — not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
+      "Cold email is the channel we've engineered from the ground up. Our Signal Engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out, not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
   },
   {
     icon: PenLine,
     title: "Copywriting That Converts",
     description:
-      "We built our own personalisation engine in-house. It researches each prospect the way a good SDR would: their site, LinkedIn, recent announcements - then drafts a line that reads like a human wrote it. Because we control the whole pipeline, we tune the research logic to your ICP, your offer, and your tone. Every lead comes with a reason-to-reach-out that's actually specific to that person, not a mail-merged \"I saw you work at {{company}}\".",
+      "Every personalised line we send is graded by strength and traceable to the specific signal that produced it: a job posting, a leadership change, a client win, a founder's own words. Because we tune the research logic to your ICP, your offer, and your tone, every lead comes with a reason-to-reach-out that's actually specific to that person, not a mail-merged \"I saw you work at {{company}}\".",
   },
   {
     icon: ShieldCheck,
@@ -45,7 +45,7 @@ const services = [
     icon: BarChart3,
     title: "Transparent Reporting",
     description:
-      "Open rates, reply rates, positive replies, and meetings booked — broken down by segment, angle, and channel. Outbound is an iterative experiment, not set-and-forget.",
+      "Reply rates, positive replies, and meetings booked, broken down by segment, angle, and channel. We deliberately don't track opens: tracking pixels damage deliverability, and opens don't close deals. Outbound is an iterative experiment, not set-and-forget.",
   },
 ]
 
@@ -82,7 +82,7 @@ export function ServicesGrid() {
           </h2>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
             Every channel, every touchpoint, every message is intentional.
-            We build systems that generate pipeline — not just activity.
+            We build systems that generate pipeline, not just activity.
           </p>
         </motion.div>
 

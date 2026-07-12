@@ -18,10 +18,30 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 })
 
+const siteDescription =
+  "VoltScale Partners books qualified B2B meetings using the Signal Engine: every prospect researched across multiple data sources, verified against your ICP, and showing real buying signals before any outreach. Backed by a 30-day satisfaction guarantee."
+
 export const metadata: Metadata = {
-  title: "VoltScale Partners — B2B Lead Generation Agency",
-  description:
-    "VoltScale Partners is a B2B outbound agency that books qualified meetings with your ideal customers through precision targeting, human-sounding outreach, and multi-channel orchestration.",
+  metadataBase: new URL("https://voltscalepartners.com"),
+  title: {
+    default: "VoltScale Partners | B2B Lead Generation Agency",
+    template: "%s | VoltScale Partners",
+  },
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "VoltScale Partners",
+    title: "VoltScale Partners | B2B Lead Generation Agency",
+    description: siteDescription,
+    images: [{ url: "/vs.png", alt: "VoltScale Partners" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "VoltScale Partners | B2B Lead Generation Agency",
+    description: siteDescription,
+    images: ["/vs.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -48,6 +68,25 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "VoltScale Partners",
+              url: "https://voltscalepartners.com",
+              logo: "https://voltscalepartners.com/vs.png",
+              description: siteDescription,
+              founder: { "@type": "Person", name: "James Gabbitus" },
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "james@voltscalepartners.com",
+                contactType: "sales",
+              },
+            }),
+          }}
+        />
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>

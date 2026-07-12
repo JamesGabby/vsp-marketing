@@ -16,8 +16,15 @@ export async function generateMetadata({
   const post = getPostBySlug(slug)
   if (!post) return {}
   return {
-    title: `${post.title} — VoltScale Partners`,
+    title: post.title,
     description: post.excerpt,
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+    },
   }
 }
 
@@ -30,6 +37,21 @@ export default async function BlogPostPage({
 
   return (
     <div className="py-24 lg:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.publishedAt,
+            author: { "@type": "Organization", name: post.author },
+            publisher: { "@type": "Organization", name: "VoltScale Partners" },
+            mainEntityOfPage: `https://voltscalepartners.com/blog/${post.slug}`,
+          }),
+        }}
+      />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Back */}
         <Link
@@ -114,7 +136,7 @@ export default async function BlogPostPage({
             Ready to put this into practice?
           </h3>
           <p className="text-sm text-[--text-secondary] mb-6">
-            Let's build an outbound engine for your business — from ICP to booked meetings.
+            Let's build an outbound engine for your business, from ICP to booked meetings.
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
             <Button asChild size="lg">

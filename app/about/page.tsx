@@ -17,7 +17,7 @@ const values = [
   {
     title: "Strategic Partner, Not a Vendor",
     description:
-      "We embed ourselves in your go-to-market motion. That means we understand your product, your customers, your objections — not just your spreadsheet.",
+      "We embed ourselves in your go-to-market motion. That means we understand your product, your customers, your objections, not just your spreadsheet.",
   },
   {
     title: "Honest Before Comfortable",
@@ -54,13 +54,13 @@ export default function AboutPage() {
             About <span className="text-[--volt]">VoltScale Partners</span>
           </h1>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            I&apos;m James Gabbitus — founder of VoltScale Partners. I built this after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. I decided to build something better.
+            I&apos;m James Gabbitus, founder of VoltScale Partners. I built this after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. I decided to build something better.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            With a technical background (MSc Computing), I spent months coding, testing, debugging, and iterating to build our AI-powered qualification and personalisation engine from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and writes research-based outreach that sounds like a human wrote it — because the targeting is precise enough that it reads that way.
+            With a technical background (MSc Computing), I spent months coding, testing, debugging, and iterating to build the Signal Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
-            We don&apos;t measure success in emails sent. We measure it in qualified meetings held — and deals closed.
+            We don&apos;t measure success in emails sent. We measure it in qualified meetings held and deals closed.
           </p>
         </motion.div>
 

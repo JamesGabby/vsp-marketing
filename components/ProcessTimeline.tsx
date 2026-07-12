@@ -5,27 +5,27 @@ import { motion } from "framer-motion"
 const steps = [
   {
     number: "01",
-    title: "ICP Definition & Engine Training",
+    title: "ICP Definition & Signal Engine Training",
     description:
-      "We work closely with you to define your ideal customer profile down to firmographic, technographic, and behavioral signals. We then train the qualification engine specifically on your ICP and offer.",
+      "We work closely with you to define your ideal customer profile down to firmographic, technographic, and behavioral signals. We then train the Signal Engine specifically on your ICP and offer.",
   },
   {
     number: "02",
     title: "Lead List Building & Verification",
     description:
-      "We scrape leads matching your ICP across multiple data sources, cross-reference them, and double-verify every email address before anything enters the engine. Clean data is non-negotiable.",
+      "We scrape leads matching your ICP across multiple data sources, cross-reference them, and double-verify every email address before anything enters the Signal Engine. Clean data is non-negotiable.",
   },
   {
     number: "03",
     title: "AI Qualification & Deep Research",
     description:
-      "Our AI agent researches each prospect across multiple sources, detects buying signals relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
+      "The Signal Engine researches each prospect across multiple sources, detects buying signals relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
   },
   {
     number: "04",
     title: "Infrastructure Setup & Outreach",
     description:
-      "Dedicated sending domains, expert DNS config, inbox warm-up, and daily health monitoring — so emails always land in the primary inbox. We then run personalised, research-based outreach to every qualified prospect.",
+      "Dedicated sending domains, expert DNS config, inbox warm-up, and daily health monitoring, so emails always land in the primary inbox. We then run personalised, research-based outreach to every qualified prospect.",
   },
   {
     number: "05",
@@ -54,7 +54,7 @@ export function ProcessTimeline() {
             Our <span className="text-[--volt]">Process</span>
           </h2>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
-            From zero to a booked calendar — a repeatable, transparent system
+            From zero to a booked calendar: a repeatable, transparent system
             built around your specific market.
           </p>
         </motion.div>

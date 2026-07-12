@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 import { getAllPosts, formatDate } from "@/lib/blog"
 
 export const metadata: Metadata = {
-  title: "Blog — VoltScale Partners",
+  title: "Blog",
   description:
     "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the VoltScale team.",
 }

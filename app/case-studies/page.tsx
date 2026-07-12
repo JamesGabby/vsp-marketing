@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Quote } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Case Studies — VoltScale Partners",
+  title: "Case Studies",
   description:
     "Real results from real clients. See how VoltScale Partners fills pipelines with qualified meetings through AI-powered outbound.",
 }
@@ -16,10 +16,10 @@ const caseStudies = [
     description:
       "A 35-person nearshore software agency offering custom development and staff augmentation to US-based tech companies. Entirely referral-dependent with no outbound motion.",
     challenge:
-      "The founder had tried one outbound agency prior — they built a massive spray-and-pray list, sent generic templates, and delivered a handful of irrelevant leads over three months. The team had no time to build their own system and needed a reliable, repeatable pipeline that matched their ICP.",
+      "The founder had tried one outbound agency prior: they built a massive spray-and-pray list, sent generic templates, and delivered a handful of irrelevant leads over three months. The team had no time to build their own system and needed a reliable, repeatable pipeline that matched their ICP.",
     whatWeDid: [
       "Defined a precise ICP: Series A/B US tech startups actively scaling engineering, showing hiring signals for senior developers",
-      "Fed the lead list through our qualification engine — disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
+      "Fed the lead list through our Signal Engine, which disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
       "Wrote personalised outreach referencing each company's recent funding, open roles, and tech stack",
     ],
     results: [
@@ -28,7 +28,7 @@ const caseStudies = [
       { label: "ARR added in first quarter", value: "$190k" },
     ],
     quote:
-      "We'd been burned before by agencies that just didn't get our ICP. VoltScale actually understood who we were targeting — and the leads proved it.",
+      "We'd been burned before by agencies that just didn't get our ICP. VoltScale actually understood who we were targeting, and the leads proved it.",
     quoteName: "Founder & CEO",
   },
   {
@@ -60,11 +60,11 @@ const caseStudies = [
     description:
       "A 50-person managed IT services and cybersecurity provider targeting professional services firms in the UK. Had an internal SDR who was generating volume but not quality.",
     challenge:
-      "Their previous outreach was high-volume and low-relevance — 600+ emails a month with a sub-1% positive reply rate. The sending domain was flagged and their primary domain reputation had taken damage. They needed to fix deliverability, overhaul targeting, and improve lead quality from the ground up.",
+      "Their previous outreach was high-volume and low-relevance: 600+ emails a month with a sub-1% positive reply rate. The sending domain was flagged and their primary domain reputation had taken damage. They needed to fix deliverability, overhaul targeting, and improve lead quality from the ground up.",
     whatWeDid: [
       "Isolated all future sending to new dedicated domains, fully separated from the main domain, with strict DNS config and continuous health monitoring",
       "Rebuilt the ICP around CFOs and IT Directors at 50–200 person professional services firms showing signs of compliance pressure or legacy infrastructure",
-      "Ran the new lead list through our engine — deep-researched each prospect for buying signals including recent audits, compliance certifications, and IT job postings",
+      "Ran the new lead list through the Signal Engine, deep-researching each prospect for buying signals including recent audits, compliance certifications, and IT job postings",
     ],
     results: [
       { label: "Qualified calls / month", value: "22" },

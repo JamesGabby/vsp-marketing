@@ -71,7 +71,7 @@ export function ContactCTA() {
             </Button>
           </div>
           <p className="mt-4 text-sm text-[--text-muted]">
-            We guarantee 15 qualified meetings within 90 days — or we keep working for free until we hit it.
+            30-day satisfaction guarantee: if you&apos;re not 100% satisfied in your first 30 days, we refund your tech fee in full.
           </p>
         </motion.div>
 

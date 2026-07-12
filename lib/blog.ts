@@ -432,7 +432,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "LinkedIn's voice note feature is massively underused. A 30-second voice note after a connection is accepted has dramatically higher open and response rates than a text message. It's human, it's personal, and it stands out in an inbox full of copy-pasted pitches. Keep it conversational: no scripts.",
+        text: "LinkedIn's voice note feature is massively underused. A 30-second voice note after a connection is accepted has a dramatically higher response rate than a text message. It's human, it's personal, and it stands out in an inbox full of copy-pasted pitches. Keep it conversational: no scripts.",
       },
       {
         type: "heading",
@@ -495,7 +495,7 @@ export const blogPosts: BlogPost[] = [
           "Email: High volume, asynchronous, easy to personalise at scale",
           "LinkedIn: Social proof, warm context, voice note capability",
           "Cold calling: Synchronous, immediate qualification, human connection",
-          "Direct mail: Extremely high open rates, stands out in a digital world",
+          "Direct mail: Almost impossible to ignore, stands out in a digital world",
           "Video prospecting: Personal, memorable, difficult to ignore",
         ],
       },

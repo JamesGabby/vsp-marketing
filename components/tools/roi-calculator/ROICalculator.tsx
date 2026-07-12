@@ -76,7 +76,7 @@ export function ROICalculator() {
         {/* ── Left: Inputs ───────────────────────────────────── */}
         <div className="flex flex-col gap-4">
           {/* Section 1 */}
-          <InputSection title="1 — Your Outbound Investment">
+          <InputSection title="1. Your Outbound Investment">
             <SliderInput
               label="Monthly agency retainer"
               value={state.agencyRetainer}
@@ -97,7 +97,7 @@ export function ROICalculator() {
               min={0} max={25000} step={250}
               onChange={set("setupFee")}
               prefix="£"
-              hint="Upfront cost — excluded from monthly ROI, included in year-1 annual ROI."
+              hint="Upfront cost, excluded from monthly ROI but included in year-1 annual ROI."
             />
 
             {/* Headcount — plain number input */}
@@ -163,20 +163,12 @@ export function ROICalculator() {
           </InputSection>
 
           {/* Section 2 */}
-          <InputSection title="2 — Campaign Performance">
+          <InputSection title="2. Campaign Performance">
             <SliderInput
               label="Emails sent per month"
               value={state.emailsPerMonth}
               min={1000} max={100000} step={1000}
               onChange={set("emailsPerMonth")}
-            />
-            <SliderInput
-              label="Average open rate"
-              value={state.openRate}
-              min={5} max={80} step={1}
-              onChange={set("openRate")}
-              suffix="%"
-              benchmark={BENCHMARKS.openRate}
             />
             <SliderInput
               label="Average reply rate"
@@ -205,7 +197,7 @@ export function ROICalculator() {
           </InputSection>
 
           {/* Section 3 */}
-          <InputSection title="3 — Your Sales Metrics">
+          <InputSection title="3. Your Sales Metrics">
             <SliderInput
               label="Close rate (meeting → deal)"
               value={state.closeRate}

@@ -4,9 +4,8 @@ import { motion } from "framer-motion"
 
 const metrics = [
   { value: "<2%", label: "Bounce Rate" },
-  { value: "45%+", label: "Average Open Rate" },
-  { value: "12%+", label: "Positive Reply Rate" },
-  { value: "200+", label: "Meetings Booked Monthly" },
+  { value: "5%+", label: "Reply Rate" },
+  { value: "20%+", label: "Positive Reply Rate" },
 ]
 
 export function MetricsBar() {
@@ -20,7 +19,7 @@ export function MetricsBar() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 lg:grid-cols-4 divide-x-0 lg:divide-x divide-[--border]"
+          className="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-[--border]"
         >
           {metrics.map((metric, i) => (
             <motion.div

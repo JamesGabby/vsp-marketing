@@ -28,7 +28,7 @@ export function Footer() {
               <span>VoltScale Partners</span>
             </Link>
             <p className="text-sm text-[--text-secondary] leading-relaxed max-w-[260px]">
-              B2B outbound that books real meetings with your ideal customers — not vanity metrics.
+              B2B outbound that books real meetings with your ideal customers, not vanity metrics.
             </p>
           </div>
 

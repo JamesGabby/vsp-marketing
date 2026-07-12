@@ -8,8 +8,7 @@ export interface CalcState {
   perMeetingFee: number
   // Section 2 — Campaign Performance
   emailsPerMonth: number
-  openRate: number       // whole percent: 45 means 45%
-  replyRate: number
+  replyRate: number      // whole percent: 5 means 5%
   positiveReplyRate: number
   showUpRate: number
   // Section 3 — Sales Metrics
@@ -29,7 +28,6 @@ export const DEFAULTS: CalcState = {
   costPerRep: 4500,
   perMeetingFee: 0,
   emailsPerMonth: 10000,
-  openRate: 45,
   replyRate: 5,
   positiveReplyRate: 40,
   showUpRate: 75,
@@ -48,7 +46,6 @@ export const PRESETS: Record<PresetKey, CalcState> = {
     costPerRep: 3500,
     perMeetingFee: 0,
     emailsPerMonth: 3000,
-    openRate: 28,
     replyRate: 2,
     positiveReplyRate: 22,
     showUpRate: 62,
@@ -66,7 +63,6 @@ export const PRESETS: Record<PresetKey, CalcState> = {
     costPerRep: 5500,
     perMeetingFee: 0,
     emailsPerMonth: 30000,
-    openRate: 55,
     replyRate: 8,
     positiveReplyRate: 50,
     showUpRate: 85,
@@ -85,7 +81,6 @@ export const MINIMUMS: CalcState = {
   costPerRep: 0,
   perMeetingFee: 0,
   emailsPerMonth: 1000,
-  openRate: 5,
   replyRate: 1,
   positiveReplyRate: 10,
   showUpRate: 30,
@@ -96,14 +91,12 @@ export const MINIMUMS: CalcState = {
 }
 
 export type BenchmarkField =
-  | "openRate"
   | "replyRate"
   | "positiveReplyRate"
   | "showUpRate"
   | "closeRate"
 
 export const BENCHMARKS: Record<BenchmarkField, { label: string; range: string; high: number }> = {
-  openRate:          { label: "Industry avg", range: "25–35%", high: 55 },
   replyRate:         { label: "Industry avg", range: "2–5%",   high: 8  },
   positiveReplyRate: { label: "Industry avg", range: "20–35%", high: 50 },
   showUpRate:        { label: "Industry avg", range: "60–75%", high: 85 },

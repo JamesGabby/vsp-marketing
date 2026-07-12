@@ -99,7 +99,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[--border] bg-[--background]/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-[--border] bg-[--background]/95 backdrop-blur-md max-h-[calc(100vh-64px)] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {navLinks.map((link) => (
               <Link
@@ -117,6 +117,18 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-[--border]">
+              <div
+                className="relative w-full overflow-hidden rounded-xl border-2 border-[--border] mb-3"
+                style={{ aspectRatio: "16 / 9" }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/9BKsPKEt6kw"
+                  title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
               <Button asChild className="w-full">
                 <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
                   Book a Call

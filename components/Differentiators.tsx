@@ -14,7 +14,7 @@ const differentiators = [
     icon: MessageSquareWarning,
     title: "Willingness to Disqualify",
     description:
-      "If your offer, pricing, or positioning is the bottleneck, we'll tell you. We're a strategic partner, not a volume vendor — your success is our success.",
+      "If your offer, pricing, or positioning is the bottleneck, we'll tell you. We're a strategic partner, not a volume vendor; your success is our success.",
   },
   {
     icon: Scale,
@@ -26,7 +26,7 @@ const differentiators = [
     icon: Star,
     title: "Quality Over Quantity",
     description:
-      "We use strict qualification criteria to deliver real sales-qualified leads. Vanity metrics look good in a deck — booked meetings that close look good on a P&L.",
+      "We use strict qualification criteria to deliver real sales-qualified leads. Vanity metrics look good in a deck; booked meetings that close look good on a P&L.",
   },
 ]
 
@@ -51,7 +51,7 @@ export function Differentiators() {
             </h2>
             <p className="text-lg text-[--text-secondary] leading-relaxed mb-8">
               Most agencies measure success by activity. We measure it by revenue
-              impact — and we're built top to bottom to deliver that.
+              impact, and we're built top to bottom to deliver that.
             </p>
             {/* Visual accent */}
             <div className="flex items-center gap-3">
