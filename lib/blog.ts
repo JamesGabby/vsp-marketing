@@ -51,7 +51,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Every list has noise in it. Companies that matched a filter but not the intent behind it. Job titles that sound right but sit in the wrong part of the org. The Signal Engine's first job is to catch these. Because it's trained on the specific ICP rather than a set of firmographic filters, it can reason about fit the way a good SDR would: not 'does this company have 50 to 200 employees' but 'is this actually the kind of business, at the kind of stage, with the kind of problem our client solves?' Prospects that fail this check don't get messaging. They get removed.",
+        text: "Every list has noise in it. Companies that matched a filter but not the intent behind it. Job titles that sound right but sit in the wrong part of the org. The Signal Engine's first job is to catch these. Because it's trained on the specific ICP rather than a set of firmographic filters, it can reason about fit the way a good SDR would: not 'does this company have 50 to 200 employees' but 'is this actually the kind of business, at the kind of stage, with the kind of problem our client solves?' That reasoning catches disqualifiers a filter never would: a company that turns out to be a subsidiary of a larger group, a firm that sits just above a headcount threshold according to recently published sources, or a business that is itself the type of company the client sells to, a peer rather than a buyer.",
+      },
+      {
+        type: "paragraph",
+        text: "Crucially, nothing gets silently dropped. Every prospect receives an explicit verdict, qualified or disqualified, alongside a written reason for the decision, with sources cited where the engine relied on them. Disqualified prospects stay in the list with that reasoning attached, so every judgement the engine makes can be reviewed, challenged, and used to sharpen the ICP for the next run.",
       },
       {
         type: "heading",
@@ -82,6 +86,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "For every greenlit prospect, the engine turns its research into personalised messaging that's specific to that person, that company, and the client's offer. To be precise about what that means: the engine doesn't send emails, and it doesn't write them end to end. It produces the research-backed personalised messaging for each prospect and adds it to the prospect list as a dedicated column, ready to be used in campaigns. That distinction matters. The messaging is grounded in what the research actually found, and a human retains full control over the final email that lands in someone's inbox.",
+      },
+      {
+        type: "paragraph",
+        text: "Each line also arrives with its working shown. The engine records the specific signals behind the messaging, whether that's a client case study, a job posting, a leadership appointment, or a founder's recent LinkedIn activity, and grades each personalisation by tier, so the strongest research-backed lines are distinguished from the merely solid ones. When we wrote about moving off Clay, the sharpest criticism was that you can't audit the reasoning behind a bad line because there isn't any. The Signal Engine is built as the opposite: every qualification verdict and every personalisation can be traced back to the evidence that produced it.",
       },
       {
         type: "heading",
