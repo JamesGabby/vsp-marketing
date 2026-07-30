@@ -51,7 +51,7 @@ export function Footer() {
           </div>
 
           {/* Contact / Social */}
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
               Connect
             </p>
@@ -82,9 +82,9 @@ export function Footer() {
               href="mailto:james@voltscalegrowth.com"
               className="text-sm text-[--text-secondary] hover:text-[--volt] transition-colors w-fit"
             >
-              james@voltscalegrowth.com
+              contact@voltscalegrowth.com
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-10 pt-6 border-t border-[--border] flex flex-col sm:flex-row justify-between items-center gap-3">
