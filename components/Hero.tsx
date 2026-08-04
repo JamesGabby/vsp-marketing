@@ -18,7 +18,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
-            B2B Outbound Agency
+            B2B Signal-Based Outbound Agency
           </motion.div>
 
           {/* Headline */}
