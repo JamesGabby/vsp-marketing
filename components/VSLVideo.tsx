@@ -17,7 +17,7 @@ export function VSLVideo() {
           className="text-center mb-10"
         >
           <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
-            For IT-based Companies…
+            For B2B SMEs…
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[--text-primary]">
             How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns
