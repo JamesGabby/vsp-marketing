@@ -135,7 +135,7 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 pt-3 border-t border-[--border]">
+            {/* <div className="mt-3 pt-3 border-t border-[--border]">
               <div
                 className="relative w-full overflow-hidden rounded-xl border-2 border-[--border] mb-3"
                 style={{ aspectRatio: "16 / 9" }}
@@ -153,7 +153,7 @@ export function Navbar() {
                   Book a Call
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </nav>
         </div>
       )}
