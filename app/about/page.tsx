@@ -42,23 +42,18 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-20"
         >
-          <div className="flex flex-col items-center gap-4 mb-6">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
-              Our Story
-            </div>
-            <div className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-[--volt-glow] border border-[--volt]/20">
-              <Image src="/perihelion-logo-light.png" alt="Perihelion" height={56} width={56} priority className="logo-light-variant" />
-              <Image src="/perihelion-logo-dark.png" alt="Perihelion" height={56} width={56} priority className="logo-dark-variant" />
-            </div>
+          <div className="flex flex-col items-center mb-6">
+            <Image src="/perihelion-logo-light.png" alt="Perihelion" height={140} width={140} priority className="logo-light-variant" />
+            <Image src="/perihelion-logo-dark.png" alt="Perihelion" height={140} width={140} priority className="logo-dark-variant" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-6">
             About <span className="text-[--volt]">Perihelion</span>
           </h1>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            I&apos;m James Gabbitus, founder of Perihelion. I built this after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. I decided to build something better.
+            James Gabbitus founded Perihelion after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. He decided to build something better.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            With a technical background (MSc Computing), I spent months coding, testing, debugging, and iterating to build the Signal Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
+            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Signal Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
             We don&apos;t measure success in emails sent. We measure it in qualified meetings held and deals closed.
