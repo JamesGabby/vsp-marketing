@@ -49,7 +49,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <div className="animate-float w-fit rounded-lg mx-auto sm:mx-0 [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
+            <div className="animate-float w-fit rounded-lg mx-auto sm:mx-0 [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
               <Button asChild size="lg">
                 <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                   Book a Free Call

@@ -62,7 +62,14 @@ export function Navbar() {
               priority
               className="logo-dark-variant"
             />
-            <span>Perihelion</span>
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-bold uppercase tracking-[0.15em] text-[--text-primary]">
+                Perihelion
+              </span>
+              <span className="hidden sm:block text-[8px] font-semibold uppercase tracking-[0.15em] text-orange-500">
+                Closest Approach to Your Next Deal
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}

@@ -62,7 +62,7 @@ export function ContactCTA() {
           <p className="text-sm text-[--text-secondary] leading-relaxed mb-8">
             <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> a small monthly fee to cover tech and tooling, then you only pay per qualified meeting that takes place. No hefty retainers.
           </p>
-          <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
+          <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">
               <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                 Book Your Strategy Call

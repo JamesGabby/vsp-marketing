@@ -200,7 +200,7 @@ export default function CaseStudiesPage() {
             href="https://calendly.com/perihelion/15mins"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-[--volt] px-6 py-3 text-sm font-bold text-[--volt-foreground] hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[--volt] px-6 py-3 text-sm font-bold text-[--volt-foreground] hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]"
           >
             Book a Strategy Call <ArrowRight className="h-4 w-4" />
           </Link>

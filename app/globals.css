@@ -7,9 +7,9 @@
   --background: #fafbfc;
   --surface: #ffffff;
   --border: #e2e8f0;
-  --volt: #0f8a6b;
-  --volt-hover: #0a7058;
-  --volt-glow: rgba(15, 138, 107, 0.08);
+  --volt: #ea580c;
+  --volt-hover: #c2410c;
+  --volt-glow: rgba(234, 88, 12, 0.08);
   --volt-foreground: #ffffff;
   --text-primary: #0b1225;
   --text-secondary: #334155;
@@ -20,7 +20,7 @@
   --foreground: #0b1225;
   --card: #ffffff;
   --card-foreground: #0b1225;
-  --primary: #0f8a6b;
+  --primary: #ea580c;
   --primary-foreground: #ffffff;
   --secondary: #f1f5f9;
   --secondary-foreground: #0f172a;
@@ -30,7 +30,7 @@
   --accent-foreground: #0f172a;
   --destructive: #ef4444;
   --input: #e2e8f0;
-  --ring: #0f8a6b;
+  --ring: #ea580c;
   --radius: 0.75rem;
 }
 
@@ -39,9 +39,9 @@
   --background: #0b1225;
   --surface: #111b36;
   --border: #1a2544;
-  --volt: #2dd4a8;
-  --volt-hover: #22b890;
-  --volt-glow: rgba(45, 212, 168, 0.15);
+  --volt: #fb923c;
+  --volt-hover: #f97316;
+  --volt-glow: rgba(251, 146, 60, 0.15);
   --volt-foreground: #0b1225;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -52,7 +52,7 @@
   --foreground: #f8fafc;
   --card: #111b36;
   --card-foreground: #f8fafc;
-  --primary: #2dd4a8;
+  --primary: #fb923c;
   --primary-foreground: #0b1225;
   --secondary: #1a2544;
   --secondary-foreground: #f8fafc;
@@ -62,7 +62,7 @@
   --accent-foreground: #f8fafc;
   --destructive: #ef4444;
   --input: #1a2544;
-  --ring: #2dd4a8;
+  --ring: #fb923c;
 }
 
 /* ─── Theme-aware logo swap ────────────────────────────────────────── */
