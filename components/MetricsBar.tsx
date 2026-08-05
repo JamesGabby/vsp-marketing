@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const metrics = [
   { value: "<2%", label: "Bounce Rate" },
-  { value: "5%+", label: "Reply Rate" },
+  { value: "4%+", label: "Reply Rate" },
   { value: "20%+", label: "Positive Reply Rate" },
 ]
 
