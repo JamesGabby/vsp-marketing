@@ -43,7 +43,7 @@ export function Differentiators() {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
-              Why VoltScale
+              Why Perihelion
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
               Not Your Typical{" "}

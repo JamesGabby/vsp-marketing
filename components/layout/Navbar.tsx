@@ -46,11 +46,23 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-2 font-bold text-lg text-[--text-primary] hover:opacity-80 transition-opacity"
           >
-            <Image src="/vs.png" alt="VoltScale Partners" height={56} width={56} priority />
-            <span>VoltScale</span>
-            <span className="hidden sm:inline text-[--text-muted] font-normal text-sm">
-              Partners
-            </span>
+            <Image
+              src="/perihelion-logo-light.png"
+              alt="Perihelion"
+              height={56}
+              width={56}
+              priority
+              className="logo-light-variant"
+            />
+            <Image
+              src="/perihelion-logo-dark.png"
+              alt="Perihelion"
+              height={56}
+              width={56}
+              priority
+              className="logo-dark-variant"
+            />
+            <span>Perihelion</span>
           </Link>
 
           {/* Desktop nav */}
@@ -75,7 +87,7 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button asChild size="sm" className="hidden sm:inline-flex">
-              <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
+              <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                 Book a Call
               </Link>
             </Button>
@@ -130,7 +142,7 @@ export function Navbar() {
                 />
               </div>
               <Button asChild className="w-full">
-                <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
+                <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                   Book a Call
                 </Link>
               </Button>

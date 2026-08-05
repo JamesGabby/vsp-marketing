@@ -18,7 +18,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
-            B2B Signal-Based Outbound Agency
+            Perihelion: Closest Approach to Your Next Deal
           </motion.div>
 
           {/* Headline */}
@@ -51,7 +51,7 @@ export function Hero() {
           >
             <div className="animate-float w-fit rounded-lg mx-auto sm:mx-0 [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
               <Button asChild size="lg">
-                <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
+                <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                   Book a Free Call
                   <ArrowRight className="h-4 w-4" />
                 </Link>

@@ -5,7 +5,7 @@ import { ArrowRight, Quote } from "lucide-react"
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Real results from real clients. See how VoltScale Partners fills pipelines with qualified meetings through AI-powered outbound.",
+    "Real results from real clients. See how Perihelion fills pipelines with qualified meetings through AI-powered outbound.",
 }
 
 const caseStudies = [
@@ -28,7 +28,7 @@ const caseStudies = [
       { label: "ARR added in first quarter", value: "$190k" },
     ],
     quote:
-      "We'd been burned before by agencies that just didn't get our ICP. VoltScale actually understood who we were targeting, and the leads proved it.",
+      "We'd been burned before by agencies that just didn't get our ICP. Perihelion actually understood who we were targeting, and the leads proved it.",
     quoteName: "Founder & CEO",
   },
   {
@@ -175,7 +175,7 @@ export default function CaseStudiesPage() {
 
                     <div className="mt-auto pt-4">
                       <Link
-                        href="https://calendly.com/voltscalepartners/15mins"
+                        href="https://calendly.com/perihelion/15mins"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-[--volt] hover:gap-2.5 transition-all"
@@ -197,7 +197,7 @@ export default function CaseStudiesPage() {
             Want to see what this looks like for your business?
           </p>
           <Link
-            href="https://calendly.com/voltscalepartners/15mins"
+            href="https://calendly.com/perihelion/15mins"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-[--volt] px-6 py-3 text-sm font-bold text-[--volt-foreground] hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]"

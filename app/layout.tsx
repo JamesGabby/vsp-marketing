@@ -19,28 +19,28 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 const siteDescription =
-  "VoltScale Partners books qualified B2B meetings using the Signal Engine: every prospect researched across multiple data sources, verified against your ICP, and showing real buying signals before any outreach. Backed by a 30-day satisfaction guarantee."
+  "Perihelion books qualified B2B meetings using the Signal Engine: every prospect researched across multiple data sources, verified against your ICP, and showing real buying signals before any outreach. Backed by a 30-day satisfaction guarantee."
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://voltscalepartners.com"),
+  metadataBase: new URL("https://periheliongrowth.com"),
   title: {
-    default: "VoltScale Partners | B2B Lead Generation Agency",
-    template: "%s | VoltScale Partners",
+    default: "Perihelion | B2B Lead Generation Agency",
+    template: "%s | Perihelion",
   },
   description: siteDescription,
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "VoltScale Partners",
-    title: "VoltScale Partners | B2B Lead Generation Agency",
+    siteName: "Perihelion",
+    title: "Perihelion | B2B Lead Generation Agency",
     description: siteDescription,
-    images: [{ url: "/vs.png", alt: "VoltScale Partners" }],
+    images: [{ url: "/perihelion-logo-light.png", alt: "Perihelion" }],
   },
   twitter: {
     card: "summary",
-    title: "VoltScale Partners | B2B Lead Generation Agency",
+    title: "Perihelion | B2B Lead Generation Agency",
     description: siteDescription,
-    images: ["/vs.png"],
+    images: ["/perihelion-logo-light.png"],
   },
   icons: {
     icon: [
@@ -74,14 +74,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "VoltScale Partners",
-              url: "https://voltscalepartners.com",
-              logo: "https://voltscalepartners.com/vs.png",
+              name: "Perihelion",
+              url: "https://periheliongrowth.com",
+              logo: "https://periheliongrowth.com/perihelion-logo-light.png",
               description: siteDescription,
               founder: { "@type": "Person", name: "James Gabbitus" },
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "james@voltscalepartners.com",
+                email: "james@periheliongrowth.com",
                 contactType: "sales",
               },
             }),

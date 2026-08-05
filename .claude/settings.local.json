@@ -15,7 +15,27 @@
       "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon-16x16.png\" /c/Users/gabbs/nextjs/vsp/app/)",
       "Bash(cp \"/c/Users/gabbs/Downloads/favicon_io \\(10\\)/favicon-32x32.png\" /c/Users/gabbs/nextjs/vsp/app/)",
       "Bash(xargs grep *)",
-      "PowerShell(npm run *)"
+      "PowerShell(npm run *)",
+      "Bash(git check-ignore *)",
+      "Bash(disown)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/_next/image?url=%2Fvs.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/_next/image?url=%2Fvs-dark.png&w=128&q=75\")",
+      "Bash(curl -s http://localhost:3000/about)",
+      "Bash(curl *)",
+      "Bash(kill %1)",
+      "Bash(cygpath -w /tmp/served_vs_opt.png)",
+      "Bash(cygpath *)",
+      "Bash(netstat -ano)",
+      "Bash(magick -version)",
+      "Bash(convert -version)",
+      "Bash(mv app/favicon-16x16.png public/favicon-16x16.png)",
+      "Bash(mv app/favicon-32x32.png public/favicon-32x32.png)",
+      "Bash(mv app/apple-touch-icon.png public/apple-touch-icon.png)",
+      "Bash(mv public/vs.png public/perihelion-logo-light.png)",
+      "Bash(mv public/vs-dark.png public/perihelion-logo-dark.png)"
     ]
   }
 }

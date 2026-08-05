@@ -249,13 +249,13 @@ export function ROICalculator() {
           Want these numbers for real?
         </h3>
         <p className="text-sm text-[--text-secondary] mb-5 max-w-md mx-auto">
-          Our clients consistently outperform industry benchmarks. Let&apos;s model what VoltScale
+          Our clients consistently outperform industry benchmarks. Let&apos;s model what Perihelion
           can deliver for your specific business.
         </p>
         <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
           <Button asChild size="lg">
             <Link
-              href="https://calendly.com/voltscalepartners/15mins"
+              href="https://calendly.com/perihelion/15mins"
               target="_blank"
               rel="noopener noreferrer"
             >

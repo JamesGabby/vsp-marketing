@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     category: "Technology",
     readTime: "7 min read",
     publishedAt: "2026-07-08",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
@@ -113,11 +113,11 @@ export const blogPosts: BlogPost[] = [
     category: "Technology",
     readTime: "7 min read",
     publishedAt: "2026-04-14",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
-        text: "Personalisation is the most cited fix for declining cold email response rates, and the most misunderstood. Every tool in the outbound stack now has an 'AI personalisation' feature. Most of them are doing something far simpler than they'd like you to think. And after running hundreds of campaigns and watching those features produce lines like 'I noticed VoltScale helps B2B companies scale their outbound. Impressive stuff,' we decided to stop patching the problem and solve it.",
+        text: "Personalisation is the most cited fix for declining cold email response rates, and the most misunderstood. Every tool in the outbound stack now has an 'AI personalisation' feature. Most of them are doing something far simpler than they'd like you to think. And after running hundreds of campaigns and watching those features produce lines like 'I noticed Perihelion helps B2B companies scale their outbound. Impressive stuff,' we decided to stop patching the problem and solve it.",
       },
       {
         type: "heading",
@@ -204,7 +204,7 @@ export const blogPosts: BlogPost[] = [
     category: "Cold Email",
     readTime: "6 min read",
     publishedAt: "2026-03-18",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
@@ -264,7 +264,7 @@ export const blogPosts: BlogPost[] = [
     category: "Strategy",
     readTime: "7 min read",
     publishedAt: "2026-03-04",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
@@ -330,7 +330,7 @@ export const blogPosts: BlogPost[] = [
     category: "Deliverability",
     readTime: "9 min read",
     publishedAt: "2026-02-19",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
@@ -404,7 +404,7 @@ export const blogPosts: BlogPost[] = [
     category: "LinkedIn",
     readTime: "5 min read",
     publishedAt: "2026-02-05",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",
@@ -471,7 +471,7 @@ export const blogPosts: BlogPost[] = [
     category: "Strategy",
     readTime: "8 min read",
     publishedAt: "2026-01-22",
-    author: "VoltScale Team",
+    author: "Perihelion Team",
     content: [
       {
         type: "paragraph",

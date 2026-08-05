@@ -6,7 +6,7 @@ import { getAllPosts, formatDate } from "@/lib/blog"
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the VoltScale team.",
+    "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion team.",
 }
 
 export default function BlogPage() {

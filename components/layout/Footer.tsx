@@ -24,8 +24,9 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2 font-bold text-lg text-[--text-primary] w-fit"
             >
-              <Image src="/vs.png" alt="VoltScale Partners" height={48} width={48} />
-              <span>VoltScale Partners</span>
+              <Image src="/perihelion-logo-light.png" alt="Perihelion" height={48} width={48} className="logo-light-variant" />
+              <Image src="/perihelion-logo-dark.png" alt="Perihelion" height={48} width={48} className="logo-dark-variant" />
+              <span>Perihelion</span>
             </Link>
             <p className="text-sm text-[--text-secondary] leading-relaxed max-w-[260px]">
               B2B outbound that books real meetings with your ideal customers, not vanity metrics.
@@ -71,7 +72,7 @@ export function Footer() {
                 <ExternalLink className="h-4 w-4" />
               </a>
               <a
-                href="mailto:james@voltscalegrowth.com"
+                href="mailto:james@periheliongrowth.com"
                 aria-label="Email"
                 className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
               >
@@ -79,17 +80,17 @@ export function Footer() {
               </a>
             </div>
             <a
-              href="mailto:james@voltscalegrowth.com"
+              href="mailto:james@periheliongrowth.com"
               className="text-sm text-[--text-secondary] hover:text-[--volt] transition-colors w-fit"
             >
-              contact@voltscalegrowth.com
+              contact@periheliongrowth.com
             </a>
           </div> */}
         </div>
 
         <div className="mt-10 pt-6 border-t border-[--border] flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-[--text-muted]">
-            © {new Date().getFullYear()} VoltScale Partners. All rights reserved.
+            © {new Date().getFullYear()} Perihelion. All rights reserved.
           </p>
           <p className="text-xs text-[--text-muted]">
             Built to build pipeline.

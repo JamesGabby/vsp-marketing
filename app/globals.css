@@ -65,6 +65,20 @@
   --ring: #2dd4a8;
 }
 
+/* ─── Theme-aware logo swap ────────────────────────────────────────── */
+
+.logo-dark-variant {
+  display: none;
+}
+
+.dark .logo-light-variant {
+  display: none;
+}
+
+.dark .logo-dark-variant {
+  display: block;
+}
+
 /* ─── Tailwind v4 theme mappings ────────────────────────────────────── */
 
 @theme inline {

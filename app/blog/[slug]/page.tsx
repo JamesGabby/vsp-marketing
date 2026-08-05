@@ -47,8 +47,8 @@ export default async function BlogPostPage({
             description: post.excerpt,
             datePublished: post.publishedAt,
             author: { "@type": "Organization", name: post.author },
-            publisher: { "@type": "Organization", name: "VoltScale Partners" },
-            mainEntityOfPage: `https://voltscalepartners.com/blog/${post.slug}`,
+            publisher: { "@type": "Organization", name: "Perihelion" },
+            mainEntityOfPage: `https://periheliongrowth.com/blog/${post.slug}`,
           }),
         }}
       />
@@ -140,7 +140,7 @@ export default async function BlogPostPage({
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(15,138,107,0.35)] dark:[box-shadow:0_8px_20px_rgba(45,212,168,0.25)]">
             <Button asChild size="lg">
-              <Link href="https://calendly.com/voltscalepartners/15mins" target="_blank" rel="noopener noreferrer">
+              <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
