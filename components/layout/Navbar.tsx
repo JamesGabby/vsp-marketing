@@ -122,7 +122,7 @@ export function Navbar() {
                 style={{ aspectRatio: "16 / 9" }}
               >
                 <iframe
-                  src="https://www.youtube.com/embed/9BKsPKEt6kw"
+                  src="https://www.youtube.com/embed/W_XEA0FXamE"
                   title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
