@@ -1,14 +1,57 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
+import { motion, animate } from "framer-motion"
 
 const metrics = [
-  { value: "<2%", label: "Bounce Rate" },
-  { value: "4%+", label: "Reply Rate" },
-  { value: "20%+", label: "Positive Reply Rate" },
+  { prefix: "<", target: 2, suffix: "%", label: "Bounce Rate" },
+  { prefix: "", target: 4, suffix: "%+", label: "Reply Rate" },
+  { prefix: "", target: 20, suffix: "%+", label: "Positive Reply Rate" },
 ]
 
+function CounterValue({
+  target,
+  prefix = "",
+  suffix = "",
+  start,
+  delay = 0,
+  duration = 1.4,
+}: {
+  target: number
+  prefix?: string
+  suffix?: string
+  start: boolean
+  delay?: number
+  duration?: number
+}) {
+  const [value, setValue] = useState(0)
+
+  useEffect(() => {
+    if (!start) return
+    const controls = animate(0, target, {
+      duration,
+      delay,
+      ease: "easeOut",
+      onUpdate: (v) => setValue(Math.round(v)),
+    })
+    return () => controls.stop()
+  }, [start, target, delay, duration])
+
+  return (
+    <span
+      className="text-3xl sm:text-4xl font-bold text-[--volt]"
+      style={{ fontFamily: "var(--font-mono)" }}
+    >
+      {prefix}
+      {value}
+      {suffix}
+    </span>
+  )
+}
+
 export function MetricsBar() {
+  const [inView, setInView] = useState(false)
+
   return (
     <section className="relative border-y border-[--border] bg-[--surface] overflow-hidden">
       {/* Volt gradient accent */}
@@ -18,6 +61,7 @@ export function MetricsBar() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
+          onViewportEnter={() => setInView(true)}
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-[--border]"
         >
@@ -30,12 +74,13 @@ export function MetricsBar() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="flex flex-col items-center text-center gap-1.5 px-6 py-2"
             >
-              <span
-                className="text-3xl sm:text-4xl font-bold text-[--volt]"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                {metric.value}
-              </span>
+              <CounterValue
+                target={metric.target}
+                prefix={metric.prefix}
+                suffix={metric.suffix}
+                start={inView}
+                delay={i * 0.15}
+              />
               <span className="text-sm text-[--text-secondary] font-medium">
                 {metric.label}
               </span>
