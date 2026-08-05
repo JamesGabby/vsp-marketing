@@ -118,20 +118,15 @@ export function Hero() {
             className="flex flex-wrap items-start justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
           >
             {[
-              { label: "No long-term contracts", sub: "(monthly rolling)" },
+              { label: "No long-term contracts" },
+              { label: "10 qualified calls in 90 days guaranteed" },
               { label: "Pay per qualified meeting held" },
-              { label: "30-day satisfaction guarantee" },
             ].map((item) => (
               <span key={item.label} className="flex flex-col">
                 <span className="flex items-center gap-1.5">
                   <span className="h-1 w-1 rounded-full bg-[--volt]" />
                   {item.label}
                 </span>
-                {item.sub && (
-                  <span className="pl-2.5 text-[11px] text-[--text-muted]/80">
-                    {item.sub}
-                  </span>
-                )}
               </span>
             ))}
           </motion.div>
