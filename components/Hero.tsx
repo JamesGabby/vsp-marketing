@@ -1,39 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const heroSubheadline =
-  "Every prospect we contact has already been through our Signal Engine: researched across multiple data sources, verified against your ICP, and showing real buying signals. Outreach built from that research books the meetings. No templates, no spray-and-pray."
-
-function useTypewriter(text: string, speed = 4, startDelay = 700) {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    let i = 0
-    let interval: ReturnType<typeof setInterval>
-    const startTimeout = setTimeout(() => {
-      interval = setInterval(() => {
-        i += 1
-        setCount(i)
-        if (i >= text.length) clearInterval(interval)
-      }, speed)
-    }, startDelay)
-
-    return () => {
-      clearTimeout(startTimeout)
-      clearInterval(interval)
-    }
-  }, [text, speed, startDelay])
-
-  return { visible: text.slice(0, count) }
-}
-
 export function Hero() {
-  const { visible } = useTypewriter(heroSubheadline)
 
   return (
     <section className="hero-bg relative flex min-h-[calc(100vh-64px)] items-center">
@@ -68,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            {visible}
+            Every prospect we contact has already been through our Signal Engine: researched across multiple data sources, verified against your ICP, and showing real buying signals. Outreach built from that research books the meetings. No templates, no spray-and-pray.
           </motion.p>
 
           {/* CTAs */}
