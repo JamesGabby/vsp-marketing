@@ -28,19 +28,41 @@ export const metadata: Metadata = {
     template: "%s | Perihelion",
   },
   description: siteDescription,
+  keywords: [
+    "B2B lead generation",
+    "outbound sales agency",
+    "cold email agency",
+    "qualified sales meetings",
+    "B2B appointment setting",
+    "AI outbound prospecting",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: "/",
     siteName: "Perihelion",
     title: "Perihelion | B2B Lead Generation Agency",
     description: siteDescription,
-    images: [{ url: "/perihelion-logo-light.png", alt: "Perihelion" }],
+    images: [
+      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
+    ],
   },
   twitter: {
     card: "summary",
     title: "Perihelion | B2B Lead Generation Agency",
     description: siteDescription,
     images: ["/perihelion-logo-light.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
   icons: {
     icon: [

@@ -18,12 +18,25 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       type: "article",
+      url: `/blog/${post.slug}`,
       title: post.title,
       description: post.excerpt,
       publishedTime: post.publishedAt,
       authors: [post.author],
+      images: [
+        { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/perihelion-logo-light.png"],
     },
   }
 }
@@ -46,9 +59,20 @@ export default async function BlogPostPage({
             headline: post.title,
             description: post.excerpt,
             datePublished: post.publishedAt,
+            dateModified: post.publishedAt,
             author: { "@type": "Organization", name: post.author },
-            publisher: { "@type": "Organization", name: "Perihelion" },
-            mainEntityOfPage: `https://periheliongrowth.com/blog/${post.slug}`,
+            publisher: {
+              "@type": "Organization",
+              name: "Perihelion",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://periheliongrowth.com/perihelion-logo-light.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://periheliongrowth.com/blog/${post.slug}`,
+            },
           }),
         }}
       />

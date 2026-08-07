@@ -2,10 +2,29 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Quote } from "lucide-react"
 
+const description =
+  "Real results from real clients. See how Perihelion fills pipelines with qualified meetings through AI-powered outbound."
+
 export const metadata: Metadata = {
   title: "Case Studies",
-  description:
-    "Real results from real clients. See how Perihelion fills pipelines with qualified meetings through AI-powered outbound.",
+  description,
+  alternates: {
+    canonical: "/case-studies",
+  },
+  openGraph: {
+    url: "/case-studies",
+    title: "Case Studies | Perihelion",
+    description,
+    images: [
+      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Case Studies | Perihelion",
+    description,
+    images: ["/perihelion-logo-light.png"],
+  },
 }
 
 const caseStudies = [
@@ -80,6 +99,23 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <div className="py-24 lg:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "B2B Lead Generation",
+            provider: { "@type": "Organization", name: "Perihelion" },
+            review: caseStudies.map((cs) => ({
+              "@type": "Review",
+              itemReviewed: { "@type": "Organization", name: cs.company },
+              reviewBody: cs.quote,
+              author: { "@type": "Person", name: cs.quoteName },
+            })),
+          }),
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}

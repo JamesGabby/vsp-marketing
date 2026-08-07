@@ -35,7 +35,9 @@
       "Bash(mv app/favicon-32x32.png public/favicon-32x32.png)",
       "Bash(mv app/apple-touch-icon.png public/apple-touch-icon.png)",
       "Bash(mv public/vs.png public/perihelion-logo-light.png)",
-      "Bash(mv public/vs-dark.png public/perihelion-logo-dark.png)"
+      "Bash(mv public/vs-dark.png public/perihelion-logo-dark.png)",
+      "Bash(npx next *)",
+      "Bash(pkill -f \"next start\")"
     ]
   }
 }

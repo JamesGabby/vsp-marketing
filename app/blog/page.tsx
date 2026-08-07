@@ -3,10 +3,29 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { getAllPosts, formatDate } from "@/lib/blog"
 
+const description =
+  "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion team."
+
 export const metadata: Metadata = {
   title: "Blog",
-  description:
-    "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion team.",
+  description,
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    url: "/blog",
+    title: "The Outbound Playbook | Perihelion Blog",
+    description,
+    images: [
+      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "The Outbound Playbook | Perihelion Blog",
+    description,
+    images: ["/perihelion-logo-light.png"],
+  },
 }
 
 export default function BlogPage() {
