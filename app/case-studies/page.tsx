@@ -38,7 +38,7 @@ const caseStudies = [
       "The founder had tried one outbound agency prior: they built a massive spray-and-pray list, sent generic templates, and delivered a handful of irrelevant leads over three months. The team had no time to build their own system and needed a reliable, repeatable pipeline that matched their ICP.",
     whatWeDid: [
       "Defined a precise ICP: Series A/B US tech startups actively scaling engineering, showing hiring signals for senior developers",
-      "Fed the lead list through our Signal Engine, which disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
+      "Fed the lead list through our Lead Intelligence Engine, which disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
       "Wrote personalised outreach referencing each company's recent funding, open roles, and tech stack",
     ],
     results: [
@@ -83,7 +83,7 @@ const caseStudies = [
     whatWeDid: [
       "Isolated all future sending to new dedicated domains, fully separated from the main domain, with strict DNS config and continuous health monitoring",
       "Rebuilt the ICP around CFOs and IT Directors at 50–200 person professional services firms showing signs of compliance pressure or legacy infrastructure",
-      "Ran the new lead list through the Signal Engine, deep-researching each prospect for buying signals including recent audits, compliance certifications, and IT job postings",
+      "Ran the new lead list through the Lead Intelligence Engine, deep-researching each prospect for event triggers including recent audits, compliance certifications, and IT job postings",
     ],
     results: [
       { label: "Qualified calls / month", value: "22" },

@@ -17,9 +17,9 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "inside-the-signal-engine",
-    title: "Inside the Signal Engine: How Every Prospect Gets Researched, Qualified, and Personalised Before We Ever Reach Out",
+    title: "Inside the Lead Intelligence Engine: How Every Prospect Gets Researched, Qualified, and Personalised Before We Ever Reach Out",
     excerpt:
-      "Our personalisation engine has evolved. The Signal Engine researches every prospect across multiple data sources, verifies they genuinely fit your ICP, checks for buying signals, and produces research-based messaging for each one. No templates, no spray-and-pray.",
+      "Our personalisation engine has evolved. The Lead Intelligence Engine researches every prospect across multiple data sources, verifies they genuinely fit your ICP, checks for event triggers, and produces research-based messaging for each one. No templates, no spray-and-pray.",
     category: "Technology",
     readTime: "7 min read",
     publishedAt: "2026-07-08",
@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "paragraph",
-        text: "Earlier this year we wrote about why we stopped using Clay and built our own AI personalisation engine. That system solved one problem: turning real research into personalisation lines that actually sound like a human did their homework. But it left another problem untouched. It personalised every prospect on the list, whether or not that prospect deserved to be on the list in the first place. The Signal Engine is what it grew into: a single system that qualifies and personalises in one pass, so that every prospect we contact has been researched, verified, and greenlit before a single email goes out.",
+        text: "Earlier this year we wrote about why we stopped using Clay and built our own AI personalisation engine. That system solved one problem: turning real research into personalisation lines that actually sound like a human did their homework. But it left another problem untouched. It personalised every prospect on the list, whether or not that prospect deserved to be on the list in the first place. The Lead Intelligence Engine is what it grew into: a single system that qualifies and personalises in one pass, so that every prospect we contact has been researched, verified, and greenlit before a single email goes out.",
       },
       {
         type: "heading",
@@ -39,11 +39,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "How the Signal Engine Works",
+        text: "How the Lead Intelligence Engine Works",
       },
       {
         type: "paragraph",
-        text: "The workflow is deliberately simple from the outside. We feed the engine a prospect list and train it on the client's ICP: who they sell to, what problem they solve, what a genuinely good-fit account looks like, and just as importantly, what a bad one looks like. From there, the engine takes over. It researches each prospect across multiple data sources, verifies they actually fit the ICP, looks for active buying signals, and produces research-based personalised messaging for every prospect that makes the cut.",
+        text: "The workflow is deliberately simple from the outside. We feed the engine a prospect list and train it on the client's ICP: who they sell to, what problem they solve, what a genuinely good-fit account looks like, and just as importantly, what a bad one looks like. From there, the engine takes over. It researches each prospect across multiple data sources, verifies they actually fit the ICP, looks for active event triggers, and produces research-based personalised messaging for every prospect that makes the cut.",
       },
       {
         type: "heading",
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Every list has noise in it. Companies that matched a filter but not the intent behind it. Job titles that sound right but sit in the wrong part of the org. The Signal Engine's first job is to catch these. Because it's trained on the specific ICP rather than a set of firmographic filters, it can reason about fit the way a good SDR would: not 'does this company have 50 to 200 employees' but 'is this actually the kind of business, at the kind of stage, with the kind of problem our client solves?' That reasoning catches disqualifiers a filter never would: a company that turns out to be a subsidiary of a larger group, a firm that sits just above a headcount threshold according to recently published sources, or a business that is itself the type of company the client sells to, a peer rather than a buyer.",
+        text: "Every list has noise in it. Companies that matched a filter but not the intent behind it. Job titles that sound right but sit in the wrong part of the org. The Lead Intelligence Engine's first job is to catch these. Because it's trained on the specific ICP rather than a set of firmographic filters, it can reason about fit the way a good SDR would: not 'does this company have 50 to 200 employees' but 'is this actually the kind of business, at the kind of stage, with the kind of problem our client solves?' That reasoning catches disqualifiers a filter never would: a company that turns out to be a subsidiary of a larger group, a firm that sits just above a headcount threshold according to recently published sources, or a business that is itself the type of company the client sells to, a peer rather than a buyer.",
       },
       {
         type: "paragraph",
@@ -59,11 +59,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "Step 2: Look for Buying Signals",
+        text: "Step 2: Look for Event Triggers",
       },
       {
         type: "paragraph",
-        text: "Fitting the ICP means a prospect could buy. Buying signals suggest they might buy now. The engine looks for the signals that matter for the specific offer, including:",
+        text: "Fitting the ICP means a prospect could buy. Event triggers suggest they might buy now. The engine looks for the signals that matter for the specific offer, including:",
       },
       {
         type: "list",
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Each line also arrives with its working shown. The engine records the specific signals behind the messaging, whether that's a client case study, a job posting, a leadership appointment, or a founder's recent LinkedIn activity, and grades each personalisation by tier, so the strongest research-backed lines are distinguished from the merely solid ones. When we wrote about moving off Clay, the sharpest criticism was that you can't audit the reasoning behind a bad line because there isn't any. The Signal Engine is built as the opposite: every qualification verdict and every personalisation can be traced back to the evidence that produced it.",
+        text: "Each line also arrives with its working shown. The engine records the specific signals behind the messaging, whether that's a client case study, a job posting, a leadership appointment, or a founder's recent LinkedIn activity, and grades each personalisation by tier, so the strongest research-backed lines are distinguished from the merely solid ones. When we wrote about moving off Clay, the sharpest criticism was that you can't audit the reasoning behind a bad line because there isn't any. The Lead Intelligence Engine is built as the opposite: every qualification verdict and every personalisation can be traced back to the evidence that produced it.",
       },
       {
         type: "heading",
@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The Signal Engine is the natural conclusion of the argument we made when we moved off Clay: enrichment gives you data, but outbound that converts requires judgement. Now that judgement is applied twice, once to decide whether a prospect should be contacted at all, and once to decide what would actually make them reply.",
+        text: "The Lead Intelligence Engine is the natural conclusion of the argument we made when we moved off Clay: enrichment gives you data, but outbound that converts requires judgement. Now that judgement is applied twice, once to decide whether a prospect should be contacted at all, and once to decide what would actually make them reply.",
       },
     ],
   },

@@ -40,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Every prospect we contact has already been through our Signal Engine: researched across multiple data sources, verified against your ICP, and showing real buying signals. Outreach built from that research books the meetings. No templates, no spray-and-pray.
+            Every prospect we contact has already been through our Lead Intelligence Engine: researched across multiple data sources, verified against your ICP, and showing real event triggers. Outreach built from that research books the meetings. No templates, no spray-and-pray.
           </motion.p>
 
           {/* CTAs */}
@@ -66,7 +66,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Signal Engine link */}
+          {/* Lead Intelligence Engine link */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -77,7 +77,7 @@ export function Hero() {
               href="/blog/inside-the-signal-engine"
               className="inline-flex items-center gap-1.5 text-[--volt] hover:underline underline-offset-4 font-medium"
             >
-              Read how the Signal Engine works
+              Read how the Lead Intelligence Engine works
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </motion.p>

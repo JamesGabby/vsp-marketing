@@ -5,21 +5,21 @@ import { motion } from "framer-motion"
 const steps = [
   {
     number: "01",
-    title: "ICP Definition & Signal Engine Training",
+    title: "ICP Definition & Lead Intelligence Engine Training",
     description:
-      "We work closely with you to define your ideal customer profile down to firmographic, technographic, and behavioral signals. We then train the Signal Engine specifically on your ICP and offer.",
+      "We work closely with you to define your ideal customer profile down to firmographic, technographic, and behavioral signals. We then train the Lead Intelligence Engine specifically on your ICP and offer.",
   },
   {
     number: "02",
     title: "Lead List Building & Verification",
     description:
-      "We scrape leads matching your ICP across multiple data sources, cross-reference them, and double-verify every email address before anything enters the Signal Engine. Clean data is non-negotiable.",
+      "We scrape leads matching your ICP across multiple data sources, cross-reference them, and double-verify every email address before anything enters the Lead Intelligence Engine. Clean data is non-negotiable.",
   },
   {
     number: "03",
     title: "AI Qualification & Deep Research",
     description:
-      "The Signal Engine researches each prospect across multiple sources, detects buying signals relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
+      "The Lead Intelligence Engine researches each prospect across multiple sources, detects event triggers relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
   },
   {
     number: "04",

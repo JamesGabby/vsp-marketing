@@ -53,7 +53,7 @@ export default function AboutPage() {
             James Gabbitus founded Perihelion after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. He decided to build something better.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Signal Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects buying signals, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
+            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Lead Intelligence Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects event triggers, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
             We don&apos;t measure success in emails sent. We measure it in qualified meetings held and deals closed.

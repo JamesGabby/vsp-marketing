@@ -21,7 +21,7 @@ const services = [
     icon: Network,
     title: "Cold Email: Our Core Speciality",
     description:
-      "Cold email is the channel we've engineered from the ground up. Our Signal Engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out, not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
+      "Cold email is the channel we've engineered from the ground up. Our Lead Intelligence Engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out, not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
   },
   {
     icon: PenLine,
