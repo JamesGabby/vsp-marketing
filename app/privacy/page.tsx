@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="mt-3">
               You can contact us about anything in this policy at{" "}
-              <a href="mailto:james@periheliongrowth.com">james@periheliongrowth.com</a>.
+              <a href="mailto:contact@periheliongrowth.com">contact@periheliongrowth.com</a>.
             </p>
           </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="mt-3">
               To exercise any of these rights, email{" "}
-              <a href="mailto:james@periheliongrowth.com">james@periheliongrowth.com</a> and we&apos;ll respond
+              <a href="mailto:contact@periheliongrowth.com">contact@periheliongrowth.com</a> and we&apos;ll respond
               within one month.
             </p>
           </section>

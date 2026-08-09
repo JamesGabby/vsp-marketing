@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   }
 
   const { error } = await resend.emails.send({
-    from: "Perihelion <james@periheliongrowth.com>",
+    from: "Perihelion <contact@periheliongrowth.com>",
     to: process.env.CONTACT_TO_EMAIL!,
     replyTo: email,
     subject: `New enquiry from ${name}${company ? ` at ${company}` : ""}`,

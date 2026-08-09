@@ -68,7 +68,7 @@ export function Footer() {
                 <LinkedinIcon className="h-4 w-4" />
               </a>
               <a
-                href="mailto:james@periheliongrowth.com"
+                href="mailto:contact@periheliongrowth.com"
                 aria-label="Email"
                 className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-[--border] text-[--text-muted] hover:text-[--volt] hover:border-[--volt] transition-colors"
               >
@@ -76,7 +76,7 @@ export function Footer() {
               </a>
             </div>
             <a
-              href="mailto:james@periheliongrowth.com"
+              href="mailto:contact@periheliongrowth.com"
               className="text-sm text-[--text-secondary] hover:text-[--volt] transition-colors w-fit"
             >
               contact@periheliongrowth.com

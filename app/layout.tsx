@@ -103,7 +103,7 @@ export default function RootLayout({
               founder: { "@type": "Person", name: "James Gabbitus" },
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "james@periheliongrowth.com",
+                email: "contact@periheliongrowth.com",
                 contactType: "sales",
               },
             }),

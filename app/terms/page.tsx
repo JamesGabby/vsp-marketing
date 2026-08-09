@@ -99,7 +99,7 @@ export default function TermsPage() {
           <section>
             <h2>Contact</h2>
             <p>
-              Questions about these terms: <a href="mailto:james@periheliongrowth.com">james@periheliongrowth.com</a>.
+              Questions about these terms: <a href="mailto:contact@periheliongrowth.com">contact@periheliongrowth.com</a>.
             </p>
           </section>
 
