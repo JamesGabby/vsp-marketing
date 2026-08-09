@@ -2,21 +2,21 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown, PoundSterling } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
 
   return (
     <section className="hero-bg relative flex min-h-[calc(100vh-64px)] items-center">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-16 sm:py-20 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
+            className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
             Perihelion: Closest Approach to Your Next Deal
@@ -27,20 +27,43 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight text-[--text-primary] mb-6"
+            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight text-[--text-primary] mb-3"
           >
-            We Build the Pipeline.{" "}
-            <span className="text-[--volt]">You Close the Deals.</span>
+            10 Qualified Sales Calls in 90 Days{" "}
+            <span className="text-[--volt]">— Guaranteed.</span>
           </motion.h1>
+
+          {/* Sub-tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-base sm:text-lg font-semibold text-[--text-secondary] mb-4"
+          >
+            We build the pipeline. You close the deals. Fall short and we work free until we get you there.
+          </motion.p>
+
+          {/* Pay-per-meeting badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            className="mb-7 flex justify-center"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border-2 border-[--volt]/30 bg-[--volt-glow] pl-3 pr-4 py-2 text-sm font-bold text-[--volt]">
+              <PoundSterling className="h-4 w-4" />
+              Pay per qualified meeting held, not a flat retainer
+            </span>
+          </motion.div>
 
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-10"
+            className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-8"
           >
-            Every prospect we contact has already been through our Lead Intelligence Engine: researched across multiple data sources, verified against your ICP, and showing real event triggers. Outreach built from that research books the meetings. No templates, no spray-and-pray.
+            Every prospect we contact has already been through our Lead Intelligence Engine: researched across multiple data sources, verified against your ICP, and showing real trigger events. Outreach built from that research books the meetings. No templates, no spray-and-pray.
           </motion.p>
 
           {/* CTAs */}
@@ -48,7 +71,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             <div className="animate-float w-fit rounded-lg mx-auto sm:mx-0 [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
               <Button asChild size="lg">
@@ -71,7 +94,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-10 text-sm"
+            className="mb-6 text-sm"
           >
             <Link
               href="/blog/inside-the-signal-engine"
@@ -91,8 +114,7 @@ export function Hero() {
           >
             {[
               { label: "No long-term contracts" },
-              { label: "10 qualified calls in 90 days guaranteed" },
-              { label: "Pay per qualified meeting held" },
+              { label: "Compliance built in (GDPR, CAN-SPAM)" },
             ].map((item) => (
               <span key={item.label} className="flex flex-col">
                 <span className="flex items-center gap-1.5">

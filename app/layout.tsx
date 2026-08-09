@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 const siteDescription =
-  "Perihelion books qualified B2B meetings using the Lead Intelligence Engine: every prospect researched across multiple data sources, verified against your ICP, and showing real event triggers before any outreach. Backed by a 10 qualified calls in 90 days guarantee: if we fall short, we work for free until you get them."
+  "Perihelion books qualified B2B meetings using the Lead Intelligence Engine: every prospect researched across multiple data sources, verified against your ICP, and showing real trigger events before any outreach. Backed by a 10 qualified calls in 90 days guarantee: if we fall short, we work for free until you get them."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://periheliongrowth.com"),

@@ -19,7 +19,7 @@ const steps = [
     number: "03",
     title: "AI Qualification & Deep Research",
     description:
-      "The Lead Intelligence Engine researches each prospect across multiple sources, detects event triggers relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
+      "The Lead Intelligence Engine researches each prospect across multiple sources, detects trigger events relevant to your offer, and qualifies or disqualifies them against your ICP. Only genuinely qualified leads move forward.",
   },
   {
     number: "04",

@@ -3,17 +3,20 @@ import Link from "next/link"
 import { ArrowRight, Quote } from "lucide-react"
 
 const description =
-  "Real results from real clients. See how Perihelion fills pipelines with qualified meetings through AI-powered outbound."
+  "Illustrative examples of how a Perihelion engagement runs and the kind of outcomes we're aiming for, not verified client results."
 
 export const metadata: Metadata = {
-  title: "Case Studies",
+  title: "Example Engagements",
   description,
+  // Not yet indexed: the examples below are illustrative, not verified
+  // client results. Remove once real case studies replace them.
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     url: "/case-studies",
-    title: "Case Studies | Perihelion",
+    title: "Example Engagements | Perihelion",
     description,
     images: [
       { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Case Studies | Perihelion",
+    title: "Example Engagements | Perihelion",
     description,
     images: ["/perihelion-logo-light.png"],
   },
@@ -42,13 +45,12 @@ const caseStudies = [
       "Wrote personalised outreach referencing each company's recent funding, open roles, and tech stack",
     ],
     results: [
-      { label: "Qualified calls / month", value: "16" },
-      { label: "New retainer clients (90 days)", value: "3" },
-      { label: "ARR added in first quarter", value: "$190k" },
+      { label: "Qualified calls / month (target)", value: "16" },
+      { label: "New retainer clients (90 days, target)", value: "3" },
+      { label: "ARR added in first quarter (target)", value: "$190k" },
     ],
     quote:
       "We'd been burned before by agencies that just didn't get our ICP. Perihelion actually understood who we were targeting, and the leads proved it.",
-    quoteName: "Founder & CEO",
   },
   {
     slug: "b2b-saas-revenue-intelligence",
@@ -64,13 +66,12 @@ const caseStudies = [
       "Personalised outreach around each prospect's tech stack, CRM setup, and publicly visible pipeline challenges",
     ],
     results: [
-      { label: "Qualified calls / month", value: "14" },
-      { label: "Pipeline generated (60 days)", value: "$260k" },
-      { label: "Enterprise deals closed", value: "2" },
+      { label: "Qualified calls / month (target)", value: "14" },
+      { label: "Pipeline generated (60 days, target)", value: "$260k" },
+      { label: "Enterprise deals closed (target)", value: "2" },
     ],
     quote:
       "The quality of the leads was unlike anything we'd seen from cold outbound before. These were people who actually had the problem we solve.",
-    quoteName: "Co-founder & Head of Sales",
   },
   {
     slug: "managed-it-services",
@@ -83,53 +84,44 @@ const caseStudies = [
     whatWeDid: [
       "Isolated all future sending to new dedicated domains, fully separated from the main domain, with strict DNS config and continuous health monitoring",
       "Rebuilt the ICP around CFOs and IT Directors at 50–200 person professional services firms showing signs of compliance pressure or legacy infrastructure",
-      "Ran the new lead list through the Lead Intelligence Engine, deep-researching each prospect for event triggers including recent audits, compliance certifications, and IT job postings",
+      "Ran the new lead list through the Lead Intelligence Engine, deep-researching each prospect for trigger events including recent audits, compliance certifications, and IT job postings",
     ],
     results: [
-      { label: "Qualified calls / month", value: "22" },
-      { label: "Main domain reputation", value: "Restored" },
-      { label: "New clients (first quarter)", value: "4" },
+      { label: "Qualified calls / month (target)", value: "22" },
+      { label: "Main domain reputation (target)", value: "Restored" },
+      { label: "New clients (first quarter, target)", value: "4" },
     ],
     quote:
       "We went from a broken, spammy outbound motion to a clean system that books us meetings with exactly the type of companies we want to work with.",
-    quoteName: "Managing Director",
   },
 ]
 
 export default function CaseStudiesPage() {
   return (
     <div className="py-24 lg:py-32">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "B2B Lead Generation",
-            provider: { "@type": "Organization", name: "Perihelion" },
-            review: caseStudies.map((cs) => ({
-              "@type": "Review",
-              itemReviewed: { "@type": "Organization", name: cs.company },
-              reviewBody: cs.quote,
-              author: { "@type": "Person", name: cs.quoteName },
-            })),
-          }),
-        }}
-      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
+        <div className="max-w-2xl mx-auto text-center mb-8">
           <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
-            Case Studies
+            Example Engagements
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
-            Real Pipelines.{" "}
-            <span className="text-[--volt]">Real Results.</span>
+            What a Pipeline{" "}
+            <span className="text-[--volt]">Engagement Looks Like</span>
           </h1>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
-            How we've helped B2B companies replace referral dependency with a
+            How we approach B2B companies replacing referral dependency with a
             predictable, engine-driven outbound motion.
+          </p>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="max-w-2xl mx-auto mb-16 rounded-xl border-2 border-[--border] bg-[--surface] px-5 py-3.5 text-center">
+          <p className="text-xs text-[--text-muted] leading-relaxed">
+            These are illustrative examples of how an engagement runs, not verified past results.
+            We&apos;re a young agency and don&apos;t yet have client case studies we can publish, this page
+            will be replaced with real, named outcomes as soon as we do.
           </p>
         </div>
 
@@ -185,7 +177,7 @@ export default function CaseStudiesPage() {
                         &ldquo;{cs.quote}&rdquo;
                       </p>
                       <p className="text-xs font-semibold text-[--text-muted]">
-                        — {cs.quoteName}
+                        Illustrative client feedback, not an actual quote
                       </p>
                     </div>
                   </div>
@@ -193,7 +185,7 @@ export default function CaseStudiesPage() {
                   {/* Right col — results */}
                   <div className="flex flex-col gap-4">
                     <h3 className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
-                      Results
+                      Target Outcomes
                     </h3>
                     {cs.results.map((r) => (
                       <div

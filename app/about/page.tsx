@@ -3,15 +3,9 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { Zap, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const teamPlaceholders = [
-  { initials: "JG", name: "James Gabbitus", role: "Founder & Head of Strategy" },
-  { initials: "MR", name: "Morgan Reid", role: "Head of Outbound Operations" },
-  { initials: "CC", name: "Casey Chen", role: "Lead Copywriter" },
-  { initials: "DP", name: "Drew Parker", role: "Data & Enrichment Lead" },
-]
+import { LinkedinIcon } from "@/components/icons/LinkedinIcon"
 
 const values = [
   {
@@ -44,7 +38,7 @@ export default function AboutPage() {
         >
           <div className="flex flex-col items-center mb-6">
             <Image src="/perihelion-logo-light.png" alt="Perihelion" height={140} width={140} priority className="logo-light-variant" />
-            <Image src="/perihelion-logo-dark.png" alt="Perihelion" height={140} width={140} priority className="logo-dark-variant" />
+            <Image src="/perihelion-logo-dark.png" alt="" aria-hidden="true" height={140} width={140} priority className="logo-dark-variant" />
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-6">
             About <span className="text-[--volt]">Perihelion</span>
@@ -53,11 +47,50 @@ export default function AboutPage() {
             James Gabbitus founded Perihelion after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. He decided to build something better.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Lead Intelligence Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects event triggers, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
+            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Lead Intelligence Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects trigger events, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
             We don&apos;t measure success in emails sent. We measure it in qualified meetings held and deals closed.
           </p>
+        </motion.div>
+
+        {/* Founder */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-20"
+        >
+          <div className="mx-auto max-w-3xl rounded-2xl border-2 border-[--border] bg-[--surface] p-6 sm:p-8 shadow-sm dark:shadow-none flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+            <Image
+              src="/james-gabbitus.png"
+              alt="James Gabbitus, Founder of Perihelion"
+              height={128}
+              width={128}
+              className="h-32 w-32 shrink-0 rounded-xl object-cover border-2 border-[--border]"
+            />
+            <div>
+              <h2 className="text-lg font-bold text-[--text-primary] tracking-tight">
+                James Gabbitus
+              </h2>
+              <p className="text-sm text-[--volt] font-semibold mb-3">
+                Founder, Perihelion
+              </p>
+              <p className="text-sm text-[--text-secondary] leading-relaxed mb-4">
+                MSc Computer Science. Built the Lead Intelligence Engine from the ground up and works directly with every client on ICP, messaging, and campaign strategy.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jamesgabbitus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[--text-secondary] hover:text-[--volt] transition-colors"
+              >
+                <LinkedinIcon className="h-4 w-4" />
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         {/* Values */}

@@ -20,6 +20,10 @@ export interface CalcState {
 
 export type PresetKey = "conservative" | "moderate" | "aggressive"
 
+// Defaults are deliberately conservative and modelled on our own case-study
+// range (14–22 qualified calls/month) rather than best-case numbers — a
+// calculator that opens on a believable outcome is more persuasive than one
+// that opens on a fantasy.
 export const DEFAULTS: CalcState = {
   agencyRetainer: 3000,
   adToolSpend: 500,
@@ -27,14 +31,14 @@ export const DEFAULTS: CalcState = {
   salesHeadcount: 1,
   costPerRep: 4500,
   perMeetingFee: 0,
-  emailsPerMonth: 10000,
-  replyRate: 5,
-  positiveReplyRate: 40,
-  showUpRate: 75,
-  closeRate: 20,
-  dealValue: 8000,
+  emailsPerMonth: 3000,
+  replyRate: 3,
+  positiveReplyRate: 25,
+  showUpRate: 70,
+  closeRate: 15,
+  dealValue: 6000,
   contractLength: 12,
-  salesCycle: 2,
+  salesCycle: 3,
 }
 
 export const PRESETS: Record<PresetKey, CalcState> = {
@@ -45,31 +49,31 @@ export const PRESETS: Record<PresetKey, CalcState> = {
     salesHeadcount: 0,
     costPerRep: 3500,
     perMeetingFee: 0,
-    emailsPerMonth: 3000,
+    emailsPerMonth: 2000,
     replyRate: 2,
-    positiveReplyRate: 22,
-    showUpRate: 62,
+    positiveReplyRate: 18,
+    showUpRate: 60,
     closeRate: 12,
-    dealValue: 3000,
+    dealValue: 4000,
     contractLength: 6,
     salesCycle: 4,
   },
   moderate: { ...DEFAULTS },
   aggressive: {
-    agencyRetainer: 8000,
-    adToolSpend: 2000,
+    agencyRetainer: 6000,
+    adToolSpend: 1000,
     setupFee: 0,
-    salesHeadcount: 3,
-    costPerRep: 5500,
+    salesHeadcount: 2,
+    costPerRep: 5000,
     perMeetingFee: 0,
-    emailsPerMonth: 30000,
-    replyRate: 8,
-    positiveReplyRate: 50,
-    showUpRate: 85,
-    closeRate: 30,
-    dealValue: 20000,
-    contractLength: 24,
-    salesCycle: 1,
+    emailsPerMonth: 4000,
+    replyRate: 4,
+    positiveReplyRate: 30,
+    showUpRate: 75,
+    closeRate: 22,
+    dealValue: 10000,
+    contractLength: 18,
+    salesCycle: 2,
   },
 }
 

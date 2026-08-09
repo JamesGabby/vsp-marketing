@@ -48,7 +48,8 @@ export function Navbar() {
           >
             <Image
               src="/perihelion-logo-light.png"
-              alt="Perihelion"
+              alt=""
+              aria-hidden="true"
               height={56}
               width={56}
               priority
@@ -56,7 +57,8 @@ export function Navbar() {
             />
             <Image
               src="/perihelion-logo-dark.png"
-              alt="Perihelion"
+              alt=""
+              aria-hidden="true"
               height={56}
               width={56}
               priority

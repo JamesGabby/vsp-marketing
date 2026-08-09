@@ -24,7 +24,12 @@ function CounterValue({
   delay?: number
   duration?: number
 }) {
-  const [value, setValue] = useState(0)
+  // Initialise to the real target value so server-rendered markup (and any
+  // client that never runs the animation — crawlers, slow JS, no-JS) always
+  // shows the true number instead of a placeholder "0". Once this section
+  // scrolls into view, the animate() call below drives the value from 0 up
+  // to target via its onUpdate callback, so no separate reset effect is needed.
+  const [value, setValue] = useState(target)
 
   useEffect(() => {
     if (!start) return
@@ -87,6 +92,9 @@ export function MetricsBar() {
             </motion.div>
           ))}
         </motion.div>
+        <p className="relative mt-4 text-center text-xs text-[--text-muted]">
+          Real numbers from live outbound campaigns we run.
+        </p>
       </div>
     </section>
   )

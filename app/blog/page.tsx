@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { getAllPosts, formatDate } from "@/lib/blog"
+import { NewsletterSignup } from "@/components/NewsletterSignup"
 
 const description =
   "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion team."
@@ -84,6 +85,8 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+
+        <NewsletterSignup />
       </div>
     </div>
   )

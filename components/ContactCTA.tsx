@@ -153,6 +153,13 @@ export function ContactCTA() {
                   </>
                 )}
               </Button>
+              <p className="text-xs text-[--text-muted] text-center">
+                By submitting, you agree to our{" "}
+                <Link href="/privacy" className="underline underline-offset-2 hover:text-[--volt]">
+                  Privacy Policy
+                </Link>
+                . We&apos;ll only use your details to respond to you.
+              </p>
             </form>
           )}
         </motion.div>

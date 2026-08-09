@@ -37,7 +37,11 @@
       "Bash(mv public/vs.png public/perihelion-logo-light.png)",
       "Bash(mv public/vs-dark.png public/perihelion-logo-dark.png)",
       "Bash(npx next *)",
-      "Bash(pkill -f \"next start\")"
+      "Bash(pkill -f \"next start\")",
+      "Read(//c/Users/gabbs/Downloads/**)",
+      "Bash(npx eslint *)",
+      "Bash(break)",
+      "Bash(python3 *)"
     ]
   }
 }

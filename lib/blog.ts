@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     slug: "inside-the-signal-engine",
     title: "Inside the Lead Intelligence Engine: How Every Prospect Gets Researched, Qualified, and Personalised Before We Ever Reach Out",
     excerpt:
-      "Our personalisation engine has evolved. The Lead Intelligence Engine researches every prospect across multiple data sources, verifies they genuinely fit your ICP, checks for event triggers, and produces research-based messaging for each one. No templates, no spray-and-pray.",
+      "Our personalisation engine has evolved. The Lead Intelligence Engine researches every prospect across multiple data sources, verifies they genuinely fit your ICP, checks for trigger events, and produces research-based messaging for each one. No templates, no spray-and-pray.",
     category: "Technology",
     readTime: "7 min read",
     publishedAt: "2026-07-08",
@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "The workflow is deliberately simple from the outside. We feed the engine a prospect list and train it on the client's ICP: who they sell to, what problem they solve, what a genuinely good-fit account looks like, and just as importantly, what a bad one looks like. From there, the engine takes over. It researches each prospect across multiple data sources, verifies they actually fit the ICP, looks for active event triggers, and produces research-based personalised messaging for every prospect that makes the cut.",
+        text: "The workflow is deliberately simple from the outside. We feed the engine a prospect list and train it on the client's ICP: who they sell to, what problem they solve, what a genuinely good-fit account looks like, and just as importantly, what a bad one looks like. From there, the engine takes over. It researches each prospect across multiple data sources, verifies they actually fit the ICP, looks for active trigger events, and produces research-based personalised messaging for every prospect that makes the cut.",
       },
       {
         type: "heading",
@@ -59,11 +59,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "heading",
-        text: "Step 2: Look for Event Triggers",
+        text: "Step 2: Look for Trigger Events",
       },
       {
         type: "paragraph",
-        text: "Fitting the ICP means a prospect could buy. Event triggers suggest they might buy now. The engine looks for the signals that matter for the specific offer, including:",
+        text: "Fitting the ICP means a prospect could buy. Trigger events suggest they might buy now. The engine looks for the signals that matter for the specific offer, including:",
       },
       {
         type: "list",

@@ -2,26 +2,10 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Inbox, UserSearch, Bell } from "lucide-react"
+import { Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
 import { ROICalculator } from "@/components/tools/roi-calculator/ROICalculator"
-
-const comingSoonTools = [
-  {
-    icon: UserSearch,
-    title: "ICP Builder",
-    description:
-      "Define and score your ideal customer profile with guided prompts across firmographic, technographic, and behavioral signals.",
-  },
-  {
-    icon: Inbox,
-    title: "Deliverability Audit",
-    description:
-      "Check your domain reputation, SPF/DKIM/DMARC configuration, and inbox placement score before your next campaign.",
-  },
-]
 
 export default function ToolsPage() {
   const [email, setEmail] = useState("")
@@ -80,40 +64,6 @@ export default function ToolsPage() {
           className="mb-12"
         >
           <ROICalculator />
-        </motion.div>
-
-        {/* Coming soon tools */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16"
-        >
-          {comingSoonTools.map((tool, i) => {
-            const Icon = tool.icon
-            return (
-              <motion.div
-                key={tool.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
-                className="rounded-2xl border-2 border-[--border] bg-[--surface] p-6 opacity-60 pointer-events-none select-none shadow-sm dark:shadow-none"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[--background] border-2 border-[--border]">
-                    <Icon className="h-5 w-5 text-[--text-muted]" />
-                  </div>
-                  <Badge variant="muted">Coming Soon</Badge>
-                </div>
-                <h3 className="text-base font-bold text-[--text-primary] mb-2 tracking-tight">
-                  {tool.title}
-                </h3>
-                <p className="text-sm text-[--text-secondary] leading-relaxed">
-                  {tool.description}
-                </p>
-              </motion.div>
-            )
-          })}
         </motion.div>
 
         {/* Email capture */}
