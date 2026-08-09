@@ -85,7 +85,7 @@ export function ROICalculator() {
               prefix="£"
             />
             <SliderInput
-              label="Monthly ad / tool spend"
+              label="Monthly tech / tool spend"
               value={state.adToolSpend}
               min={0} max={5000} step={100}
               onChange={set("adToolSpend")}
