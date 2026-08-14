@@ -51,7 +51,7 @@ export function VSLVideo() {
           <div className="animate-float rounded-lg [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">
               <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
-                Book a Strategy Call
+                Book a 15-Minute Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
