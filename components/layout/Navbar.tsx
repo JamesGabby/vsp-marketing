@@ -144,7 +144,7 @@ export function Navbar() {
               >
                 <iframe
                   src="https://www.youtube.com/embed/Vj6QeO1a68E"
-                  title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
+                  title="How to Consistently Win More High-Paying Clients Each Month Through Running Tightly-Listed & Trigger-Based Cold Email Campaigns"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="absolute inset-0 h-full w-full"

@@ -20,7 +20,7 @@ export function VSLVideo() {
             For B2B SMEs…
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[--text-primary]">
-            How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns
+            How to Consistently Win More High-Paying Clients Each Month Through Running Tightly-Listed & Trigger-Based Cold Email Campaigns
           </h2>
         </motion.div>
 
@@ -34,7 +34,7 @@ export function VSLVideo() {
         >
           <iframe
             src="https://www.youtube.com/embed/Vj6QeO1a68E" 
-            title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
+            title="How to Consistently Win More High-Paying Clients Each Month Through Running Tightly-Listed & Trigger-Based Cold Email Campaigns"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             className="absolute inset-0 h-full w-full"
