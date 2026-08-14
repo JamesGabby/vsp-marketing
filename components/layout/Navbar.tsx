@@ -137,13 +137,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            {/* <div className="mt-3 pt-3 border-t border-[--border]">
+            <div className="mt-3 pt-3 border-t border-[--border]">
               <div
                 className="relative w-full overflow-hidden rounded-xl border-2 border-[--border] mb-3"
                 style={{ aspectRatio: "16 / 9" }}
               >
                 <iframe
-                  src="https://www.youtube.com/embed/W_XEA0FXamE"
+                  src="https://www.youtube.com/embed/Vj6QeO1a68E"
                   title="How To Get An Extra 5 High-Paying Clients Every 90 Days Through Laser Targeted Outbound Prospecting Campaigns"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -155,7 +155,7 @@ export function Navbar() {
                   Book a Call
                 </Link>
               </Button>
-            </div> */}
+            </div>
           </nav>
         </div>
       )}

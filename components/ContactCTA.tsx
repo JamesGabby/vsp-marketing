@@ -60,7 +60,7 @@ export function ContactCTA() {
             an outbound engine that fills your calendar with qualified conversations.
           </p>
           <p className="text-sm text-[--text-secondary] leading-relaxed mb-8">
-            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> a fixed monthly fee covering sending infrastructure, data, and tooling, then a fee per qualified meeting that takes place. No hefty retainers.
+            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> £500/month covers lead sourcing, data verification, AI research credits, mailboxes, and sending infrastructure. Then £250 per qualified meeting that actually takes place, more where the ICP is genuinely hard to reach. A typical first 90 days is around £4,000 all in for 10 qualified meetings, about £400 each.
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">

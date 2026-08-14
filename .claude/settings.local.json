@@ -50,7 +50,8 @@
       "Bash(git -C /c/Users/gabbs/nextjs/vsp diff --stat)",
       "Bash(git -C /c/Users/gabbs/nextjs/vsp diff -U0)",
       "Bash(echo \"EXIT=$?\")",
-      "Bash(echo \"TSC=$?\")"
+      "Bash(echo \"TSC=$?\")",
+      "PowerShell(npx eslint components/ContactCTA.tsx)"
     ]
   }
 }
