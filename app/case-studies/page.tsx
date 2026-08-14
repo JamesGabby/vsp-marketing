@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Quote } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 const description =
   "Illustrative examples of how a Perihelion engagement runs and the kind of outcomes we're aiming for, not verified client results."
@@ -41,7 +41,7 @@ const caseStudies = [
       "The founder had tried one outbound agency prior: they built a massive spray-and-pray list, sent generic templates, and delivered a handful of irrelevant leads over three months. The team had no time to build their own system and needed a reliable, repeatable pipeline that matched their ICP.",
     whatWeDid: [
       "Defined a precise ICP: Series A/B US tech startups actively scaling engineering, showing hiring signals for senior developers",
-      "Fed the lead list through our Lead Intelligence Engine, which disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
+      "Fed the lead list through our Qualification Engine, which disqualified 60% of the raw list as non-ICP, retaining only verified, research-backed prospects",
       "Wrote personalised outreach referencing each company's recent funding, open roles, and tech stack",
     ],
     results: [
@@ -49,8 +49,6 @@ const caseStudies = [
       { label: "New retainer clients (90 days, target)", value: "3" },
       { label: "ARR added in first quarter (target)", value: "$190k" },
     ],
-    quote:
-      "We'd been burned before by agencies that just didn't get our ICP. Perihelion actually understood who we were targeting, and the leads proved it.",
   },
   {
     slug: "b2b-saas-revenue-intelligence",
@@ -70,8 +68,6 @@ const caseStudies = [
       { label: "Pipeline generated (60 days, target)", value: "$260k" },
       { label: "Enterprise deals closed (target)", value: "2" },
     ],
-    quote:
-      "The quality of the leads was unlike anything we'd seen from cold outbound before. These were people who actually had the problem we solve.",
   },
   {
     slug: "managed-it-services",
@@ -84,15 +80,13 @@ const caseStudies = [
     whatWeDid: [
       "Isolated all future sending to new dedicated domains, fully separated from the main domain, with strict DNS config and continuous health monitoring",
       "Rebuilt the ICP around CFOs and IT Directors at 50–200 person professional services firms showing signs of compliance pressure or legacy infrastructure",
-      "Ran the new lead list through the Lead Intelligence Engine, deep-researching each prospect for trigger events including recent audits, compliance certifications, and IT job postings",
+      "Ran the new lead list through the Qualification Engine, deep-researching each prospect for trigger events including recent audits, compliance certifications, and IT job postings",
     ],
     results: [
       { label: "Qualified calls / month (target)", value: "22" },
       { label: "Main domain reputation (target)", value: "Restored" },
       { label: "New clients (first quarter, target)", value: "4" },
     ],
-    quote:
-      "We went from a broken, spammy outbound motion to a clean system that books us meetings with exactly the type of companies we want to work with.",
   },
 ]
 
@@ -119,9 +113,10 @@ export default function CaseStudiesPage() {
         {/* Disclaimer */}
         <div className="max-w-2xl mx-auto mb-16 rounded-xl border-2 border-[--border] bg-[--surface] px-5 py-3.5 text-center">
           <p className="text-xs text-[--text-muted] leading-relaxed">
-            These are illustrative examples of how an engagement runs, not verified past results.
-            We&apos;re a young agency and don&apos;t yet have client case studies we can publish, this page
-            will be replaced with real, named outcomes as soon as we do.
+            These are illustrative examples of how an engagement runs, and the target outcomes we
+            work towards, not verified past results. We&apos;re a young agency and can&apos;t yet publish
+            named client results, this page will be replaced with real, attributed outcomes as soon
+            as we can.
           </p>
         </div>
 
@@ -169,17 +164,6 @@ export default function CaseStudiesPage() {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Quote */}
-                    <div className="rounded-xl border border-[--volt]/20 bg-[--volt-glow] p-5">
-                      <Quote className="h-4 w-4 text-[--volt] mb-3" />
-                      <p className="text-sm text-[--text-primary] leading-relaxed italic mb-3">
-                        &ldquo;{cs.quote}&rdquo;
-                      </p>
-                      <p className="text-xs font-semibold text-[--text-muted]">
-                        Illustrative client feedback, not an actual quote
-                      </p>
-                    </div>
                   </div>
 
                   {/* Right col — results */}
@@ -208,7 +192,7 @@ export default function CaseStudiesPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-[--volt] hover:gap-2.5 transition-all"
                       >
-                        Get similar results <ArrowRight className="h-3.5 w-3.5" />
+                        Talk about your numbers <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
                   </div>
@@ -230,7 +214,7 @@ export default function CaseStudiesPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-[--volt] px-6 py-3 text-sm font-bold text-[--volt-foreground] hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]"
           >
-            Book a Strategy Call <ArrowRight className="h-4 w-4" />
+            Book a 15-Minute Call <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 

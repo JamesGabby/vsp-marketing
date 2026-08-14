@@ -71,7 +71,7 @@ export default function TermsPage() {
           <section>
             <h2>Intellectual property</h2>
             <p>
-              The Site&apos;s content, design, and the Lead Intelligence Engine are the property of
+              The Site&apos;s content, design, and the Qualification Engine are the property of
               Perihelion. You&apos;re welcome to link to or reference the Site, but not to reproduce its
               content, code, or methodology without permission.
             </p>

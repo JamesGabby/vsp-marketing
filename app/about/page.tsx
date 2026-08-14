@@ -9,19 +9,19 @@ import { LinkedinIcon } from "@/components/icons/LinkedinIcon"
 
 const values = [
   {
-    title: "Strategic Partner, Not a Vendor",
+    title: "Founder-Led, Not Farmed Out",
     description:
-      "We embed ourselves in your go-to-market motion. That means we understand your product, your customers, your objections, not just your spreadsheet.",
+      "James runs every account personally. There's no junior SDR pool learning on your budget and no offshore list-builder you never speak to.",
   },
   {
-    title: "Honest Before Comfortable",
+    title: "We Build Our Own Tools",
     description:
-      "If your positioning is the bottleneck, we'll say so. If a channel isn't working, we won't hide behind vanity metrics. You deserve the truth.",
+      "The Qualification Engine is ours, written from scratch. When your campaign needs the research logic to work differently, we change the code rather than wait on a vendor's roadmap.",
   },
   {
-    title: "Obsessed with Quality",
+    title: "Paid on Outcomes",
     description:
-      "We'd rather book ten highly qualified meetings than fifty that waste your sales team's time. Every lead we send reflects on us.",
+      "You pay per qualified meeting that actually takes place. If the campaign doesn't book meetings, we don't get paid, which keeps us honest about what's working.",
   },
 ]
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
             James Gabbitus founded Perihelion after speaking to dozens of founders who&apos;d been burned by lead gen agencies: agencies that didn&apos;t understand their ICP, delivered low-quality leads, and hid behind vanity metrics. He decided to build something better.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed mb-4">
-            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Lead Intelligence Engine, our AI-powered qualification and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects trigger events, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
+            With a technical background (MSc Computer Science), he spent months coding, testing, debugging, and iterating to build the Qualification Engine, our AI-powered research and personalisation system, from the ground up. It&apos;s a system that deep-researches every prospect, detects trigger events, qualifies or disqualifies against your exact ICP, and produces research-based outreach that sounds like a human wrote it, because the targeting is precise enough that it reads that way.
           </p>
           <p className="text-lg text-[--text-secondary] leading-relaxed">
             We don&apos;t measure success in emails sent. We measure it in qualified meetings held and deals closed.
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 Founder, Perihelion
               </p>
               <p className="text-sm text-[--text-secondary] leading-relaxed mb-4">
-                MSc Computer Science. Built the Lead Intelligence Engine from the ground up and works directly with every client on ICP, messaging, and campaign strategy.
+                MSc Computer Science. Built the Qualification Engine from the ground up and works directly with every client on ICP, messaging, and campaign strategy.
               </p>
               <a
                 href="https://www.linkedin.com/in/jamesgabbitus/"
@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">
               <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
-                Work With Us
+                Book a 15-Minute Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

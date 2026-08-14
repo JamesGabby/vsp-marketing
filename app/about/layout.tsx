@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 const description =
-  "Perihelion was founded by James Gabbitus after seeing too many companies burned by lead gen agencies. We built the Lead Intelligence Engine to deliver qualified meetings, not vanity metrics."
+  "Perihelion was founded by James Gabbitus after seeing too many companies burned by lead gen agencies. We built the Qualification Engine to deliver qualified meetings, not vanity metrics."
 
 export const metadata: Metadata = {
   title: "About",

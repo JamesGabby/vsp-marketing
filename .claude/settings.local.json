@@ -41,7 +41,16 @@
       "Read(//c/Users/gabbs/Downloads/**)",
       "Bash(npx eslint *)",
       "Bash(break)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "PowerShell($files = @\\(\"app\\\\about\\\\layout.tsx\",\"app\\\\about\\\\page.tsx\",\"app\\\\layout.tsx\",\"app\\\\case-studies\\\\page.tsx\",\"app\\\\terms\\\\page.tsx\",\"lib\\\\blog.ts\",\"components\\\\Hero.tsx\",\"components\\\\ProcessTimeline.tsx\",\"components\\\\ServicesGrid.tsx\"\\); foreach \\($f in $files\\) { $p = Join-Path \"C:\\\\Users\\\\gabbs\\\\nextjs\\\\vsp\" $f; $c = [System.IO.File]::ReadAllText\\($p\\); $n = $c -creplace \"Lead Intelligence Engine\",\"Qualification Engine\"; if \\($n -ne $c\\) { [System.IO.File]::WriteAllText\\($p,$n\\); Write-Output \"updated $f\" } })",
+      "Bash(grep -rn \"—\\\\|\\\\\\\\\\\\\\\\u2014\" --include=\"*.tsx\" --include=\"*.ts\" app components lib)",
+      "Bash(grep -v \"{/\\\\*\")",
+      "Bash(grep -v \"// \")",
+      "Bash(echo \"TSC_EXIT=$?\")",
+      "Bash(git -C /c/Users/gabbs/nextjs/vsp diff --stat)",
+      "Bash(git -C /c/Users/gabbs/nextjs/vsp diff -U0)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(echo \"TSC=$?\")"
     ]
   }
 }

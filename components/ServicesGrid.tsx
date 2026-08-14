@@ -15,17 +15,17 @@ const services = [
     icon: Target,
     title: "ICP Research & Targeting",
     description:
-      'We build hyper-specific ideal customer profiles down to firmographic, technographic, and behavioral signals. We know the difference between \u201ccompanies with 50\u2013200 employees\u201d and \u201cSeries B SaaS companies actively hiring SDRs who just switched CRMs.\u201d',
+      'We build hyper-specific ideal customer profiles down to firmographic, technographic, and behavioural signals. We know the difference between \u201ccompanies with 50\u2013200 employees\u201d and \u201cSeries B SaaS companies actively hiring SDRs who just switched CRMs.\u201d',
   },
   {
     icon: Network,
     title: "Cold Email: Our Core Speciality",
     description:
-      "Cold email is the channel we've engineered from the ground up. Our Lead Intelligence Engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out, not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
+      "Cold email is the channel we've engineered from the ground up. Our Qualification Engine means every email is sent to a verified, ICP-matched prospect with a research-based reason-to-reach-out, not a generic template. For clients who want to go further, we can layer in LinkedIn outreach and cold calling on top.",
   },
   {
     icon: PenLine,
-    title: "Copywriting That Converts",
+    title: "Research-Backed Personalisation",
     description:
       "Every personalised line we send is graded by strength and traceable to the specific signal that produced it: a job posting, a leadership change, a client win, a founder's own words. Because we tune the research logic to your ICP, your offer, and your tone, every lead comes with a reason-to-reach-out that's actually specific to that person, not a mail-merged \"I saw you work at {{company}}\".",
   },

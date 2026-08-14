@@ -16,10 +16,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border-2 border-[--volt]/30 bg-[--volt-glow] pl-3 pr-4 py-1.5 text-xs font-semibold leading-none text-[--volt]"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-[--volt] animate-pulse" />
-            Perihelion: Closest Approach to Your Next Deal
+            <PoundSterling className="h-3.5 w-3.5" />
+            Pay per qualified meeting held, not a flat retainer
           </motion.div>
 
           {/* Headline */}
@@ -29,8 +29,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight text-[--text-primary] mb-3"
           >
-            10 Qualified Sales Calls in 90 Days{" "}
-            <span className="text-[--volt]">— Guaranteed.</span>
+            10 Qualified Sales Calls in 90 Days.{" "}
+            <span className="text-[--volt]">Guaranteed.</span>
           </motion.h1>
 
           {/* Sub-tagline */}
@@ -40,21 +40,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-base sm:text-lg font-semibold text-[--text-secondary] mb-4"
           >
-            We build the pipeline. You close the deals. Fall short and we work free until we get you there.
+            We build the pipeline. You close the deals. If we fall short, we work for free until we get you there.
           </motion.p>
 
-          {/* Pay-per-meeting badge */}
-          <motion.div
+          {/* Definition of a qualified call */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mb-7 flex justify-center"
+            className="mx-auto mb-6 max-w-xl text-sm text-[--text-muted] leading-relaxed"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border-2 border-[--volt]/30 bg-[--volt-glow] pl-3 pr-4 py-2 text-sm font-bold text-[--volt]">
-              <PoundSterling className="h-4 w-4" />
-              Pay per qualified meeting held, not a flat retainer
-            </span>
-          </motion.div>
+            Qualified means a decision-maker at a company matching the ICP we agree in week one, who attends the call.
+          </motion.p>
 
           {/* Subheadline */}
           <motion.p
@@ -63,7 +60,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[--text-secondary] max-w-2xl mx-auto leading-relaxed mb-8"
           >
-            Every prospect we contact has already been through our Lead Intelligence Engine: researched across multiple data sources, verified against your ICP, and showing real trigger events. Outreach built from that research books the meetings. No templates, no spray-and-pray.
+            You only take calls with people who genuinely fit your market and have a live reason to buy. Our Qualification Engine researches every prospect across multiple data sources, verifies them against your ICP, and checks for real trigger events before we send a single email. No templates, no spray-and-pray.
           </motion.p>
 
           {/* CTAs */}
@@ -76,7 +73,7 @@ export function Hero() {
             <div className="animate-float w-fit rounded-lg mx-auto sm:mx-0 [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
               <Button asChild size="lg">
                 <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
-                  Book a Free Call
+                  Book a 15-Minute Call
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -89,7 +86,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Lead Intelligence Engine link */}
+          {/* Qualification Engine link */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -100,7 +97,7 @@ export function Hero() {
               href="/blog/inside-the-signal-engine"
               className="inline-flex items-center gap-1.5 text-[--volt] hover:underline underline-offset-4 font-medium"
             >
-              Read how the Lead Intelligence Engine works
+              Read how the Qualification Engine works
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </motion.p>

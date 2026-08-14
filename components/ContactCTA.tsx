@@ -60,18 +60,21 @@ export function ContactCTA() {
             an outbound engine that fills your calendar with qualified conversations.
           </p>
           <p className="text-sm text-[--text-secondary] leading-relaxed mb-8">
-            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> a small monthly fee to cover tech and tooling, then you only pay per qualified meeting that takes place. No hefty retainers.
+            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> a fixed monthly fee covering sending infrastructure, data, and tooling, then a fee per qualified meeting that takes place. No hefty retainers.
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">
               <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
-                Book Your Strategy Call
+                Book a 15-Minute Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>
           <p className="mt-4 text-sm text-[--text-muted]">
             10 qualified calls in 90 days guarantee: if we fall short, we work for free until we get you there.
+          </p>
+          <p className="mt-1.5 text-xs text-[--text-muted]">
+            Qualified means a decision-maker at a company matching the ICP we agree in week one, who attends the call.
           </p>
         </motion.div>
 
@@ -154,7 +157,7 @@ export function ContactCTA() {
                 )}
               </Button>
               <p className="text-xs text-[--text-muted] text-center">
-                By submitting, you agree to our{" "}
+                We reply within one business day. By submitting, you agree to our{" "}
                 <Link href="/privacy" className="underline underline-offset-2 hover:text-[--volt]">
                   Privacy Policy
                 </Link>

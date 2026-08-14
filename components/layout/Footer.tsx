@@ -32,6 +32,9 @@ export function Footer() {
             <p className="text-sm text-[--text-secondary] leading-relaxed max-w-[260px]">
               B2B outbound that books real meetings with your ideal customers, not vanity metrics.
             </p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
+              Built to build pipeline.
+            </p>
           </div>
 
           {/* Quick links */}
@@ -96,9 +99,6 @@ export function Footer() {
               <Link href="/terms" className="text-xs text-[--text-muted] hover:text-[--volt] transition-colors">
                 Terms of Service
               </Link>
-              <p className="text-xs text-[--text-muted]">
-                Built to build pipeline.
-              </p>
             </div>
           </div>
           {/* <p className="text-[11px] text-[--text-muted]">

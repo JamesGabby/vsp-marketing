@@ -23,9 +23,9 @@ export default function ToolsPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: "Tools launch notification signup",
+          name: "Tools notification signup",
           email,
-          message: `${email} asked to be notified when the free tools launch.`,
+          message: `${email} asked to be notified when new free tools go live.`,
         }),
       })
       if (!res.ok) throw new Error()
@@ -77,10 +77,10 @@ export default function ToolsPage() {
             <Bell className="h-5 w-5 text-[--volt]" />
           </div>
           <h2 className="text-xl font-bold text-[--text-primary] mb-2 mt-3">
-            Get notified when tools launch
+            Get notified when we add new tools
           </h2>
           <p className="text-sm text-[--text-secondary] mb-6">
-            Drop your email and we&apos;ll let you know the moment they&apos;re live.
+            Drop your email and we&apos;ll let you know the moment the next one is live.
           </p>
           {submitted ? (
             <div className="rounded-lg border-2 border-[--volt]/40 bg-[--volt-glow] px-5 py-4 text-sm font-medium text-[--volt]">
