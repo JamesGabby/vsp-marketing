@@ -51,7 +51,10 @@
       "Bash(git -C /c/Users/gabbs/nextjs/vsp diff -U0)",
       "Bash(echo \"EXIT=$?\")",
       "Bash(echo \"TSC=$?\")",
-      "PowerShell(npx eslint components/ContactCTA.tsx)"
+      "PowerShell(npx eslint components/ContactCTA.tsx)",
+      "PowerShell(npx tsc --noEmit -p tsconfig.json)",
+      "PowerShell(node \"C:\\\\Users\\\\gabbs\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-gabbs-nextjs-vsp\\\\e77346f9-bd7e-4e7a-8c5f-6cb722de251f\\\\scratchpad\\\\check.mjs\")",
+      "PowerShell(node \"C:\\\\Users\\\\gabbs\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-gabbs-nextjs-vsp\\\\e77346f9-bd7e-4e7a-8c5f-6cb722de251f\\\\scratchpad\\\\check.mjs\" 2>&1 | Select-Object -First 16)"
     ]
   }
 }

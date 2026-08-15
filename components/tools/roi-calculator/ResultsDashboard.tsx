@@ -11,6 +11,7 @@ interface ResultsDashboardProps {
 export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
   const {
     totalMonthlyCost,
+    meetingsBookedPerMonth,
     meetingsPerMonth,
     dealsPerMonth,
     revenuePerMonth,
@@ -20,7 +21,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
     pipelinePerMonth,
     annualRevenue,
     annualROI,
-    revenueMonths,
+    closingCohorts,
     totalContractValue,
   } = results
 
@@ -40,7 +41,12 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
       {/* Primary metrics — 2 × 3 */}
       <div className="grid grid-cols-2 gap-x-4 gap-y-5">
         <StatBlock
-          label="Meetings / Month"
+          label="Meetings Booked / Month"
+          value={meetingsBookedPerMonth}
+          format={(n) => fmtNum(n, 1)}
+        />
+        <StatBlock
+          label="Meetings Held / Month"
           value={meetingsPerMonth}
           format={(n) => fmtNum(n, 1)}
         />
@@ -50,7 +56,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
           format={(n) => fmtNum(n, 2)}
         />
         <StatBlock
-          label="Revenue / Month"
+          label="New Revenue / Month"
           value={revenuePerMonth}
           format={fmtGBP}
         />
@@ -79,14 +85,14 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
           value={cpa !== null ? fmtGBP(cpa) : "—"}
         />
         <StatCard
-          label="Pipeline / Month"
+          label="Pipeline Created / Month"
           value={fmtGBP(pipelinePerMonth)}
-          sub="weighted"
+          sub="meetings × contract value"
         />
         <StatCard
           label="Annual Revenue"
           value={fmtGBP(annualRevenue)}
-          sub={`${revenueMonths} revenue months (cycle lag)`}
+          sub={`incl. recurring · ${closingCohorts} closing months`}
         />
         <StatCard
           label="Annual ROI"

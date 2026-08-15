@@ -2,16 +2,17 @@ import type { CalcState } from "./constants"
 
 export interface CalcResults {
   totalMonthlyCost: number
-  meetingsPerMonth: number
+  meetingsBookedPerMonth: number
+  meetingsPerMonth: number    // meetings actually held (booked × show-up)
   dealsPerMonth: number
-  revenuePerMonth: number
+  revenuePerMonth: number     // new revenue added per month, not total billings
   monthlyROI: number | null
   costPerMeeting: number | null
   cpa: number | null
   pipelinePerMonth: number
   annualRevenue: number
   annualROI: number | null
-  revenueMonths: number       // effective revenue-generating months in year 1 after lag
+  closingCohorts: number      // months in year 1 that produce closed deals after cycle lag
   totalContractValue: number  // deal value × contract length (total customer value)
 }
 
@@ -36,11 +37,15 @@ export function fmtNum(n: number, decimals = 1): string {
 }
 
 export function calculate(s: CalcState): CalcResults {
-  const meetingsPerMonth =
+  // A positive reply is not a booked meeting — a share of interested replies
+  // never make it onto the calendar, so bookingRate sits between the two.
+  const meetingsBookedPerMonth =
     s.emailsPerMonth *
     (s.replyRate / 100) *
     (s.positiveReplyRate / 100) *
-    (s.showUpRate / 100)
+    (s.bookingRate / 100)
+
+  const meetingsPerMonth = meetingsBookedPerMonth * (s.showUpRate / 100)
 
   const totalMonthlyCost =
     s.agencyRetainer +
@@ -62,13 +67,23 @@ export function calculate(s: CalcState): CalcResults {
   const cpa =
     dealsPerMonth > 0.001 ? totalMonthlyCost / dealsPerMonth : null
 
-  const pipelinePerMonth = meetingsPerMonth * s.dealValue * (s.closeRate / 100)
+  // Gross pipeline created: every held meeting is an opportunity worth its full
+  // contract value. Weighting it by close rate would just restate revenue.
+  const pipelinePerMonth = meetingsPerMonth * s.dealValue * s.contractLength
 
-  // Sales cycle creates a lag: deals started in the last `salesCycle` months of
-  // year 1 won't close until year 2. Effective revenue months = 12 - salesCycle,
-  // floored at 1 so the field always has some impact.
-  const revenueMonths = Math.max(1, 12 - s.salesCycle)
-  const annualRevenue = revenuePerMonth * revenueMonths
+  // Sales cycle creates a lag: deals sourced in month m don't close until month
+  // m + salesCycle, so the first closes land in month salesCycle + 1. Each
+  // monthly cohort then bills for the rest of year 1, capped by contract length
+  // — that recurrence is what a flat `revenue × months` model misses. Clamped so
+  // a 12-month cycle still closes one cohort rather than zeroing the year out.
+  const firstCloseMonth = Math.min(s.salesCycle + 1, 12)
+  const closingCohorts = 12 - firstCloseMonth + 1
+
+  let annualRevenue = 0
+  for (let startMonth = firstCloseMonth; startMonth <= 12; startMonth++) {
+    const billingMonths = Math.min(13 - startMonth, s.contractLength)
+    annualRevenue += revenuePerMonth * billingMonths
+  }
 
   const annualCost = totalMonthlyCost * 12 + s.setupFee
   const annualROI =
@@ -80,6 +95,7 @@ export function calculate(s: CalcState): CalcResults {
 
   return {
     totalMonthlyCost,
+    meetingsBookedPerMonth,
     meetingsPerMonth,
     dealsPerMonth,
     revenuePerMonth,
@@ -89,7 +105,7 @@ export function calculate(s: CalcState): CalcResults {
     pipelinePerMonth,
     annualRevenue,
     annualROI,
-    revenueMonths,
+    closingCohorts,
     totalContractValue,
   }
 }

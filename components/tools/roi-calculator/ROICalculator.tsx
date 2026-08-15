@@ -187,6 +187,14 @@ export function ROICalculator() {
               benchmark={BENCHMARKS.positiveReplyRate}
             />
             <SliderInput
+              label="Positive replies that book a meeting"
+              value={state.bookingRate}
+              min={20} max={100} step={5}
+              onChange={set("bookingRate")}
+              suffix="%"
+              benchmark={BENCHMARKS.bookingRate}
+            />
+            <SliderInput
               label="Meeting show-up rate"
               value={state.showUpRate}
               min={30} max={100} step={5}
