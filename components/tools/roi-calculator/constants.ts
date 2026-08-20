@@ -16,6 +16,8 @@ export interface CalcState {
   closeRate: number
   dealValue: number
   contractLength: number
+  grossMargin: number    // % of revenue left after cost of delivery
+  renewalRate: number    // % of customers renewing at the end of each term
   salesCycle: number
 }
 
@@ -41,6 +43,8 @@ export const DEFAULTS: CalcState = {
   closeRate: 15,
   dealValue: 6000,
   contractLength: 12,
+  grossMargin: 70,
+  renewalRate: 70,
   salesCycle: 3,
 }
 
@@ -60,6 +64,8 @@ export const PRESETS: Record<PresetKey, CalcState> = {
     closeRate: 12,
     dealValue: 4000,
     contractLength: 6,
+    grossMargin: 55,
+    renewalRate: 50,
     salesCycle: 4,
   },
   moderate: { ...DEFAULTS },
@@ -78,6 +84,8 @@ export const PRESETS: Record<PresetKey, CalcState> = {
     closeRate: 22,
     dealValue: 10000,
     contractLength: 18,
+    grossMargin: 85,
+    renewalRate: 65,
     salesCycle: 2,
   },
 }
@@ -97,6 +105,8 @@ export const MINIMUMS: CalcState = {
   closeRate: 5,
   dealValue: 500,
   contractLength: 1,
+  grossMargin: 10,
+  renewalRate: 0,
   salesCycle: 1,
 }
 

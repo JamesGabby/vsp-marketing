@@ -13,7 +13,12 @@ export interface CalcResults {
   annualRevenue: number
   annualROI: number | null
   closingCohorts: number      // months in year 1 that produce closed deals after cycle lag
-  totalContractValue: number  // deal value × contract length (total customer value)
+  totalContractValue: number  // deal value × contract length (first-term value)
+  customerLifetimeMonths: number
+  ltv: number                 // margin-based lifetime value of one customer
+  ltvCacRatio: number | null
+  cacPaybackMonths: number | null
+  lifetimeCapped: boolean     // true when the 10-year horizon binds
 }
 
 const GBP = new Intl.NumberFormat("en-GB", {
@@ -35,6 +40,20 @@ export function fmtPct(n: number, signed = false): string {
 export function fmtNum(n: number, decimals = 1): string {
   return n.toFixed(decimals)
 }
+
+export function fmtRatio(n: number): string {
+  return `${n.toFixed(1)} : 1`
+}
+
+export function fmtMonths(n: number): string {
+  return `${n.toFixed(1)} mo`
+}
+
+// A renewal rate approaching 100% sends expected lifetime to infinity, which is
+// arithmetically true and commercially meaningless. Cap the horizon at 5 years,
+// the usual ceiling for a defensible LTV, so the headline number survives
+// scrutiny from a sceptical buyer.
+const MAX_LIFETIME_MONTHS = 60
 
 export function calculate(s: CalcState): CalcResults {
   // A positive reply is not a booked meeting — a share of interested replies
@@ -93,6 +112,24 @@ export function calculate(s: CalcState): CalcResults {
 
   const totalContractValue = s.dealValue * s.contractLength
 
+  // Contract length is the first term, not the customer lifetime. With a per-term
+  // renewal probability r, the expected number of terms is the geometric mean
+  // 1 / (1 - r) — 75% renewal means four terms, not one.
+  const renewal = Math.min(Math.max(s.renewalRate / 100, 0), 0.95)
+  const uncappedLifetime = s.contractLength / (1 - renewal)
+  const customerLifetimeMonths = Math.min(uncappedLifetime, MAX_LIFETIME_MONTHS)
+  const lifetimeCapped = uncappedLifetime > MAX_LIFETIME_MONTHS
+
+  // LTV is gross profit, not revenue — an LTV:CAC ratio built on revenue
+  // overstates the case by the whole cost of delivery.
+  const monthlyGrossProfit = s.dealValue * (s.grossMargin / 100)
+  const ltv = monthlyGrossProfit * customerLifetimeMonths
+
+  const ltvCacRatio = cpa !== null && cpa > 0 ? ltv / cpa : null
+
+  const cacPaybackMonths =
+    cpa !== null && monthlyGrossProfit > 0 ? cpa / monthlyGrossProfit : null
+
   return {
     totalMonthlyCost,
     meetingsBookedPerMonth,
@@ -107,5 +144,10 @@ export function calculate(s: CalcState): CalcResults {
     annualROI,
     closingCohorts,
     totalContractValue,
+    customerLifetimeMonths,
+    ltv,
+    ltvCacRatio,
+    cacPaybackMonths,
+    lifetimeCapped,
   }
 }

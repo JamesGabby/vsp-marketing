@@ -229,6 +229,22 @@ export function ROICalculator() {
               suffix=" mo"
             />
             <SliderInput
+              label="Gross margin"
+              value={state.grossMargin}
+              min={10} max={100} step={5}
+              onChange={set("grossMargin")}
+              suffix="%"
+              hint="Revenue left after cost of delivery. LTV is measured in gross profit, not revenue."
+            />
+            <SliderInput
+              label="Contract renewal rate"
+              value={state.renewalRate}
+              min={0} max={95} step={5}
+              onChange={set("renewalRate")}
+              suffix="%"
+              hint="Share of customers renewing at the end of each term. Drives expected lifetime, capped at 5 years."
+            />
+            <SliderInput
               label="Average sales cycle (months)"
               value={state.salesCycle}
               min={1} max={12} step={1}
@@ -275,7 +291,7 @@ export function ROICalculator() {
 
       {/* Mobile: sticky bottom summary bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-[--border] bg-[--background]/95 backdrop-blur-md px-4 py-3">
-        <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
+        <div className="mx-auto max-w-7xl flex items-center justify-between gap-3">
           <div className="text-center">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">Meetings/mo</p>
             <p className="text-sm font-bold text-[--volt] tabular-nums">{results.meetingsPerMonth.toFixed(1)}</p>
@@ -284,6 +300,13 @@ export function ROICalculator() {
           <div className="text-center">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">Revenue/mo</p>
             <p className="text-sm font-bold text-[--volt] tabular-nums">{fmtGBP(results.revenuePerMonth)}</p>
+          </div>
+          <div className="h-8 w-px bg-[--border]" />
+          <div className="text-center">
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">LTV:CAC</p>
+            <p className="text-sm font-bold text-[--volt] tabular-nums">
+              {results.ltvCacRatio !== null ? `${results.ltvCacRatio.toFixed(1)}:1` : "—"}
+            </p>
           </div>
           <div className="h-8 w-px bg-[--border]" />
           <div className="text-center">

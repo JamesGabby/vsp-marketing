@@ -37,6 +37,7 @@ interface StatBlockProps {
   value: number | null
   format: (n: number) => string
   nullDisplay?: string
+  sub?: string
   positive?: boolean
   negative?: boolean
 }
@@ -46,6 +47,7 @@ export function StatBlock({
   value,
   format,
   nullDisplay = "—",
+  sub,
   positive,
   negative,
 }: StatBlockProps) {
@@ -64,6 +66,16 @@ export function StatBlock({
       <span className="text-[11px] text-[--text-muted] uppercase tracking-widest font-semibold">
         {label}
       </span>
+      {sub && (
+        <span
+          className={cn(
+            "text-[10px] leading-tight -mt-0.5",
+            positive ? "text-[--volt]" : negative ? "text-red-400" : "text-[--text-muted]"
+          )}
+        >
+          {sub}
+        </span>
+      )}
     </div>
   )
 }

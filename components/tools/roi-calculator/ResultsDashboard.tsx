@@ -1,7 +1,7 @@
 import { StatBlock } from "./StatBlock"
 import { StatCard } from "./StatCard"
 import { ROIChart } from "./ROIChart"
-import { fmtGBP, fmtPct, fmtNum, type CalcResults } from "./calculations"
+import { fmtGBP, fmtPct, fmtNum, fmtRatio, fmtMonths, type CalcResults } from "./calculations"
 
 interface ResultsDashboardProps {
   results: CalcResults
@@ -23,10 +23,32 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
     annualROI,
     closingCohorts,
     totalContractValue,
+    customerLifetimeMonths,
+    ltv,
+    ltvCacRatio,
+    cacPaybackMonths,
+    lifetimeCapped,
   } = results
 
   const roiPositive = monthlyROI !== null && monthlyROI >= 0
   const roiNegative = monthlyROI !== null && monthlyROI < 0
+
+  // 3:1 is the benchmark every operator recognises, so the ratio is scored
+  // against it rather than against zero.
+  const ltvCacHealthy = ltvCacRatio !== null && ltvCacRatio >= 3
+  const ltvCacUnderwater = ltvCacRatio !== null && ltvCacRatio < 1
+  const ltvCacSub =
+    ltvCacRatio === null
+      ? undefined
+      : ltvCacHealthy
+      ? "↑ healthy is 3:1"
+      : ltvCacUnderwater
+      ? "below 1:1 — losing money per deal"
+      : "below the 3:1 benchmark"
+
+  const ltvSub = lifetimeCapped
+    ? "gross profit, 5-yr lifetime cap"
+    : `gross profit × ${fmtNum(customerLifetimeMonths, 0)} mo lifetime`
 
   return (
     <div className="rounded-2xl border-2 border-[--border] bg-[--surface] p-5 flex flex-col gap-6">
@@ -38,7 +60,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         <p className="text-[11px] text-[--text-muted] mt-0.5">Updates as you adjust inputs</p>
       </div>
 
-      {/* Primary metrics — 2 × 3 */}
+      {/* Primary metrics — 2 × 4 */}
       <div className="grid grid-cols-2 gap-x-4 gap-y-5">
         <StatBlock
           label="Meetings Booked / Month"
@@ -74,6 +96,21 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
           format={fmtGBP}
           nullDisplay="—"
         />
+        <StatBlock
+          label="Customer LTV"
+          value={ltv}
+          format={fmtGBP}
+          sub={ltvSub}
+        />
+        <StatBlock
+          label="LTV : CAC"
+          value={ltvCacRatio}
+          format={fmtRatio}
+          nullDisplay="—"
+          sub={ltvCacSub}
+          positive={ltvCacHealthy}
+          negative={ltvCacUnderwater}
+        />
       </div>
 
       <div className="h-px bg-[--border]" />
@@ -83,6 +120,12 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         <StatCard
           label="Cost Per Acquisition"
           value={cpa !== null ? fmtGBP(cpa) : "—"}
+          sub="your CAC"
+        />
+        <StatCard
+          label="CAC Payback"
+          value={cacPaybackMonths !== null ? fmtMonths(cacPaybackMonths) : "—"}
+          sub="months of gross profit to break even"
         />
         <StatCard
           label="Pipeline Created / Month"
@@ -100,11 +143,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
           sub={setupFee > 0 ? "incl. setup fee" : "12-month projection"}
         />
         <StatCard
-          label="Total Monthly Cost"
-          value={fmtGBP(totalMonthlyCost)}
-        />
-        <StatCard
-          label="Total Contract Value"
+          label="First-Term Value"
           value={fmtGBP(totalContractValue)}
           sub="deal value × contract length"
         />
