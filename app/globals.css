@@ -32,6 +32,17 @@
   --input: #e2e8f0;
   --ring: #ea580c;
   --radius: 0.75rem;
+
+  /* Chart marks (ROI calculator). Validated for contrast against the surface
+     and, for the ordinal ramp, for monotone lightness with a visible step gap. */
+  --chart-return: #ea580c;
+  --chart-cost: #64748b;
+  --chart-grid: #e2e8f0;
+  --chart-negative: #dc2626;
+  --chart-shortfall: #9f1239;
+  --chart-ord-1: #fb923c;
+  --chart-ord-2: #ea580c;
+  --chart-ord-3: #9a3412;
 }
 
 .dark {
@@ -63,6 +74,17 @@
   --destructive: #ef4444;
   --input: #1a2544;
   --ring: #fb923c;
+
+  /* Chart marks: the ordinal ramp flips its anchor in dark mode, so more still
+     reads as further from the surface. */
+  --chart-return: #fb923c;
+  --chart-cost: #94a3b8;
+  --chart-grid: #1a2544;
+  --chart-negative: #f87171;
+  --chart-shortfall: #f472b6;
+  --chart-ord-1: #9a3412;
+  --chart-ord-2: #d9531a;
+  --chart-ord-3: #fb923c;
 }
 
 /* ─── Theme-aware logo swap ────────────────────────────────────────── */
