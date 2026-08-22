@@ -6,18 +6,18 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--ring] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--ring) focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
   {
     variants: {
       variant: {
         default:
-          "bg-[--volt] text-[--volt-foreground] hover:bg-[--volt-hover]",
+          "bg-(--volt) text-(--volt-foreground) hover:bg-(--volt-hover)",
         outline:
-          "border border-[--volt] text-[--volt] bg-transparent hover:bg-[--volt-glow]",
+          "border border-(--volt) text-(--volt) bg-transparent hover:bg-(--volt-glow)",
         ghost:
-          "bg-transparent text-[--text-secondary] hover:bg-[--surface] hover:text-[--text-primary]",
+          "bg-transparent text-(--text-secondary) hover:bg-(--surface) hover:text-(--text-primary)",
         secondary:
-          "bg-[--surface] text-[--text-primary] border-2 border-[--border] hover:border-[--volt]",
+          "bg-(--surface) text-(--text-primary) border-2 border-(--border) hover:border-(--volt)",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90",
       },
