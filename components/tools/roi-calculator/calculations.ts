@@ -21,14 +21,14 @@ export interface CalcResults {
   lifetimeCapped: boolean     // true when the 10-year horizon binds
 }
 
-const GBP = new Intl.NumberFormat("en-GB", {
+const MONEY = new Intl.NumberFormat("en-US", {
   style: "currency",
-  currency: "GBP",
+  currency: "USD",
   maximumFractionDigits: 0,
 })
 
-export function fmtGBP(n: number): string {
-  return GBP.format(Math.round(n))
+export function fmtMoney(n: number): string {
+  return MONEY.format(Math.round(n))
 }
 
 export function fmtPct(n: number, signed = false): string {

@@ -97,22 +97,22 @@ export default function CaseStudiesPage() {
 
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center mb-8">
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-(--volt)/30 bg-(--volt-glow) px-3 py-1 text-xs font-semibold text-(--volt)">
             Example Engagements
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--text-primary) mb-4">
             What a Pipeline{" "}
-            <span className="text-[--volt]">Engagement Looks Like</span>
+            <span className="text-(--volt)">Engagement Looks Like</span>
           </h1>
-          <p className="text-lg text-[--text-secondary] leading-relaxed">
+          <p className="text-lg text-(--text-secondary) leading-relaxed">
             How we approach B2B companies replacing referral dependency with a
             predictable, engine-driven outbound motion.
           </p>
         </div>
 
         {/* Disclaimer */}
-        <div className="max-w-2xl mx-auto mb-16 rounded-xl border-2 border-[--border] bg-[--surface] px-5 py-3.5 text-center">
-          <p className="text-xs text-[--text-muted] leading-relaxed">
+        <div className="max-w-2xl mx-auto mb-16 rounded-xl border-2 border-(--border) bg-(--surface) px-5 py-3.5 text-center">
+          <p className="text-xs text-(--text-muted) leading-relaxed">
             These are illustrative examples of how an engagement runs, and the target outcomes we
             work towards, not verified past results. We&apos;re a young agency and can&apos;t yet publish
             named client results, this page will be replaced with real, attributed outcomes as soon
@@ -125,7 +125,7 @@ export default function CaseStudiesPage() {
           {caseStudies.map((cs, i) => (
             <div
               key={cs.slug}
-              className="rounded-2xl border-2 border-[--border] bg-[--surface] overflow-hidden shadow-sm dark:shadow-none"
+              className="rounded-2xl border-2 border-(--border) bg-(--surface) overflow-hidden shadow-sm dark:shadow-none"
             >
               <div className="p-8 lg:p-10">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -133,33 +133,33 @@ export default function CaseStudiesPage() {
                   {/* Left col — context */}
                   <div className="lg:col-span-2">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-2.5 py-0.5 text-xs font-semibold text-[--volt]">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-(--volt)/30 bg-(--volt-glow) px-2.5 py-0.5 text-xs font-semibold text-(--volt)">
                         {cs.industry}
                       </span>
-                      <span className="text-xs text-[--text-muted] font-mono">0{i + 1}</span>
+                      <span className="text-xs text-(--text-muted) font-mono">0{i + 1}</span>
                     </div>
 
-                    <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[--text-primary] mb-3">
+                    <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-(--text-primary) mb-3">
                       {cs.company}
                     </h2>
-                    <p className="text-sm text-[--text-secondary] leading-relaxed mb-6">
+                    <p className="text-sm text-(--text-secondary) leading-relaxed mb-6">
                       {cs.description}
                     </p>
 
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-[--text-muted] mb-2">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-(--text-muted) mb-2">
                       The Challenge
                     </h3>
-                    <p className="text-sm text-[--text-secondary] leading-relaxed mb-6">
+                    <p className="text-sm text-(--text-secondary) leading-relaxed mb-6">
                       {cs.challenge}
                     </p>
 
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-[--text-muted] mb-3">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-(--text-muted) mb-3">
                       What We Did
                     </h3>
                     <ul className="flex flex-col gap-2 mb-8">
                       {cs.whatWeDid.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm text-[--text-secondary] leading-relaxed">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[--volt]" />
+                        <li key={item} className="flex items-start gap-2.5 text-sm text-(--text-secondary) leading-relaxed">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-(--volt)" />
                           {item}
                         </li>
                       ))}
@@ -168,18 +168,18 @@ export default function CaseStudiesPage() {
 
                   {/* Right col — results */}
                   <div className="flex flex-col gap-4">
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-(--text-muted)">
                       Target Outcomes
                     </h3>
                     {cs.results.map((r) => (
                       <div
                         key={r.label}
-                        className="rounded-xl border-2 border-[--border] bg-[--background] p-5"
+                        className="rounded-xl border-2 border-(--border) bg-(--background) p-5"
                       >
-                        <div className="text-3xl font-extrabold text-[--volt] tracking-tight mb-1">
+                        <div className="text-3xl font-extrabold text-(--volt) tracking-tight mb-1">
                           {r.value}
                         </div>
-                        <div className="text-xs text-[--text-muted] leading-snug">
+                        <div className="text-xs text-(--text-muted) leading-snug">
                           {r.label}
                         </div>
                       </div>
@@ -190,7 +190,7 @@ export default function CaseStudiesPage() {
                         href="https://calendly.com/perihelion/15mins"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[--volt] hover:gap-2.5 transition-all"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-(--volt) hover:gap-2.5 transition-all"
                       >
                         Talk about your numbers <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
@@ -205,14 +205,14 @@ export default function CaseStudiesPage() {
 
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <p className="text-lg text-[--text-secondary] mb-6">
+          <p className="text-lg text-(--text-secondary) mb-6">
             Want to see what this looks like for your business?
           </p>
           <Link
             href="https://calendly.com/perihelion/15mins"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-[--volt] px-6 py-3 text-sm font-bold text-[--volt-foreground] hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]"
+            className="inline-flex items-center gap-2 rounded-lg bg-(--volt) px-6 py-3 text-sm font-bold text-(--volt-foreground) hover:opacity-90 transition-opacity [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]"
           >
             Book a 15-Minute Call <ArrowRight className="h-4 w-4" />
           </Link>

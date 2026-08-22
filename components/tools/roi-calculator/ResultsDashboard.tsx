@@ -1,7 +1,7 @@
 import { StatBlock } from "./StatBlock"
 import { StatCard } from "./StatCard"
 import { ROIChart } from "./ROIChart"
-import { fmtGBP, fmtPct, fmtNum, fmtRatio, fmtMonths, type CalcResults } from "./calculations"
+import { fmtMoney, fmtPct, fmtNum, fmtRatio, fmtMonths, type CalcResults } from "./calculations"
 
 interface ResultsDashboardProps {
   results: CalcResults
@@ -51,13 +51,13 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
     : `gross profit × ${fmtNum(customerLifetimeMonths, 0)} mo lifetime`
 
   return (
-    <div className="rounded-2xl border-2 border-[--border] bg-[--surface] p-5 flex flex-col gap-6">
+    <div className="rounded-2xl border-2 border-(--border) bg-(--surface) p-5 flex flex-col gap-6">
       {/* Header */}
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
+        <p className="text-xs font-semibold uppercase tracking-widest text-(--text-muted)">
           Live Results
         </p>
-        <p className="text-[11px] text-[--text-muted] mt-0.5">Updates as you adjust inputs</p>
+        <p className="text-[11px] text-(--text-muted) mt-0.5">Updates as you adjust inputs</p>
       </div>
 
       {/* Primary metrics — 2 × 4 */}
@@ -80,7 +80,7 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         <StatBlock
           label="New Revenue / Month"
           value={revenuePerMonth}
-          format={fmtGBP}
+          format={fmtMoney}
         />
         <StatBlock
           label="Monthly ROI"
@@ -93,13 +93,13 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         <StatBlock
           label="Cost Per Meeting"
           value={costPerMeeting}
-          format={fmtGBP}
+          format={fmtMoney}
           nullDisplay="—"
         />
         <StatBlock
           label="Customer LTV"
           value={ltv}
-          format={fmtGBP}
+          format={fmtMoney}
           sub={ltvSub}
         />
         <StatBlock
@@ -113,13 +113,13 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         />
       </div>
 
-      <div className="h-px bg-[--border]" />
+      <div className="h-px bg-(--border)" />
 
       {/* Secondary metrics — 2 × 3 */}
       <div className="grid grid-cols-2 gap-2.5">
         <StatCard
           label="Cost Per Acquisition"
-          value={cpa !== null ? fmtGBP(cpa) : "—"}
+          value={cpa !== null ? fmtMoney(cpa) : "—"}
           sub="your CAC"
         />
         <StatCard
@@ -129,12 +129,12 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         />
         <StatCard
           label="Pipeline Created / Month"
-          value={fmtGBP(pipelinePerMonth)}
+          value={fmtMoney(pipelinePerMonth)}
           sub="meetings × contract value"
         />
         <StatCard
           label="Annual Revenue"
-          value={fmtGBP(annualRevenue)}
+          value={fmtMoney(annualRevenue)}
           sub={`incl. recurring · ${closingCohorts} closing months`}
         />
         <StatCard
@@ -144,18 +144,18 @@ export function ResultsDashboard({ results, setupFee }: ResultsDashboardProps) {
         />
         <StatCard
           label="First-Term Value"
-          value={fmtGBP(totalContractValue)}
+          value={fmtMoney(totalContractValue)}
           sub="deal value × contract length"
         />
       </div>
 
-      <div className="h-px bg-[--border]" />
+      <div className="h-px bg-(--border)" />
 
       {/* Chart */}
       <ROIChart cost={totalMonthlyCost} revenue={revenuePerMonth} />
 
       {/* Disclaimer */}
-      <p className="text-[11px] text-[--text-muted] leading-relaxed">
+      <p className="text-[11px] text-(--text-muted) leading-relaxed">
         This calculator provides estimates based on the inputs you provide. Actual results vary
         based on ICP quality, market conditions, and sales execution.
       </p>

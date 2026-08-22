@@ -38,7 +38,7 @@ export function ContactCTA() {
   }
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-[--surface] overflow-hidden volt-section">
+    <section id="contact" className="relative py-24 lg:py-32 bg-(--surface) overflow-hidden volt-section">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top CTA block */}
         <motion.div
@@ -48,29 +48,29 @@ export function ContactCTA() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-(--volt)/30 bg-(--volt-glow) px-3 py-1 text-xs font-semibold text-(--volt)">
             Get Started
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--text-primary) mb-4">
             Ready to Build{" "}
-            <span className="text-[--volt]">Predictable Pipeline?</span>
+            <span className="text-(--volt)">Predictable Pipeline?</span>
           </h2>
-          <p className="text-lg text-[--text-secondary] leading-relaxed mb-6">
+          <p className="text-lg text-(--text-secondary) leading-relaxed mb-6">
             Stop guessing where your next customer will come from. Let&apos;s build
             an outbound engine that fills your calendar with qualified conversations.
           </p>
-          <div className="mx-auto mb-8 max-w-xl rounded-2xl border-2 border-[--border] bg-[--background] p-5 sm:p-6 text-left shadow-sm dark:shadow-none">
-            <p className="mb-3 text-sm font-semibold text-[--text-primary]">
+          <div className="mx-auto mb-8 max-w-xl rounded-2xl border-2 border-(--border) bg-(--background) p-5 sm:p-6 text-left shadow-sm dark:shadow-none">
+            <p className="mb-3 text-sm font-semibold text-(--text-primary)">
               How the money works
             </p>
-            <ul className="flex flex-col gap-2.5 text-sm text-[--text-secondary] leading-relaxed">
+            <ul className="flex flex-col gap-2.5 text-sm text-(--text-secondary) leading-relaxed">
               {[
                 "You pay per qualified call held. No call, no invoice.",
-                "A £500 monthly deposit gets the campaign built and sending: lead sourcing, data verification, AI research credits, mailboxes, and infrastructure. It is paid back to you out of the first calls booked.",
+                "A $500 monthly deposit gets the campaign built and sending: lead sourcing, data verification, AI research credits, mailboxes, and infrastructure. It is paid back to you out of the first calls booked.",
                 "No retainer. No setup fee. Monthly rolling, so we earn the next month every month.",
               ].map((line) => (
                 <li key={line} className="flex gap-2.5">
-                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[--volt]" />
+                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-(--volt)" />
                   <span>{line}</span>
                 </li>
               ))}
@@ -84,21 +84,21 @@ export function ContactCTA() {
               </Link>
             </Button>
           </div>
-          <p className="mt-4 text-sm text-[--text-muted]">
+          <p className="mt-4 text-sm text-(--text-muted)">
             Fifteen minutes, no pitch deck. We will tell you straight whether your ICP is one we can reach.
           </p>
-          <p className="mt-1.5 text-xs text-[--text-muted]">
+          <p className="mt-1.5 text-xs text-(--text-muted)">
             Qualified means a decision-maker at a company matching the ICP we agree in week one, who attends the call.
           </p>
         </motion.div>
 
         {/* Divider */}
         <div className="flex items-center gap-4 max-w-xl mx-auto mb-12">
-          <div className="h-px flex-1 bg-[--border]" />
-          <span className="text-xs font-medium text-[--text-muted] uppercase tracking-wider">
+          <div className="h-px flex-1 bg-(--border)" />
+          <span className="text-xs font-medium text-(--text-muted) uppercase tracking-wider">
             or send us a message
           </span>
-          <div className="h-px flex-1 bg-[--border]" />
+          <div className="h-px flex-1 bg-(--border)" />
         </div>
 
         {/* Contact form */}
@@ -107,13 +107,13 @@ export function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="max-w-xl mx-auto rounded-2xl border-2 border-[--border] bg-[--background] p-6 sm:p-8 shadow-sm dark:shadow-none"
+          className="max-w-xl mx-auto rounded-2xl border-2 border-(--border) bg-(--background) p-6 sm:p-8 shadow-sm dark:shadow-none"
         >
           {status === "success" ? (
             <div className="flex flex-col items-center text-center gap-4 py-8">
-              <CheckCircle className="h-12 w-12 text-[--volt]" />
-              <h3 className="text-lg font-bold text-[--text-primary]">Message sent!</h3>
-              <p className="text-sm text-[--text-secondary]">
+              <CheckCircle className="h-12 w-12 text-(--volt)" />
+              <h3 className="text-lg font-bold text-(--text-primary)">Message sent!</h3>
+              <p className="text-sm text-(--text-secondary)">
                 Thanks for reaching out. We&apos;ll get back to you within one business day.
               </p>
               <Button variant="outline" size="sm" onClick={() => { setStatus("idle"); setFields({ name: "", company: "", email: "", message: "" }) }}>
@@ -124,26 +124,26 @@ export function ContactCTA() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-4" aria-label="Contact form">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="name" className="text-xs font-semibold text-[--text-secondary] uppercase tracking-wide">
+                  <label htmlFor="name" className="text-xs font-semibold text-(--text-secondary) uppercase tracking-wide">
                     Name
                   </label>
                   <Input id="name" placeholder="Alex Johnson" autoComplete="name" value={fields.name} onChange={handleChange} required />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="company" className="text-xs font-semibold text-[--text-secondary] uppercase tracking-wide">
+                  <label htmlFor="company" className="text-xs font-semibold text-(--text-secondary) uppercase tracking-wide">
                     Company
                   </label>
                   <Input id="company" placeholder="Acme Corp" autoComplete="organization" value={fields.company} onChange={handleChange} />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-xs font-semibold text-[--text-secondary] uppercase tracking-wide">
+                <label htmlFor="email" className="text-xs font-semibold text-(--text-secondary) uppercase tracking-wide">
                   Work Email
                 </label>
                 <Input id="email" type="email" placeholder="alex@acmecorp.com" autoComplete="email" value={fields.email} onChange={handleChange} required />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="message" className="text-xs font-semibold text-[--text-secondary] uppercase tracking-wide">
+                <label htmlFor="message" className="text-xs font-semibold text-(--text-secondary) uppercase tracking-wide">
                   Message
                 </label>
                 <Textarea
@@ -170,9 +170,9 @@ export function ContactCTA() {
                   </>
                 )}
               </Button>
-              <p className="text-xs text-[--text-muted] text-center">
+              <p className="text-xs text-(--text-muted) text-center">
                 We reply within one business day. By submitting, you agree to our{" "}
-                <Link href="/privacy" className="underline underline-offset-2 hover:text-[--volt]">
+                <Link href="/privacy" className="underline underline-offset-2 hover:text-(--volt)">
                   Privacy Policy
                 </Link>
                 . We&apos;ll only use your details to respond to you.

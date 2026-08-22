@@ -6,7 +6,7 @@ import {
   ArrowRight,
   CalendarCheck,
   ChevronDown,
-  PoundSterling,
+  DollarSign,
   RefreshCw,
   Undo2,
 } from "lucide-react"
@@ -22,7 +22,7 @@ const offerTerms = [
   },
   {
     icon: Undo2,
-    term: "£500 monthly deposit",
+    term: "$500 monthly deposit",
     detail:
       "Builds the campaign and gets it sending, then comes back to you out of the first calls booked.",
   },
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-3 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 rounded-full border-2 border-(--volt)/30 bg-(--volt-glow) pl-2.5 pr-3 sm:pl-3 sm:pr-4 py-1.5 text-[11px] sm:text-xs font-semibold leading-none text-(--volt)"
           >
-            <PoundSterling className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
+            <DollarSign className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
             Outbound priced on outcomes, not activity
           </motion.div>
 

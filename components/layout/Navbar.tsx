@@ -35,7 +35,7 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-[--background]/90 backdrop-blur-md border-b border-[--border]"
+          ? "bg-(--background)/90 backdrop-blur-md border-b border-(--border)"
           : "bg-transparent"
       )}
     >
@@ -44,7 +44,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-lg text-[--text-primary] hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 font-bold text-lg text-(--text-primary) hover:opacity-80 transition-opacity"
           >
             <Image
               src="/perihelion-logo-light.png"
@@ -65,7 +65,7 @@ export function Navbar() {
               className="logo-dark-variant"
             />
             <div className="flex flex-col leading-none">
-              <span className="text-lg font-bold uppercase tracking-[0.15em] text-[--text-primary]">
+              <span className="text-lg font-bold uppercase tracking-[0.15em] text-(--text-primary)">
                 Perihelion
               </span>
               <span className="hidden sm:block text-[8px] font-semibold uppercase tracking-[0.15em] text-orange-500">
@@ -83,8 +83,8 @@ export function Navbar() {
                 className={cn(
                   "relative px-3 py-2 text-sm font-medium rounded-lg transition-colors",
                   pathname === link.href
-                    ? "text-[--volt] bg-[--volt-glow]"
-                    : "text-[--text-secondary] hover:text-[--text-primary] hover:bg-[--surface]"
+                    ? "text-(--volt) bg-(--volt-glow)"
+                    : "text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--surface)"
                 )}
               >
                 {link.label}
@@ -120,7 +120,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[--border] bg-[--background]/95 backdrop-blur-md max-h-[calc(100vh-64px)] overflow-y-auto">
+        <div className="md:hidden border-t border-(--border) bg-(--background)/95 backdrop-blur-md max-h-[calc(100vh-64px)] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {navLinks.map((link) => (
               <Link
@@ -129,17 +129,17 @@ export function Navbar() {
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-lg transition-colors",
                   pathname === link.href
-                    ? "text-[--volt] bg-[--surface]"
-                    : "text-[--text-secondary] hover:text-[--text-primary] hover:bg-[--surface]"
+                    ? "text-(--volt) bg-(--surface)"
+                    : "text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--surface)"
                 )}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 pt-3 border-t border-[--border]">
+            <div className="mt-3 pt-3 border-t border-(--border)">
               <div
-                className="relative w-full overflow-hidden rounded-xl border-2 border-[--border] mb-3"
+                className="relative w-full overflow-hidden rounded-xl border-2 border-(--border) mb-3"
                 style={{ aspectRatio: "16 / 9" }}
               >
                 <iframe

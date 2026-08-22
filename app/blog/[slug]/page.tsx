@@ -80,7 +80,7 @@ export default async function BlogPostPage({
         {/* Back */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm text-[--text-muted] hover:text-[--volt] transition-colors mb-10"
+          className="inline-flex items-center gap-1.5 text-sm text-(--text-muted) hover:text-(--volt) transition-colors mb-10"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           All posts
@@ -88,18 +88,18 @@ export default async function BlogPostPage({
 
         {/* Category badge */}
         <div className="block mb-4">
-        <div className="inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-(--volt)/30 bg-(--volt-glow) px-3 py-1 text-xs font-semibold text-(--volt)">
           {post.category}
         </div>
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[--text-primary] mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-(--text-primary) mb-6 leading-tight">
           {post.title}
         </h1>
 
         {/* Meta */}
-        <div className="flex items-center gap-3 text-sm text-[--text-muted] mb-8">
+        <div className="flex items-center gap-3 text-sm text-(--text-muted) mb-8">
           <span>{post.author}</span>
           <span>·</span>
           <span>{formatDate(post.publishedAt)}</span>
@@ -109,9 +109,9 @@ export default async function BlogPostPage({
 
         {/* Volt divider */}
         <div className="flex items-center gap-3 mb-10">
-          <div className="h-px w-12 bg-[--volt]" />
-          <div className="h-1.5 w-1.5 rounded-full bg-[--volt]" />
-          <div className="h-px flex-1 bg-[--border]" />
+          <div className="h-px w-12 bg-(--volt)" />
+          <div className="h-1.5 w-1.5 rounded-full bg-(--volt)" />
+          <div className="h-px flex-1 bg-(--border)" />
         </div>
 
         {/* Content */}
@@ -121,7 +121,7 @@ export default async function BlogPostPage({
               return (
                 <h2
                   key={i}
-                  className="text-xl font-bold text-[--text-primary] tracking-tight pt-4"
+                  className="text-xl font-bold text-(--text-primary) tracking-tight pt-4"
                 >
                   {block.text}
                 </h2>
@@ -131,8 +131,8 @@ export default async function BlogPostPage({
               return (
                 <ul key={i} className="space-y-2 pl-4">
                   {block.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-[--text-secondary] text-base leading-relaxed">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[--volt]" />
+                    <li key={j} className="flex items-start gap-2.5 text-(--text-secondary) text-base leading-relaxed">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-(--volt)" />
                       {item}
                     </li>
                   ))}
@@ -140,7 +140,7 @@ export default async function BlogPostPage({
               )
             }
             return (
-              <p key={i} className="text-base text-[--text-secondary] leading-relaxed">
+              <p key={i} className="text-base text-(--text-secondary) leading-relaxed">
                 {block.text}
               </p>
             )
@@ -149,17 +149,17 @@ export default async function BlogPostPage({
 
         {/* Bottom divider */}
         <div className="flex items-center gap-3 mt-12 mb-12">
-          <div className="h-px flex-1 bg-[--border]" />
-          <div className="h-1.5 w-1.5 rounded-full bg-[--volt]" />
-          <div className="h-px flex-1 bg-[--border]" />
+          <div className="h-px flex-1 bg-(--border)" />
+          <div className="h-1.5 w-1.5 rounded-full bg-(--volt)" />
+          <div className="h-px flex-1 bg-(--border)" />
         </div>
 
         {/* CTA */}
-        <div className="rounded-2xl border-2 border-[--border] bg-[--surface] p-8 text-center">
-          <h3 className="text-xl font-extrabold text-[--text-primary] mb-2 tracking-tight">
+        <div className="rounded-2xl border-2 border-(--border) bg-(--surface) p-8 text-center">
+          <h3 className="text-xl font-extrabold text-(--text-primary) mb-2 tracking-tight">
             Ready to put this into practice?
           </h3>
-          <p className="text-sm text-[--text-secondary] mb-6">
+          <p className="text-sm text-(--text-secondary) mb-6">
             Let's build an outbound engine for your business, from ICP to booked meetings.
           </p>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">

@@ -44,7 +44,7 @@ function CounterValue({
 
   return (
     <span
-      className="text-3xl sm:text-4xl font-bold text-[--volt]"
+      className="text-3xl sm:text-4xl font-bold text-(--volt)"
       style={{ fontFamily: "var(--font-mono)" }}
     >
       {prefix}
@@ -58,9 +58,9 @@ export function MetricsBar() {
   const [inView, setInView] = useState(false)
 
   return (
-    <section className="relative border-y border-[--border] bg-[--surface] overflow-hidden">
+    <section className="relative border-y border-(--border) bg-(--surface) overflow-hidden">
       {/* Volt gradient accent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[--volt-glow] to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-(--volt-glow) to-transparent pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export function MetricsBar() {
           viewport={{ once: true }}
           onViewportEnter={() => setInView(true)}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-[--border]"
+          className="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-(--border)"
         >
           {metrics.map((metric, i) => (
             <motion.div
@@ -86,13 +86,13 @@ export function MetricsBar() {
                 start={inView}
                 delay={i * 0.15}
               />
-              <span className="text-sm text-[--text-secondary] font-medium">
+              <span className="text-sm text-(--text-secondary) font-medium">
                 {metric.label}
               </span>
             </motion.div>
           ))}
         </motion.div>
-        <p className="relative mt-4 text-center text-xs text-[--text-muted]">
+        <p className="relative mt-4 text-center text-xs text-(--text-muted)">
           Real numbers from live outbound campaigns we run.
         </p>
       </div>

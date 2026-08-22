@@ -47,11 +47,11 @@ export default function ToolsPage() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[--text-primary] mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-(--text-primary) mb-4">
             Tools for{" "}
-            <span className="text-[--volt]">Growth Teams</span>
+            <span className="text-(--volt)">Growth Teams</span>
           </h1>
-          <p className="text-lg text-[--text-secondary] leading-relaxed">
+          <p className="text-lg text-(--text-secondary) leading-relaxed">
             Free resources to help you plan, measure, and optimise your outbound engine.
           </p>
         </motion.div>
@@ -73,17 +73,17 @@ export default function ToolsPage() {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="max-w-md mx-auto text-center"
         >
-          <div className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--surface] border-2 border-[--border] mx-auto">
-            <Bell className="h-5 w-5 text-[--volt]" />
+          <div className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-(--surface) border-2 border-(--border) mx-auto">
+            <Bell className="h-5 w-5 text-(--volt)" />
           </div>
-          <h2 className="text-xl font-bold text-[--text-primary] mb-2 mt-3">
+          <h2 className="text-xl font-bold text-(--text-primary) mb-2 mt-3">
             Get notified when we add new tools
           </h2>
-          <p className="text-sm text-[--text-secondary] mb-6">
+          <p className="text-sm text-(--text-secondary) mb-6">
             Drop your email and we&apos;ll let you know the moment the next one is live.
           </p>
           {submitted ? (
-            <div className="rounded-lg border-2 border-[--volt]/40 bg-[--volt-glow] px-5 py-4 text-sm font-medium text-[--volt]">
+            <div className="rounded-lg border-2 border-(--volt)/40 bg-(--volt-glow) px-5 py-4 text-sm font-medium text-(--volt)">
               You&apos;re on the list. We&apos;ll be in touch.
             </div>
           ) : (

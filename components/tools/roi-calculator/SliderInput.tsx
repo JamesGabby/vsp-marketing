@@ -67,12 +67,12 @@ export function SliderInput({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between gap-3">
-        <label className="text-sm font-medium text-[--text-secondary] flex-1 min-w-0 leading-snug">
+        <label className="text-sm font-medium text-(--text-secondary) flex-1 min-w-0 leading-snug">
           {label}
         </label>
         <div className="flex items-center gap-1 shrink-0">
           {prefix && (
-            <span className="text-sm text-[--text-muted] font-medium">{prefix}</span>
+            <span className="text-sm text-(--text-muted) font-medium">{prefix}</span>
           )}
           <input
             type="number"
@@ -84,13 +84,13 @@ export function SliderInput({
             max={max}
             step={step}
             className={cn(
-              "w-20 text-right text-sm font-bold bg-transparent border-b border-[--border]",
-              "focus:border-[--volt] focus:outline-none tabular-nums pb-px transition-colors",
-              isAboveBenchmark ? "text-[--volt]" : "text-[--text-primary]"
+              "w-20 text-right text-sm font-bold bg-transparent border-b border-(--border)",
+              "focus:border-(--volt) focus:outline-none tabular-nums pb-px transition-colors",
+              isAboveBenchmark ? "text-(--volt)" : "text-(--text-primary)"
             )}
           />
           {suffix && (
-            <span className={cn("text-sm font-medium", isAboveBenchmark ? "text-[--volt]" : "text-[--text-muted]")}>
+            <span className={cn("text-sm font-medium", isAboveBenchmark ? "text-(--volt)" : "text-(--text-muted)")}>
               {suffix}
             </span>
           )}
@@ -109,15 +109,15 @@ export function SliderInput({
       />
 
       {benchmark && (
-        <p className="text-[11px] text-[--text-muted]">
+        <p className="text-[11px] text-(--text-muted)">
           {benchmark.label}: {benchmark.range}
           {isAboveBenchmark && (
-            <span className="ml-1.5 text-[--volt]">↑ above benchmark</span>
+            <span className="ml-1.5 text-(--volt)">↑ above benchmark</span>
           )}
         </p>
       )}
       {hint && !benchmark && (
-        <p className="text-[11px] text-[--text-muted]">{hint}</p>
+        <p className="text-[11px] text-(--text-muted)">{hint}</p>
       )}
     </div>
   )

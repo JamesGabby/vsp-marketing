@@ -8,7 +8,7 @@ import { SliderInput } from "./SliderInput"
 import { InputSection } from "./InputSection"
 import { PresetButtons } from "./PresetButtons"
 import { ResultsDashboard } from "./ResultsDashboard"
-import { calculate, fmtGBP } from "./calculations"
+import { calculate, fmtMoney } from "./calculations"
 import { DEFAULTS, PRESETS, MINIMUMS, BENCHMARKS, type CalcState, type PresetKey } from "./constants"
 
 type Action =
@@ -45,17 +45,17 @@ export function ROICalculator() {
   }
 
   return (
-    <section className="rounded-3xl border-2 border-[--border] bg-[--surface]/50 p-6 sm:p-8">
+    <section className="rounded-3xl border-2 border-(--border) bg-(--surface)/50 p-6 sm:p-8">
       {/* Section header */}
       <div className="flex items-start gap-4 mb-6">
-        <div className="h-10 w-10 shrink-0 rounded-xl border-2 border-[--volt]/25 bg-[--volt-glow] flex items-center justify-center">
-          <Calculator className="h-5 w-5 text-[--volt]" />
+        <div className="h-10 w-10 shrink-0 rounded-xl border-2 border-(--volt)/25 bg-(--volt-glow) flex items-center justify-center">
+          <Calculator className="h-5 w-5 text-(--volt)" />
         </div>
         <div>
-          <h2 className="text-xl font-bold text-[--text-primary] tracking-tight">
+          <h2 className="text-xl font-bold text-(--text-primary) tracking-tight">
             B2B Outbound ROI Calculator
           </h2>
-          <p className="text-sm text-[--text-secondary] mt-0.5">
+          <p className="text-sm text-(--text-secondary) mt-0.5">
             Model the pipeline and revenue impact of your outbound programme. All calculations are live.
           </p>
         </div>
@@ -66,7 +66,7 @@ export function ROICalculator() {
         <button
           type="button"
           onClick={clearToMinimum}
-          className="text-xs font-medium text-[--text-muted] hover:text-[--text-secondary] underline underline-offset-2 transition-colors shrink-0"
+          className="text-xs font-medium text-(--text-muted) hover:text-(--text-secondary) underline underline-offset-2 transition-colors shrink-0"
         >
           Reset all
         </button>
@@ -82,27 +82,27 @@ export function ROICalculator() {
               value={state.agencyRetainer}
               min={0} max={25000} step={500}
               onChange={set("agencyRetainer")}
-              prefix="£"
+              prefix="$"
             />
             <SliderInput
               label="Monthly tech / tool spend"
               value={state.adToolSpend}
               min={0} max={5000} step={100}
               onChange={set("adToolSpend")}
-              prefix="£"
+              prefix="$"
             />
             <SliderInput
               label="One-time setup / onboarding fee"
               value={state.setupFee}
               min={0} max={25000} step={250}
               onChange={set("setupFee")}
-              prefix="£"
+              prefix="$"
               hint="Upfront cost, excluded from monthly ROI but included in year-1 annual ROI."
             />
 
             {/* Headcount — plain number input */}
             <div className="flex items-center justify-between gap-3">
-              <label className="text-sm font-medium text-[--text-secondary]">
+              <label className="text-sm font-medium text-(--text-secondary)">
                 Sales reps dedicated to outbound
               </label>
               <input
@@ -110,23 +110,23 @@ export function ROICalculator() {
                 min={0} max={20} step={1}
                 value={state.salesHeadcount}
                 onChange={(e) => set("salesHeadcount")(Math.max(0, Math.min(20, parseInt(e.target.value) || 0)))}
-                className="w-20 text-right text-sm font-bold text-[--text-primary] bg-transparent border-b border-[--border] focus:border-[--volt] focus:outline-none tabular-nums pb-px transition-colors"
+                className="w-20 text-right text-sm font-bold text-(--text-primary) bg-transparent border-b border-(--border) focus:border-(--volt) focus:outline-none tabular-nums pb-px transition-colors"
               />
             </div>
 
             {state.salesHeadcount > 0 && (
               <div className="flex items-center justify-between gap-3">
-                <label className="text-sm font-medium text-[--text-secondary]">
+                <label className="text-sm font-medium text-(--text-secondary)">
                   Avg. fully loaded cost per rep / month
                 </label>
                 <div className="flex items-center gap-1 shrink-0">
-                  <span className="text-sm text-[--text-muted] font-medium">£</span>
+                  <span className="text-sm text-(--text-muted) font-medium">$</span>
                   <input
                     type="number"
                     min={0} max={15000} step={500}
                     value={state.costPerRep}
                     onChange={(e) => set("costPerRep")(Math.max(0, parseInt(e.target.value) || 0))}
-                    className="w-20 text-right text-sm font-bold text-[--text-primary] bg-transparent border-b border-[--border] focus:border-[--volt] focus:outline-none tabular-nums pb-px transition-colors"
+                    className="w-20 text-right text-sm font-bold text-(--text-primary) bg-transparent border-b border-(--border) focus:border-(--volt) focus:outline-none tabular-nums pb-px transition-colors"
                   />
                 </div>
               </div>
@@ -137,26 +137,26 @@ export function ROICalculator() {
               value={state.perMeetingFee}
               min={0} max={1500} step={25}
               onChange={set("perMeetingFee")}
-              prefix="£"
-              hint="For pay-per-meeting or retainer + bonus models. Leave at £0 for retainer-only."
+              prefix="$"
+              hint="For pay-per-meeting or retainer + bonus models. Leave at $0 for retainer-only."
             />
 
             {/* Total cost summary */}
-            <div className="rounded-lg border-2 border-[--border] bg-[--background] px-4 py-2.5 flex flex-col gap-1.5">
+            <div className="rounded-lg border-2 border-(--border) bg-(--background) px-4 py-2.5 flex flex-col gap-1.5">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[--text-muted]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-(--text-muted)">
                   Total Monthly Outbound Cost
                 </span>
-                <span className="text-sm font-bold text-[--volt] tabular-nums">
-                  {fmtGBP(results.totalMonthlyCost)}
+                <span className="text-sm font-bold text-(--volt) tabular-nums">
+                  {fmtMoney(results.totalMonthlyCost)}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[--text-muted]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-(--text-muted)">
                   Cost Per Meeting
                 </span>
-                <span className="text-sm font-bold text-[--volt] tabular-nums">
-                  {results.costPerMeeting !== null ? fmtGBP(results.costPerMeeting) : "—"}
+                <span className="text-sm font-bold text-(--volt) tabular-nums">
+                  {results.costPerMeeting !== null ? fmtMoney(results.costPerMeeting) : "—"}
                 </span>
               </div>
             </div>
@@ -219,7 +219,7 @@ export function ROICalculator() {
               value={state.dealValue}
               min={500} max={500000} step={500}
               onChange={set("dealValue")}
-              prefix="£"
+              prefix="$"
             />
             <SliderInput
               label="Average contract length"
@@ -268,11 +268,11 @@ export function ROICalculator() {
       </div>
 
       {/* CTA */}
-      <div className="mt-8 rounded-2xl border-2 border-[--volt]/20 bg-[--volt-glow] px-6 py-7 text-center">
-        <h3 className="text-lg font-bold text-[--text-primary] mb-2">
+      <div className="mt-8 rounded-2xl border-2 border-(--volt)/20 bg-(--volt-glow) px-6 py-7 text-center">
+        <h3 className="text-lg font-bold text-(--text-primary) mb-2">
           Want these numbers for real?
         </h3>
-        <p className="text-sm text-[--text-secondary] mb-5 max-w-md mx-auto">
+        <p className="text-sm text-(--text-secondary) mb-5 max-w-md mx-auto">
           Our clients consistently outperform industry benchmarks. Let&apos;s model what Perihelion
           can deliver for your specific business.
         </p>
@@ -290,27 +290,27 @@ export function ROICalculator() {
       </div>
 
       {/* Mobile: sticky bottom summary bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-[--border] bg-[--background]/95 backdrop-blur-md px-4 py-3">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-(--border) bg-(--background)/95 backdrop-blur-md px-4 py-3">
         <div className="mx-auto max-w-7xl flex items-center justify-between gap-3">
           <div className="text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">Meetings/mo</p>
-            <p className="text-sm font-bold text-[--volt] tabular-nums">{results.meetingsPerMonth.toFixed(1)}</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-(--text-muted)">Meetings/mo</p>
+            <p className="text-sm font-bold text-(--volt) tabular-nums">{results.meetingsPerMonth.toFixed(1)}</p>
           </div>
-          <div className="h-8 w-px bg-[--border]" />
+          <div className="h-8 w-px bg-(--border)" />
           <div className="text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">Revenue/mo</p>
-            <p className="text-sm font-bold text-[--volt] tabular-nums">{fmtGBP(results.revenuePerMonth)}</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-(--text-muted)">Revenue/mo</p>
+            <p className="text-sm font-bold text-(--volt) tabular-nums">{fmtMoney(results.revenuePerMonth)}</p>
           </div>
-          <div className="h-8 w-px bg-[--border]" />
+          <div className="h-8 w-px bg-(--border)" />
           <div className="text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">LTV:CAC</p>
-            <p className="text-sm font-bold text-[--volt] tabular-nums">
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-(--text-muted)">LTV:CAC</p>
+            <p className="text-sm font-bold text-(--volt) tabular-nums">
               {results.ltvCacRatio !== null ? `${results.ltvCacRatio.toFixed(1)}:1` : "—"}
             </p>
           </div>
-          <div className="h-8 w-px bg-[--border]" />
+          <div className="h-8 w-px bg-(--border)" />
           <div className="text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[--text-muted]">ROI</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-(--text-muted)">ROI</p>
             <p
               className="text-sm font-bold tabular-nums"
               style={{

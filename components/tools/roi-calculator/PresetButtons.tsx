@@ -17,7 +17,7 @@ const PRESETS: { key: PresetKey; label: string; desc: string }[] = [
 export function PresetButtons({ active, onSelect }: PresetButtonsProps) {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted]">
+      <p className="text-xs font-semibold uppercase tracking-widest text-(--text-muted)">
         Quick-fill a scenario
       </p>
       <div className="flex flex-wrap gap-2">
@@ -29,8 +29,8 @@ export function PresetButtons({ active, onSelect }: PresetButtonsProps) {
             className={cn(
               "rounded-lg border-2px-4 py-2 text-sm font-medium transition-colors",
               active === key
-                ? "border-[--volt] bg-[--volt-glow] text-[--volt]"
-                : "border-[--border] text-[--text-secondary] hover:border-[--volt] hover:text-[--volt] hover:bg-[--volt-glow]"
+                ? "border-(--volt) bg-(--volt-glow) text-(--volt)"
+                : "border-(--border) text-(--text-secondary) hover:border-(--volt) hover:text-(--volt) hover:bg-(--volt-glow)"
             )}
             title={desc}
           >

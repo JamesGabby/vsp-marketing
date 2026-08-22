@@ -21,12 +21,12 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[--text-primary] mb-2">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-(--text-primary) mb-2">
           Privacy Policy
         </h1>
-        <p className="text-sm text-[--text-muted] mb-10">Last updated: 9 August 2026</p>
+        <p className="text-sm text-(--text-muted) mb-10">Last updated: 9 August 2026</p>
 
-        <div className="flex flex-col gap-8 text-sm text-[--text-secondary] leading-relaxed [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-[--text-primary] [&_h2]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5 [&_a]:text-[--volt] [&_a]:hover:underline">
+        <div className="flex flex-col gap-8 text-sm text-(--text-secondary) leading-relaxed [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-(--text-primary) [&_h2]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5 [&_a]:text-(--volt) [&_a]:hover:underline">
 
           <section>
             <h2>Who we are</h2>
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
-          <p className="text-xs text-[--text-muted] pt-4 border-t border-[--border]">
+          <p className="text-xs text-(--text-muted) pt-4 border-t border-(--border)">
             See also our <Link href="/terms">Terms of Service</Link>.
           </p>
         </div>

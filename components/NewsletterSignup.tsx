@@ -36,18 +36,18 @@ export function NewsletterSignup() {
   }
 
   return (
-    <div className="mt-16 rounded-2xl border-2 border-[--volt]/20 bg-[--volt-glow] p-6 sm:p-8 text-center max-w-xl mx-auto">
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--background] border-2 border-[--border] mx-auto">
-        <Mail className="h-5 w-5 text-[--volt]" />
+    <div className="mt-16 rounded-2xl border-2 border-(--volt)/20 bg-(--volt-glow) p-6 sm:p-8 text-center max-w-xl mx-auto">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-(--background) border-2 border-(--border) mx-auto">
+        <Mail className="h-5 w-5 text-(--volt)" />
       </div>
-      <h2 className="text-lg font-bold text-[--text-primary] mb-2">
+      <h2 className="text-lg font-bold text-(--text-primary) mb-2">
         Get new posts in your inbox
       </h2>
-      <p className="text-sm text-[--text-secondary] mb-5">
+      <p className="text-sm text-(--text-secondary) mb-5">
         Outbound strategy, deliverability, and cold email tactics. No spam, unsubscribe any time.
       </p>
       {submitted ? (
-        <div className="rounded-lg border-2 border-[--volt]/40 bg-[--background] px-5 py-4 text-sm font-medium text-[--volt]">
+        <div className="rounded-lg border-2 border-(--volt)/40 bg-(--background) px-5 py-4 text-sm font-medium text-(--volt)">
           You&apos;re on the list. We&apos;ll email you when we publish something worth reading.
         </div>
       ) : (
@@ -59,7 +59,7 @@ export function NewsletterSignup() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 bg-[--background]"
+              className="flex-1 bg-(--background)"
             />
             <Button type="submit" disabled={sending}>
               {sending ? "Sending…" : "Subscribe"}

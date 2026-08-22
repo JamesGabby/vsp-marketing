@@ -16,10 +16,10 @@ export function VSLVideo() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[--volt]/30 bg-[--volt-glow] px-3 py-1 text-xs font-semibold text-[--volt]">
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-(--volt)/30 bg-(--volt-glow) px-3 py-1 text-xs font-semibold text-(--volt)">
             For B2B SMEs…
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[--text-primary]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-(--text-primary)">
             How to Consistently Win More High-Paying Clients Each Month Through Running Tightly-Listed & Trigger-Based Cold Email Campaigns
           </h2>
         </motion.div>
@@ -29,7 +29,7 @@ export function VSLVideo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative w-full overflow-hidden rounded-2xl border-2 border-[--border] shadow-lg dark:shadow-none"
+          className="relative w-full overflow-hidden rounded-2xl border-2 border-(--border) shadow-lg dark:shadow-none"
           style={{ aspectRatio: "16 / 9" }}
         >
           <iframe

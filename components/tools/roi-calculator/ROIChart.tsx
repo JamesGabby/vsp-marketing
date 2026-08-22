@@ -1,6 +1,6 @@
 "use client"
 
-import { fmtGBP } from "./calculations"
+import { fmtMoney } from "./calculations"
 
 interface ROIChartProps {
   cost: number
@@ -16,20 +16,20 @@ export function ROIChart({ cost, revenue }: ROIChartProps) {
 
   return (
     <div>
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-[--text-muted] mb-3">
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-(--text-muted) mb-3">
         Monthly: Cost vs Revenue
       </p>
       <div className="flex items-end gap-4" style={{ height: `${CHART_H + 40}px` }}>
         {/* Cost bar */}
         <div className="flex flex-col items-center gap-1.5 flex-1 h-full justify-end">
-          <span className="text-[11px] font-semibold text-[--text-muted] tabular-nums">
-            {fmtGBP(cost)}
+          <span className="text-[11px] font-semibold text-(--text-muted) tabular-nums">
+            {fmtMoney(cost)}
           </span>
           <div
             className="w-full rounded-t-lg transition-all duration-500"
             style={{ height: `${costH}px`, backgroundColor: "var(--text-muted)", opacity: 0.35 }}
           />
-          <span className="text-[10px] text-[--text-muted]">Cost</span>
+          <span className="text-[10px] text-(--text-muted)">Cost</span>
         </div>
 
         {/* Revenue bar */}
@@ -38,7 +38,7 @@ export function ROIChart({ cost, revenue }: ROIChartProps) {
             className="text-[11px] font-semibold tabular-nums"
             style={{ color: positive ? "var(--volt)" : "rgb(248 113 113)" }}
           >
-            {fmtGBP(revenue)}
+            {fmtMoney(revenue)}
           </span>
           <div
             className="w-full rounded-t-lg transition-all duration-500"
@@ -48,7 +48,7 @@ export function ROIChart({ cost, revenue }: ROIChartProps) {
               opacity: 0.85,
             }}
           />
-          <span className="text-[10px] text-[--text-muted]">Revenue</span>
+          <span className="text-[10px] text-(--text-muted)">Revenue</span>
         </div>
       </div>
     </div>

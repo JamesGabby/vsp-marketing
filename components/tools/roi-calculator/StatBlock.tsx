@@ -58,19 +58,19 @@ export function StatBlock({
       <span
         className={cn(
           "text-2xl sm:text-3xl font-extrabold tracking-tight tabular-nums leading-none",
-          negative ? "text-red-400" : "text-[--volt]"
+          negative ? "text-red-400" : "text-(--volt)"
         )}
       >
         {value === null ? nullDisplay : format(animated)}
       </span>
-      <span className="text-[11px] text-[--text-muted] uppercase tracking-widest font-semibold">
+      <span className="text-[11px] text-(--text-muted) uppercase tracking-widest font-semibold">
         {label}
       </span>
       {sub && (
         <span
           className={cn(
             "text-[10px] leading-tight -mt-0.5",
-            positive ? "text-[--volt]" : negative ? "text-red-400" : "text-[--text-muted]"
+            positive ? "text-(--volt)" : negative ? "text-red-400" : "text-(--text-muted)"
           )}
         >
           {sub}
