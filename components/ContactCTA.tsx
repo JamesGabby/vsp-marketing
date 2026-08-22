@@ -59,9 +59,23 @@ export function ContactCTA() {
             Stop guessing where your next customer will come from. Let&apos;s build
             an outbound engine that fills your calendar with qualified conversations.
           </p>
-          <p className="text-sm text-[--text-secondary] leading-relaxed mb-8">
-            <span className="font-semibold text-[--text-primary]">Performance-based pricing:</span> £500/month covers lead sourcing, data verification, AI research credits, mailboxes, and sending infrastructure. Then £250 per qualified meeting that actually takes place, more where the ICP is genuinely hard to reach. A typical first 90 days is around £4,000 all in for 10 qualified meetings, about £400 each.
-          </p>
+          <div className="mx-auto mb-8 max-w-xl rounded-2xl border-2 border-[--border] bg-[--background] p-5 sm:p-6 text-left shadow-sm dark:shadow-none">
+            <p className="mb-3 text-sm font-semibold text-[--text-primary]">
+              How the money works
+            </p>
+            <ul className="flex flex-col gap-2.5 text-sm text-[--text-secondary] leading-relaxed">
+              {[
+                "You pay per qualified call held. No call, no invoice.",
+                "A £500 monthly deposit gets the campaign built and sending: lead sourcing, data verification, AI research credits, mailboxes, and infrastructure. It is paid back to you out of the first calls booked.",
+                "No retainer. No setup fee. Monthly rolling, so we earn the next month every month.",
+              ].map((line) => (
+                <li key={line} className="flex gap-2.5">
+                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[--volt]" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="animate-float w-fit rounded-lg mx-auto [box-shadow:0_8px_20px_rgba(234,88,12,0.35)] dark:[box-shadow:0_8px_20px_rgba(251,146,60,0.25)]">
             <Button asChild size="lg">
               <Link href="https://calendly.com/perihelion/15mins" target="_blank" rel="noopener noreferrer">
@@ -71,7 +85,7 @@ export function ContactCTA() {
             </Button>
           </div>
           <p className="mt-4 text-sm text-[--text-muted]">
-            10 qualified calls in 90 days guarantee: if we fall short, we work for free until we get you there.
+            Fifteen minutes, no pitch deck. We will tell you straight whether your ICP is one we can reach.
           </p>
           <p className="mt-1.5 text-xs text-[--text-muted]">
             Qualified means a decision-maker at a company matching the ICP we agree in week one, who attends the call.

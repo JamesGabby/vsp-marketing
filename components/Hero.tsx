@@ -19,7 +19,7 @@ export function Hero() {
             className="mb-3 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 rounded-full border-2 border-[--volt]/30 bg-[--volt-glow] pl-2.5 pr-3 sm:pl-3 sm:pr-4 py-1.5 text-[11px] sm:text-xs font-semibold leading-none text-[--volt]"
           >
             <PoundSterling className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
-            Pay per qualified meeting held, not a flat retainer
+            Pay per qualified call held. No retainer, no setup fee.
           </motion.div>
 
           {/* Headline */}
@@ -29,8 +29,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-[2rem] sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-[--text-primary] text-balance mb-3 sm:mb-4"
           >
-            10 Qualified Sales Calls in 90 Days.{" "}
-            <span className="text-[--volt]">Guaranteed.</span>
+            Qualified Sales Calls, Booked For You.{" "}
+            <span className="text-[--volt]">You Only Pay When They&apos;re Held.</span>
           </motion.h1>
 
           {/* Sub-tagline */}
@@ -40,7 +40,17 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mx-auto max-w-3xl text-[15px] sm:text-lg font-semibold text-[--text-secondary] mb-3"
           >
-            We build the pipeline. You close the deals. If we fall short, we work for free until we get you there.
+            We build the pipeline. You close the deals. A call that never happens never costs you a penny.
+          </motion.p>
+
+          {/* Deposit terms */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.17 }}
+            className="mx-auto mb-2 max-w-2xl text-[13px] sm:text-[15px] text-[--text-secondary] leading-snug"
+          >
+            You start with a <span className="font-semibold text-[--text-primary]">&pound;500 monthly deposit</span> that gets your campaign built and sending, and you get it back out of the first calls booked. It is a float, not a fee.
           </motion.p>
 
           {/* Definition of a qualified call */}
@@ -110,7 +120,8 @@ export function Hero() {
             className="flex flex-wrap items-start justify-center gap-x-6 gap-y-2 text-xs text-[--text-muted]"
           >
             {[
-              { label: "No long-term contracts" },
+              { label: "Monthly rolling, cancel any time" },
+              { label: "No retainers, no setup fee" },
               { label: "Compliance built in (GDPR, CAN-SPAM)" },
             ].map((item) => (
               <span key={item.label} className="flex flex-col">

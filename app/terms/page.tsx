@@ -50,7 +50,7 @@ export default function TermsPage() {
             <h2>Our services</h2>
             <p>
               Where we agree to provide outbound lead generation services, the specific scope,
-              pricing, guarantee terms, and cancellation terms are set out in the proposal or
+              pricing, payment terms, and cancellation terms are set out in the proposal or
               agreement signed with you directly, which takes precedence over this page in the event
               of any conflict. Nothing on this Site constitutes a binding offer to provide services on
               specific terms until we&apos;ve agreed a scope in writing.
@@ -82,7 +82,7 @@ export default function TermsPage() {
             <p>
               The Site and its free tools are provided &ldquo;as is&rdquo;, without warranty of any kind. To the
               extent permitted by law, Perihelion isn&apos;t liable for decisions made based on tools or
-              content published on the Site. This doesn&apos;t affect any guarantee explicitly agreed in a
+              content published on the Site. This doesn&apos;t affect any commitment explicitly agreed in a
               signed client contract, or any liability that can&apos;t be excluded under UK law (such as
               for fraud or death or personal injury caused by negligence).
             </p>

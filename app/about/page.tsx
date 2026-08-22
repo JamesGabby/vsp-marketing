@@ -21,7 +21,7 @@ const values = [
   {
     title: "Paid on Outcomes",
     description:
-      "You pay per qualified meeting that actually takes place. If the campaign doesn't book meetings, we don't get paid, which keeps us honest about what's working.",
+      "You pay per qualified call that actually takes place. No retainer, no setup fee. If the campaign doesn't book calls, we don't get paid, which keeps us honest about what's working.",
   },
 ]
 
