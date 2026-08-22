@@ -66,8 +66,8 @@ export function ContactCTA() {
             <ul className="flex flex-col gap-2.5 text-sm text-(--text-secondary) leading-relaxed">
               {[
                 "You pay per qualified call held. No call, no invoice.",
-                "A $500 monthly deposit gets the campaign built and sending: lead sourcing, data verification, AI research credits, mailboxes, and infrastructure. It is paid back to you out of the first calls booked.",
-                "No retainer. No setup fee. Monthly rolling, so we earn the next month every month.",
+                "A $500 monthly deposit gets the campaign live, and it is credited in full against your first qualified calls. You are not invoiced for those calls, the deposit has already covered them.",
+                "Lead sourcing, data verification, AI research credits, mailboxes, and sending infrastructure are all included. No retainer, no setup fee, monthly rolling.",
               ].map((line) => (
                 <li key={line} className="flex gap-2.5">
                   <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-(--volt)" />

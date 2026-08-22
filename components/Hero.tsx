@@ -8,7 +8,7 @@ import {
   ChevronDown,
   DollarSign,
   RefreshCw,
-  Undo2,
+  Wallet,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -21,10 +21,10 @@ const offerTerms = [
     detail: "A call that never happens never reaches your invoice.",
   },
   {
-    icon: Undo2,
-    term: "$500 monthly deposit",
+    icon: Wallet,
+    term: "$500 credited to your calls",
     detail:
-      "Builds the campaign and gets it sending, then comes back to you out of the first calls booked.",
+      "The monthly deposit is credited in full against your first qualified calls, so they arrive already paid for.",
   },
   {
     icon: RefreshCw,
