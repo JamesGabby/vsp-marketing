@@ -51,8 +51,8 @@ export const PRESETS: Record<PresetKey, ValueState> = {
 export const RANGES = {
   meetingsPerYear: { min: 0, max: 600, step: 1 },
   closeRate: { min: 0, max: 60, step: 0.5 },
-  grossLtv: { min: 0, max: 250000, step: 500 },
-  netLtv: { min: 0, max: 250000, step: 500 },
+  grossLtv: { min: 0, max: 3000000, step: 500 },
+  netLtv: { min: 0, max: 3000000, step: 500 },
   pricePerMeeting: { min: 0, max: 1500, step: 25 },
   monthlyInfra: { min: 0, max: 2000, step: 25 },
 } as const
