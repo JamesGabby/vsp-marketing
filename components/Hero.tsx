@@ -22,7 +22,7 @@ const offerTerms = [
   },
   {
     icon: Wallet,
-    term: "$600 credited to your calls",
+    term: "£500 credited to your calls",
     detail:
       "The monthly deposit is credited in full against your first qualified calls, so they arrive already paid for.",
   },
