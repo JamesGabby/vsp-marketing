@@ -44,6 +44,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
+            aria-label="Perihelion, home"
             className="flex items-center gap-2 font-bold text-lg text-(--text-primary) hover:opacity-80 transition-opacity"
           >
             <Image

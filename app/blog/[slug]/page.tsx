@@ -4,6 +4,12 @@ import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { getAllPosts, getPostBySlug, formatDate } from "@/lib/blog"
 import { Button } from "@/components/ui/button"
+import {
+  ORGANIZATION_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  jsonLdGraph,
+} from "@/lib/seo"
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }))
@@ -28,15 +34,11 @@ export async function generateMetadata({
       description: post.excerpt,
       publishedTime: post.publishedAt,
       authors: [post.author],
-      images: [
-        { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
-      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["/perihelion-logo-light.png"],
     },
   }
 }
@@ -53,27 +55,29 @@ export default async function BlogPostPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.title,
-            description: post.excerpt,
-            datePublished: post.publishedAt,
-            dateModified: post.publishedAt,
-            author: { "@type": "Organization", name: post.author },
-            publisher: {
-              "@type": "Organization",
-              name: "Perihelion",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://periheliongrowth.com/perihelion-logo-light.png",
+          __html: jsonLdGraph(
+            {
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.excerpt,
+              datePublished: post.publishedAt,
+              dateModified: post.publishedAt,
+              inLanguage: "en-GB",
+              // Point author and publisher at the Organization node defined in
+              // the root layout so the whole site resolves to one brand entity.
+              author: { "@id": ORGANIZATION_ID },
+              publisher: { "@id": ORGANIZATION_ID },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${SITE_URL}/blog/${post.slug}`,
               },
             },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": `https://periheliongrowth.com/blog/${post.slug}`,
-            },
-          }),
+            breadcrumbSchema([
+              { name: "Home", path: "/" },
+              { name: "Blog", path: "/blog" },
+              { name: post.title, path: `/blog/${post.slug}` },
+            ]),
+          ),
         }}
       />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

@@ -30,7 +30,7 @@ export function Footer() {
               <span>Perihelion</span>
             </Link>
             <p className="text-sm text-(--text-secondary) leading-relaxed max-w-[260px]">
-              B2B outbound that books real meetings with your ideal customers, not vanity metrics.
+              Perihelion Growth is B2B outbound that books real meetings with your ideal customers, not vanity metrics.
             </p>
             <p className="text-xs font-semibold uppercase tracking-widest text-(--text-muted)">
               Built to build pipeline.

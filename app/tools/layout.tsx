@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 const description =
-  "Free tools for growth teams: an outbound ROI calculator, plus an ICP builder and deliverability audit coming soon. Plan, measure, and optimise your outbound."
+  "Free tools for growth teams from Perihelion Growth: an outbound ROI calculator, plus an ICP builder and deliverability audit coming soon. Plan, measure, and optimise your outbound."
 
 export const metadata: Metadata = {
   title: "Free Outbound Tools",
@@ -11,17 +11,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/tools",
-    title: "Free Outbound Tools | Perihelion",
+    title: "Free Outbound Tools | Perihelion Growth",
     description,
-    images: [
-      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
-    ],
   },
   twitter: {
-    card: "summary",
-    title: "Free Outbound Tools | Perihelion",
+    card: "summary_large_image",
+    title: "Free Outbound Tools | Perihelion Growth",
     description,
-    images: ["/perihelion-logo-light.png"],
   },
 }
 

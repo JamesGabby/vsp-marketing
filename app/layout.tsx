@@ -4,6 +4,16 @@ import "./globals.css"
 import { Providers } from "@/components/providers"
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
+import {
+  FOUNDER_NAME,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  founderSchema,
+  jsonLdGraph,
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/seo"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,17 +28,24 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 })
 
-const siteDescription =
-  "Perihelion books qualified B2B sales calls. Every prospect is researched, verified against your ICP, and showing a real trigger event before we send a single email. You pay per qualified call held. No retainers, no setup fee, monthly rolling."
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://periheliongrowth.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Perihelion | B2B Lead Generation Agency",
-    template: "%s | Perihelion",
+    // The full brand name leads, because "perihelion growth" is the query we
+    // most want this page to win.
+    default: "Perihelion Growth | B2B Lead Generation Agency",
+    template: `%s | ${SITE_NAME}`,
   },
-  description: siteDescription,
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: FOUNDER_NAME, url: `${SITE_URL}/about` }],
+  creator: FOUNDER_NAME,
+  publisher: SITE_NAME,
+  category: "Business",
   keywords: [
+    "Perihelion Growth",
+    "Perihelion Growth agency",
+    "Perihelion lead generation",
     "B2B lead generation",
     "outbound sales agency",
     "cold email agency",
@@ -42,18 +59,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Perihelion",
-    title: "Perihelion | B2B Lead Generation Agency",
-    description: siteDescription,
-    images: [
-      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
-    ],
+    siteName: SITE_NAME,
+    locale: "en_GB",
+    title: "Perihelion Growth | B2B Lead Generation Agency",
+    description: SITE_DESCRIPTION,
   },
   twitter: {
-    card: "summary",
-    title: "Perihelion | B2B Lead Generation Agency",
-    description: siteDescription,
-    images: ["/perihelion-logo-light.png"],
+    card: "summary_large_image",
+    title: "Perihelion Growth | B2B Lead Generation Agency",
+    description: SITE_DESCRIPTION,
   },
   robots: {
     index: true,
@@ -62,6 +76,8 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   icons: {
@@ -85,7 +101,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
@@ -93,20 +109,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Perihelion",
-              url: "https://periheliongrowth.com",
-              logo: "https://periheliongrowth.com/perihelion-logo-light.png",
-              description: siteDescription,
-              founder: { "@type": "Person", name: "James Gabbitus" },
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "contact@periheliongrowth.com",
-                contactType: "sales",
-              },
-            }),
+            __html: jsonLdGraph(organizationSchema, websiteSchema, founderSchema),
           }}
         />
         <Providers>

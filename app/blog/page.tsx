@@ -5,27 +5,25 @@ import { getAllPosts, formatDate } from "@/lib/blog"
 import { NewsletterSignup } from "@/components/NewsletterSignup"
 
 const description =
-  "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion team."
+  "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion Growth team."
+
+const title = "The Outbound Playbook | Perihelion Growth Blog"
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: { absolute: title },
   description,
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
     url: "/blog",
-    title: "The Outbound Playbook | Perihelion Blog",
+    title,
     description,
-    images: [
-      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
-    ],
   },
   twitter: {
-    card: "summary",
-    title: "The Outbound Playbook | Perihelion Blog",
+    card: "summary_large_image",
+    title,
     description,
-    images: ["/perihelion-logo-light.png"],
   },
 }
 
