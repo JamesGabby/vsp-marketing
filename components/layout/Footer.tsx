@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail } from "lucide-react"
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon"
+import { COMPANY_LINKEDIN } from "@/lib/seo"
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -62,10 +63,10 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/in/jamesgabbitus/"
+                href={COMPANY_LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Perihelion on LinkedIn"
                 className="h-9 w-9 flex items-center justify-center rounded-lg border-2 border-(--border) text-(--text-muted) hover:text-(--volt) hover:border-(--volt) transition-colors"
               >
                 <LinkedinIcon className="h-4 w-4" />

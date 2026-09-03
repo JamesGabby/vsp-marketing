@@ -6,6 +6,7 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon"
+import { FOUNDER_LINKEDIN } from "@/lib/seo"
 
 const values = [
   {
@@ -81,7 +82,7 @@ export default function AboutPage() {
                 MSc Computer Science. Built the Qualification Engine from the ground up and works directly with every client on ICP, messaging, and campaign strategy.
               </p>
               <a
-                href="https://www.linkedin.com/in/jamesgabbitus/"
+                href={FOUNDER_LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-(--text-secondary) hover:text-(--volt) transition-colors"

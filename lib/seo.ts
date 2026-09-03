@@ -25,6 +25,7 @@ export const SITE_URL = "https://periheliongrowth.com"
 export const SITE_EMAIL = "contact@periheliongrowth.com"
 export const FOUNDER_NAME = "James Gabbitus"
 export const FOUNDER_LINKEDIN = "https://www.linkedin.com/in/jamesgabbitus/"
+export const COMPANY_LINKEDIN = "https://www.linkedin.com/company/perihelion-growth"
 
 export const SITE_DESCRIPTION =
   "Perihelion Growth is a B2B lead generation agency that books qualified sales calls. Every prospect is researched, verified against your ICP, and showing a real trigger event before we send a single email. You pay per qualified call held. No retainers, no setup fee, monthly rolling."
@@ -79,8 +80,8 @@ export const organizationSchema = {
     availableLanguage: "English",
   },
   // sameAs is the strongest signal tying this site to the brand entity across
-  // the web. Add company profiles here as they go live.
-  sameAs: [FOUNDER_LINKEDIN],
+  // the web. Add further company profiles here as they go live.
+  sameAs: [COMPANY_LINKEDIN],
 }
 
 export const founderSchema = {
