@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { openGraphImage } from "@/lib/seo"
 
 const description =
   "The terms that apply when you use periheliongrowth.com or work with Perihelion."
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     canonical: "/terms",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/terms",
     title: "Terms of Service | Perihelion",
     description,

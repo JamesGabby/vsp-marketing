@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { openGraphImage } from "@/lib/seo"
 
 const description =
   "How Perihelion collects, uses, and protects your personal data."
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     canonical: "/privacy",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/privacy",
     title: "Privacy Policy | Perihelion",
     description,

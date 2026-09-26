@@ -6,6 +6,7 @@ import {
   SITE_URL,
   breadcrumbSchema,
   jsonLdGraph,
+  openGraphImage,
 } from "@/lib/seo"
 
 const description =
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/about",
     title,
     description,

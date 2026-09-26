@@ -5,10 +5,13 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { getAllPosts, getPostBySlug, formatDate } from "@/lib/blog"
 import { Button } from "@/components/ui/button"
 import {
+  FOUNDER_ID,
+  FOUNDER_NAME,
   ORGANIZATION_ID,
   SITE_URL,
   breadcrumbSchema,
   jsonLdGraph,
+  openGraphImage,
 } from "@/lib/seo"
 
 export async function generateStaticParams() {
@@ -28,6 +31,7 @@ export async function generateMetadata({
       canonical: `/blog/${post.slug}`,
     },
     openGraph: {
+      ...openGraphImage,
       type: "article",
       url: `/blog/${post.slug}`,
       title: post.title,
@@ -61,11 +65,17 @@ export default async function BlogPostPage({
               headline: post.title,
               description: post.excerpt,
               datePublished: post.publishedAt,
-              dateModified: post.publishedAt,
+              dateModified: post.updatedAt ?? post.publishedAt,
               inLanguage: "en-GB",
-              // Point author and publisher at the Organization node defined in
-              // the root layout so the whole site resolves to one brand entity.
-              author: { "@id": ORGANIZATION_ID },
+              image: `${SITE_URL}/opengraph-image`,
+              // A named human author carries more weight with search and
+              // answer engines than a house byline, so a post credited to the
+              // founder resolves to his Person node. Posts bylined to the team
+              // fall back to the Organization, which keeps the whole site
+              // resolving to one brand entity either way.
+              author: {
+                "@id": post.author === FOUNDER_NAME ? FOUNDER_ID : ORGANIZATION_ID,
+              },
               publisher: { "@id": ORGANIZATION_ID },
               mainEntityOfPage: {
                 "@type": "WebPage",

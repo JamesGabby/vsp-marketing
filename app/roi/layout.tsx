@@ -8,6 +8,11 @@ const description =
 export const metadata: Metadata = {
   title: "ROI Calculator",
   description,
+  // Set explicitly so the page does not inherit the root layout's canonical,
+  // which points at the homepage and would declare this page a duplicate of it.
+  alternates: {
+    canonical: "/roi",
+  },
   robots: {
     index: false,
     follow: false,

@@ -55,6 +55,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": [
+        { url: "/rss.xml", title: `The Outbound Playbook | ${SITE_NAME}` },
+      ],
+    },
   },
   openGraph: {
     type: "website",

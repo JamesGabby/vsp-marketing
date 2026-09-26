@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { getAllPosts, formatDate } from "@/lib/blog"
 import { NewsletterSignup } from "@/components/NewsletterSignup"
+import { openGraphImage } from "@/lib/seo"
 
 const description =
   "Outbound strategy, cold email, LinkedIn, and B2B pipeline insights from the Perihelion Growth team."
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     canonical: "/blog",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/blog",
     title,
     description,

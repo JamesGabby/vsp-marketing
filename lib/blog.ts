@@ -10,6 +10,8 @@ export type BlogPost = {
   category: string
   readTime: string
   publishedAt: string
+  /** Only set this when a post is genuinely revised; it feeds dateModified. */
+  updatedAt?: string
   author: string
   content: ContentBlock[]
 }

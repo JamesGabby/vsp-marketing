@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { openGraphImage } from "@/lib/seo"
 
 const description =
   "Free tools for growth teams from Perihelion Growth: an outbound ROI calculator, plus an ICP builder and deliverability audit coming soon. Plan, measure, and optimise your outbound."
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "/tools",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/tools",
     title: "Free Outbound Tools | Perihelion Growth",
     description,

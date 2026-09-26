@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { openGraphImage } from "@/lib/seo"
 
 const description =
   "Illustrative examples of how a Perihelion engagement runs and the kind of outcomes we're aiming for, not verified client results."
@@ -15,18 +16,17 @@ export const metadata: Metadata = {
     canonical: "/case-studies",
   },
   openGraph: {
+    ...openGraphImage,
     url: "/case-studies",
     title: "Example Engagements | Perihelion",
     description,
-    images: [
-      { url: "/perihelion-logo-light.png", width: 512, height: 512, alt: "Perihelion" },
-    ],
   },
+  // The square logo through a `summary` card never showed the brand name in
+  // the preview. The shared 1200x630 card spread in above does.
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Example Engagements | Perihelion",
     description,
-    images: ["/perihelion-logo-light.png"],
   },
 }
 
