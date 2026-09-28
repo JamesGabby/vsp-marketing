@@ -5,8 +5,8 @@ import { motion, animate } from "framer-motion"
 
 const metrics = [
   { prefix: "<", target: 2, suffix: "%", label: "Bounce Rate" },
-  { prefix: "", target: 4, suffix: "%+", label: "Reply Rate" },
-  { prefix: "", target: 20, suffix: "%+", label: "Positive Reply Rate" },
+  { prefix: "", target: 3, suffix: "%+", label: "Human Reply Rate" },
+  { prefix: "", target: 40, suffix: "%+", label: "Positive Reply Rate" },
 ]
 
 function CounterValue({
