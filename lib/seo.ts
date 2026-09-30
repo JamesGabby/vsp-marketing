@@ -260,7 +260,7 @@ export const faqs: Array<{ question: string; answer: string }> = [
   {
     question: "What results do you see?",
     answer:
-      "Across the live outbound campaigns we run, bounce rates stay under 2%, reply rates run above 4%, and above 20% of those replies are positive. We keep bounce rates low by cross-referencing multiple data sources and double-verifying every email address before it enters the Qualification Engine.",
+      "Across the live outbound campaigns we run, bounce rates stay under 2%, reply rates run above 3%, and above 40% of those replies are positive. We keep bounce rates low by cross-referencing multiple data sources and double-verifying every email address before it enters the Qualification Engine.",
   },
 ]
 
