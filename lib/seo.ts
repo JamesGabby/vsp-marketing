@@ -171,7 +171,7 @@ export const serviceSchema = {
     "@id": `${SITE_URL}/#offer`,
     name: "Monthly rolling, pay per qualified call held",
     description:
-      "A GBP 500 monthly deposit, credited in full against your first qualified calls. Beyond the deposit you pay per qualified call held. No retainer, no setup fee, no lock-in.",
+      "A GBP 500 monthly deposit. During the 60-day pilot it is credited in full against your first qualified calls; after the pilot it covers the cost of running your outbound. Beyond the deposit you pay per qualified call held. No retainer, no setup fee, no lock-in.",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
       price: 500,
@@ -179,7 +179,7 @@ export const serviceSchema = {
       billingIncrement: 1,
       unitText: "MONTH",
       description:
-        "Monthly deposit, credited in full against the first qualified calls held.",
+        "Monthly deposit. Credited in full against the first qualified calls held during the 60-day pilot; after the pilot it covers the cost of running outbound.",
     },
     availability: "https://schema.org/InStock",
     url: SITE_URL,
@@ -215,7 +215,7 @@ export const faqs: Array<{ question: string; answer: string }> = [
   {
     question: "How much does Perihelion Growth cost?",
     answer:
-      "You pay a £500 monthly deposit, which is credited in full against your first qualified calls, so those calls arrive already paid for. Beyond the deposit you pay per qualified call held. There is no retainer, no setup fee, and no lock-in: the arrangement is monthly rolling, so we re-earn the next month every month.",
+      "You pay a £500 monthly deposit. During the 60-day pilot it is credited in full against your first qualified calls, so those calls arrive already paid for. After the pilot, the £500 goes towards the cost of running your outbound instead of being credited to calls. Beyond the deposit you pay per qualified call held. There is no retainer, no setup fee, and no lock-in: the arrangement is monthly rolling, so we re-earn the next month every month.",
   },
   {
     question: "What counts as a qualified call?",

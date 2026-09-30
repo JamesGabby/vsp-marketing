@@ -66,7 +66,7 @@ export function ContactCTA() {
             <ul className="flex flex-col gap-2.5 text-sm text-(--text-secondary) leading-relaxed">
               {[
                 "You pay per qualified call held. No call, no invoice.",
-                "A £500 monthly deposit gets the campaign live, and it is credited in full against your first qualified calls. You are not invoiced for those calls, the deposit has already covered them.",
+                "A £500 monthly deposit gets the campaign live. During the 60-day pilot it is credited in full against your first qualified calls, so you are not invoiced for those calls, the deposit has already covered them. After the pilot, the £500 goes towards the cost of running your outbound.",
                 "Lead sourcing, data verification, AI research credits, mailboxes, and sending infrastructure are all included. No retainer, no setup fee, monthly rolling.",
               ].map((line) => (
                 <li key={line} className="flex gap-2.5">

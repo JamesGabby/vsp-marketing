@@ -15,7 +15,8 @@ export function GET() {
 
 ## The offer
 
-- £500 monthly deposit, credited in full against the first qualified calls held.
+- £500 monthly deposit. During the 60-day pilot it is credited in full against the first qualified calls held.
+- After the pilot, the £500 covers the cost of running the client's outbound and is no longer credited to calls.
 - Beyond the deposit, payment is per qualified call held.
 - A qualified call means a decision-maker at a company matching the ICP agreed in week one, who attends the call.
 - No retainer, no setup fee, no lock-in. Monthly rolling.

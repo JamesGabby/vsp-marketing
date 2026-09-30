@@ -22,9 +22,9 @@ const offerTerms = [
   },
   {
     icon: Wallet,
-    term: "£500 credited to your calls",
+    term: "£500 credited during your pilot",
     detail:
-      "The monthly deposit is credited in full against your first qualified calls, so they arrive already paid for.",
+      "For the 60-day pilot, the monthly deposit is credited in full against your first qualified calls. After that it covers the cost of running your outbound.",
   },
   {
     icon: RefreshCw,
