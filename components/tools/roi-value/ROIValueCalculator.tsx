@@ -254,7 +254,7 @@ function CalculatorBody({ currency, onCurrencyChange }: CalculatorBodyProps) {
 
           {/* Everything above is an expected value. Say so while the volume is
               too small for that average to describe a real year. */}
-          {results.tooFewMeetings && (
+          {/* {results.tooFewMeetings && (
             <div className="mb-8 flex gap-3 rounded-xl border border-(--border) border-l-[3px] border-l-(--chart-shortfall) bg-(--background) p-4">
               <TriangleAlert
                 className="mt-0.5 h-4 w-4 shrink-0"
@@ -278,7 +278,7 @@ function CalculatorBody({ currency, onCurrencyChange }: CalculatorBodyProps) {
                 </p>
               </div>
             </div>
-          )}
+          )} */}
 
           <div className="mb-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
             <ValueStat
